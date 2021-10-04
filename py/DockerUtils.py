@@ -24,14 +24,14 @@ class DockerClient():
             container.stop()
         self.client.close()
 
-    def execute(self, docker_image, container_name, command, workdir="/"):
+    def execute(self, docker_image, container_name, command, workdir="/", volumes={}):
         
         if not self.container_exist(container_name):
             # NOT EXISTS -> CREATE
             container = self.client.containers.run(docker_image,"tail -f /dev/null",
                 name=container_name, 
                 detach=True,
-                volumes_from=[os.environ['HOSTNAME']],
+                volumes=volumes,
                 working_dir=workdir,
                 auto_remove=True
             )
