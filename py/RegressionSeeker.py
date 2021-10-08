@@ -29,19 +29,19 @@ class RegressionSeeker():
 
         # 0) GET REGRESSION TEST
         self.gitManager.change_commit(fix_commit['hash'])
-        #self.bug.saveRegressionTest(self.project.path,self.experiment.bug_folder)
+        self.experiment.saveRegressionTest()
 
         # 1) CHECK FIX COMMIT
         self.experiment.log("Checking FIX COMMIT: %s"%fix_commit['hash'])
         self.checkCommit(fix_commit)
         
         # 2) CHECK PREVIOUS COMMIT (ASSERT NO FLAKY TEST)
-        # self.experiment.log("Checking PREVIOUS COMMIT: %s"%previous_commit['hash'])
-        #self.bug.applyRegressionTest()
-        #self.checkCommit(previous_commit)
+        self.experiment.log("Checking PREVIOUS COMMIT: %s"%previous_commit['hash'])
+        self.experiment.applyRegressionTest()
+        self.checkCommit(previous_commit)
 
         # 3) CHECK ALL PREVIOUS COMMITS
-        #self.experiment.log("Checking ALL PREVIOUS COMMITS")
+        self.experiment.log("Checking ALL PREVIOUS COMMITS")
 
         # self.experiment.log(" -> Checking commit %s"%commit['hash'])
 

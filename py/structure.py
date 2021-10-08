@@ -41,7 +41,7 @@ class Experiment():
     def saveRegressionTest(self):
         shutil.copyfile(self.project.path+self.bug.testPath, self.bug_folder + self.bug.testFile)
 
-    def applyRegressionTest(self, path):
+    def applyRegressionTest(self):
         shutil.copyfile(self.bug_folder + self.bug.testFile,self.project.path+self.bug.testPath)
 
     def log(self, msg, log_prefix=None):
@@ -84,6 +84,7 @@ class Project():
 
     def executeTest(self, resultsPath):
         isSuccess = self.executeOnCommit(self.bug.test_command, resultsPath + "test-execution.log")
+        shutil.copyfile(self.path+self.bug.test_report, resultsPath + "test-report.xml")
         return isSuccess
 
     def executeOnCommit(self, cmd, log_path):
@@ -120,3 +121,4 @@ class Bug():
         self.build_source_command = self.bugConfig['build']
         self.build_test_command = self.bugConfig['build_test']
         self.test_command = self.bugConfig['test_command']
+        self.test_report = self.bugConfig['test_report']
