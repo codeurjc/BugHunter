@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "project": "SpringBootSamples",
+    "git_url": "https://github.com/Maes95/SpringBootSamples.git",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "-",
+    "fix_commit": "add8221fb5314265ce7d7a8a4002078a498511a3",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=DividerTest#divideBy0 test",
+    "folder": "src/test/java/samples/websocket/tomcat/divider/",
+    "file": "DividerTest.java",
+    "test_report": "target/surefire-reports/TEST-samples.websocket.tomcat.divider.DividerTest.xml"
+}

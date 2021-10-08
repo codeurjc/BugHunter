@@ -1,18 +1,16 @@
 import subprocess
-import os
-import sys
+from injectable import injectable
 
+@injectable(singleton=True)
 class ProcessManager():
 
-    def __init__(self, output, log_name="PROCESS MANAGER"):
-        self.outfile = output
-        self.log_name = log_name
+    def __init__(self):
+        self.log_name = "PROCESS MANAGER"
+        self.outfile = open("/tmp/process-manager.log", 'w+')
 
-    @staticmethod
-    def default_exec(command, output=None, returnOutput=False):
-        dpm = ProcessManager(open("default.log", 'w'), "DEFAULT PROCESS MANAGER")
-        exit_code, text = dpm.execute(command, output, returnOutput)
-        dpm.close()
+    def setNewOutput(self, output, log_name):
+        self.log_name = log_name
+        self.outfile = open(output, 'w+')
 
     def execute(self, command, output=None, returnOutput=False):
         
@@ -29,10 +27,11 @@ class ProcessManager():
             exit_code = subprocess.call(command, shell=True, stdout=output, stderr=output)
             return exit_code, None
 
-    def log(self, message, output=None):
+    def log(self, message, output=None, log_prefix=None):
+        if log_prefix is None: log_prefix = self.log_name
         if output is None:
             output=self.outfile
-        subprocess.call("echo [ %s ] %s"%(self.log_name, message), shell=True, stdout=output, stderr=output)
+        subprocess.call("echo [ %s ] %s"%(log_prefix, message), shell=True, stdout=output, stderr=output)
 
     def close(self):
         if self.outfile is not None:

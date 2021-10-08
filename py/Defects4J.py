@@ -1,4 +1,5 @@
 from DockerUtils import DockerClient
+from injectable import Autowired, autowired
 import csv
 import json
 import re
@@ -7,19 +8,19 @@ import sys
 
 class Defects4J():
 
-    def __init__(self, container_name="defects4j-container"):
-        self.dockerUtils = DockerClient()
-        self.container_name = container_name
+    @autowired
+    def __init__(self, dockerClient: Autowired(DockerClient)):
+        self.dockerClient = dockerClient
+        self.container_name = "d4j-container"
 
-    def cloneRepository(self, projectName):
-        cmd = "defects4j checkout -p {projectName} -v 1b -w /tmp/{projectName}/".format(projectName=projectName)
-        os.mkdir('/home/regseek/workdir/{projectName}/'.format(projectName=projectName))
-        volumes = ['/home/regseek/workdir/{projectName}/:/tmp/{projectName}/'.format(projectName=projectName)]
-        return self.dockerUtils.execute("defects4j:2.0.0", self.container_name, cmd, volumes=volumes)
+    def cloneRepository(self, projectName, experimentId):
+        projectFolder = "/home/regseek/workdir/projects/{experimentId}".format(experimentId= experimentId)
+        cmd = "defects4j checkout -p {projectName} -v 1b -w {projectFolder} && chmod -R 777 {projectFolder}".format(projectName=projectName, projectFolder=projectFolder)
+        return self.dockerClient.execute("defects4j:2.0.0", self.container_name, cmd)
 
     def getAllBugs(self, projectName):
         cmd = "cat /defects4j/framework/projects/{projectName}/active-bugs.csv".format(projectName=projectName)
-        exit_code, container_output = self.dockerUtils.execute("defects4j:2.0.0", self.container_name, cmd)
+        exit_code, container_output = self.dockerClient.execute("defects4j:2.0.0", self.container_name, cmd)
 
         lines = container_output.decode("utf-8") .splitlines()
         reader = csv.reader(lines)
@@ -30,7 +31,7 @@ class Defects4J():
 
     def generateBugConfigFile(self, projectConfig, bug):
         cmd = "defects4j info -p {projectName} -b {bugId}".format(projectName=projectConfig['project'], bugId=bug['bug.id'])
-        exit_code, container_output = self.dockerUtils.execute("defects4j:2.0.0", self.container_name, cmd)
+        exit_code, container_output = self.dockerClient.execute("defects4j:2.0.0", self.container_name, cmd)
         
         text = container_output.decode("utf-8") 
 
@@ -50,12 +51,15 @@ class Defects4J():
         configFile = {
             "id": bug['bug.id'],
             "project": projectConfig['project'],
+            "git_url": projectConfig['git_url'],
+            "docker_image": projectConfig['docker_image'],
             "bug_report": bug['report.url'],
             "fix_commit": fix_commit,
             "build": projectConfig['build'],
+            "build_test": projectConfig['build_test'],
+            "test_command": test_command,
             "folder":  test_folder,
             "file": test_file,
-            "test_command": test_command,
             "test_report" : report_path,
         }
         
@@ -77,6 +81,6 @@ if __name__ == "__main__":
         projectConfig = json.load(f)
 
     d4j = Defects4J()
-    d4j.cloneRepository(projectConfig['project'])
-    # bug_1 = d4j.getAllBugs(projectConfig['project'])[0]
-    # d4j.generateBugConfigFile(projectConfig, bug_1)
+    #d4j.cloneRepository(projectConfig['project'], projectConfig['project']+"-EXAMPLE")
+    bug_1 = d4j.getAllBugs(projectConfig['project'])[0]
+    d4j.generateBugConfigFile(projectConfig, bug_1)

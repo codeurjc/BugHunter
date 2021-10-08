@@ -3,10 +3,13 @@
 import os
 # import sys
 import docker
+import getpass
+from injectable import injectable
 
 DEFAULT_TIMEOUT=1200
 
-class DockerClient():
+@injectable(singleton=True)
+class DockerClient():        
 
     def __init__(self):
         self.client = docker.from_env()
@@ -32,6 +35,7 @@ class DockerClient():
                 name=container_name, 
                 detach=True,
                 volumes=volumes,
+                volumes_from=[os.environ['HOSTNAME']],
                 working_dir=workdir,
                 auto_remove=True
             )
@@ -39,7 +43,7 @@ class DockerClient():
         else:
             container = self.client.containers.get(container_name)
         
-        (exit_code, container_output) = container.exec_run("timeout %d bash -c '%s'"%(DEFAULT_TIMEOUT,command))
+        (exit_code, container_output) = container.exec_run("timeout %d bash -c '%s'"%(DEFAULT_TIMEOUT,command), user="1000")
         return exit_code, container_output
 
 if __name__ == "__main__":

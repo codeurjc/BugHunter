@@ -1,11 +1,14 @@
 {
     "id": "1",
     "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://github.com/FasterXML/jackson-databind/issues/223",
     "fix_commit": "88f44d87d4c2251d7cf55d9aa9c3452a397ae19b",
-    "build": "mvn clean build",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.struct.TestPOJOAsArray#testNullColumn test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/struct/",
     "file": "TestPOJOAsArray.java",
-    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.struct.TestPOJOAsArray#testNullColumn test",
     "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.struct.TestPOJOAsArray.xml"
 }
