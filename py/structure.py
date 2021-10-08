@@ -42,6 +42,7 @@ class Experiment():
         shutil.copyfile(self.project.path+self.bug.testPath, self.bug_folder + self.bug.testFile)
 
     def applyRegressionTest(self):
+        createDirIfNotExist(self.project.path+self.bug.testFolder)
         shutil.copyfile(self.bug_folder + self.bug.testFile,self.project.path+self.bug.testPath)
 
     def log(self, msg, log_prefix=None):
@@ -102,9 +103,9 @@ class Project():
         isSuccess = exit_code == 0
         
         if isSuccess:
-            self.pm.log("%s SUCCESS"%cmd)
+            self.pm.log("   %s SUCCESS"%cmd)
         else:
-            self.pm.log("%s FAILS"%cmd)
+            self.pm.log("   %s FAILS"%cmd)
         
         return isSuccess
         
@@ -115,7 +116,8 @@ class Bug():
         with open('configFiles/{project}/bugs/Bug-{bugId}.json'.format(project=project, bugId=bugId)) as f:
             self.bugConfig = json.load(f)
         self.fixCommit = self.bugConfig['fix_commit']
-        self.testPath = self.bugConfig['folder']+self.bugConfig['file']
+        self.testPath = self.bugConfig['folder'] + self.bugConfig['file']
+        self.testFolder = self.bugConfig['folder']
         self.testFile = self.bugConfig['file']
 
         self.build_source_command = self.bugConfig['build']

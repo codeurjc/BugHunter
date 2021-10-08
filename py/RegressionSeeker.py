@@ -37,13 +37,14 @@ class RegressionSeeker():
         
         # 2) CHECK PREVIOUS COMMIT (ASSERT NO FLAKY TEST)
         self.experiment.log("Checking PREVIOUS COMMIT: %s"%previous_commit['hash'])
-        self.experiment.applyRegressionTest()
         self.checkCommit(previous_commit)
 
         # 3) CHECK ALL PREVIOUS COMMITS
         self.experiment.log("Checking ALL PREVIOUS COMMITS")
 
-        # self.experiment.log(" -> Checking commit %s"%commit['hash'])
+        for commit in remain_previous_commits:
+            self.experiment.log("Checking commit %s"%commit['hash'])
+            self.checkCommit(commit)
 
     def checkCommit(self, commit):
 
@@ -53,23 +54,35 @@ class RegressionSeeker():
 
         if not created:
             self.experiment.log("Commit already checked", log_prefix=commit['hash'][0:17])
-            return
+            return        
 
         # 1) Checkout commit
         self.gitManager.change_commit(commit['hash'])
 
-        # 2) Build source
-        isSuccess = self.experiment.project.buildSource(commitResultsPath)
-        if not isSuccess: return
+        # 2) Apply regression test
+        self.experiment.applyRegressionTest()
 
-        # 3) Build test
-        isSuccess = self.experiment.project.buildTests(commitResultsPath)
-        if not isSuccess: return
+        # 3) Build source
+        isSourceBuildSuccess = self.experiment.project.buildSource(commitResultsPath)
+        isTestBuildSuccess     = False
+        isTestExecutionSuccess = False
 
-        # 4) Run test
-        isSuccess = self.experiment.project.executeTest(commitResultsPath)
-        if not isSuccess: return
+        # 4) Build test
+        if isSourceBuildSuccess:
+            isTestBuildSuccess = self.experiment.project.buildTests(commitResultsPath)
+            if isTestBuildSuccess:
+                # 5) Run test
+                isTestExecutionSuccess = self.experiment.project.executeTest(commitResultsPath)
 
+        # Save results
+        with open(commitResultsPath+"result.json",'w+') as json_file:
+            data = {
+                "isSourceBuildSuccess" : isSourceBuildSuccess,
+                "isTestBuildSuccess" : isTestBuildSuccess,
+                "isTestExecutionSuccess" : isTestExecutionSuccess
+            }
+            json.dump(data, json_file, indent=4)
+            
     def finish(self, message):
         self.experiment.close(message)
 
