@@ -1,0 +1,14 @@
+{
+    "id": "62",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1392",
+    "fix_commit": "4e94c0ed9eca0caccb57feb0ceb252fc91198032",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.creators.ArrayDelegatorCreatorForCollectionTest#testUnmodifiable test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/creators/",
+    "file": "ArrayDelegatorCreatorForCollectionTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.ArrayDelegatorCreatorForCollectionTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "19",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/issues/317",
+    "fix_commit": "345cad5b2f4c06a1bcc6794311a31226e9f2bce7",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestNumericValues#testLongerFloatingPoint test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/json/",
+    "file": "TestNumericValues.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestNumericValues.xml"
+}

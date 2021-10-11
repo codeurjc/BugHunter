@@ -1,0 +1,14 @@
+{
+    "id": "66",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1441",
+    "fix_commit": "cd5430a91723ff8cd61928524ec21ab4e14b20f6",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer#testCustomEnumKeySerializerWithPolymorphic test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/module/",
+    "file": "TestCustomEnumKeyDeserializer.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer.xml"
+}

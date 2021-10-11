@@ -1,0 +1,14 @@
+{
+    "id": "6",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-94",
+    "fix_commit": "9b6406bf37af48e843b02fa8fd53dc673f3cbd1e",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.compiler.VariableTest#testIterateVariable test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/compiler/",
+    "file": "VariableTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.compiler.VariableTest.xml"
+}

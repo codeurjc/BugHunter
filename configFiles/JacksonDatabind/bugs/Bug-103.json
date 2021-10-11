@@ -1,0 +1,14 @@
+{
+    "id": "103",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/2128",
+    "fix_commit": "f6cf1817509dc5ed61b9730c17abe492cc62b074",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.exc.BasicExceptionTest#testLocationAddition test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/exc/",
+    "file": "BasicExceptionTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.exc.BasicExceptionTest.xml"
+}

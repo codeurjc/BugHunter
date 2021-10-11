@@ -1,0 +1,14 @@
+{
+    "id": "26",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/60",
+    "fix_commit": "c7a581e55fc988bd90fa4bb1b0acece5181b7c5f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZoneCutover#testWithSecondOfMinuteInDstChange test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestDateTimeZoneCutover.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZoneCutover.xml"
+}

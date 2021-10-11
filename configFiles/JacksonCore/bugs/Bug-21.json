@@ -1,0 +1,14 @@
+{
+    "id": "21",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/issues/330",
+    "fix_commit": "96faf2ecd985dfc838e2bf6f6ae4d9d4b310861b",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.filter.TokenVerifyingParserFiltering330Test#testTokensSingleMatchWithPath test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/filter/",
+    "file": "TokenVerifyingParserFiltering330Test.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.filter.TokenVerifyingParserFiltering330Test.xml"
+}

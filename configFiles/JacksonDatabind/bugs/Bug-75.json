@@ -1,0 +1,14 @@
+{
+    "id": "75",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1543",
+    "fix_commit": "ce114737139538f72d2a7a994db41befc32362fe",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.struct.EnumFormatShapeTest#testEnumPropertyAsNumber test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/struct/",
+    "file": "EnumFormatShapeTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.struct.EnumFormatShapeTest.xml"
+}

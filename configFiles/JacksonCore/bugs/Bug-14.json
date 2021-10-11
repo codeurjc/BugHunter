@@ -1,0 +1,14 @@
+{
+    "id": "14",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/issues/255",
+    "fix_commit": "3c2c9610b6c76e2b348eb057d0a8268681d573a6",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.io.TestIOContext#testAllocations test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/io/",
+    "file": "TestIOContext.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.io.TestIOContext.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "3",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/77",
+    "fix_commit": "8d109fe1a999a11b4557536dd96f9210460a5936",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestMutableDateTime_Adds#testAddYears_int_dstOverlapWinter_addZero test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestMutableDateTime_Adds.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestMutableDateTime_Adds.xml"
+}

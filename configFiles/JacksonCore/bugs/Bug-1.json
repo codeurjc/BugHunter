@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/issues/98",
+    "fix_commit": "b40ac81d4a81736e2b7536b14db4ad070b598d2e",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestParserNonStandard#testAllowNaN test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/json/",
+    "file": "TestParserNonStandard.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestParserNonStandard.xml"
+}

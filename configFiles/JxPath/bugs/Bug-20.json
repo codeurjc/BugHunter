@@ -1,0 +1,14 @@
+{
+    "id": "20",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-149",
+    "fix_commit": "820a69d81b3b5d33f4a2b2cd9f153450f7535452",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.compiler.JXPath149Test#testComplexOperationWithVariables test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/compiler/",
+    "file": "JXPath149Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.compiler.JXPath149Test.xml"
+}

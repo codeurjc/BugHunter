@@ -1,0 +1,14 @@
+{
+    "id": "6",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/28",
+    "fix_commit": "28aeba952e838fb12c9b934ce6ef65658e45d7b2",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.chrono.TestGJDate#test_cutoverPreZero test",
+    "folder": "src/test/java/org/joda/time/chrono/",
+    "file": "TestGJDate.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.chrono.TestGJDate.xml"
+}

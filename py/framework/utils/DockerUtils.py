@@ -31,14 +31,17 @@ class DockerClient():
             # Not exist -> Create
             self.client.volumes.create(name=name, driver="local")
 
-    def initContainer(self, docker_image, container_name, workdir="/", volumes={}, env={}):
+    def initContainer(self, docker_image, container_name, workdir="/", volumes={}, env={}, reuse=False):
+
+        if reuse and self.container_exist(container_name):
+            return
+
         container = self.client.containers.run(docker_image,"tail -f /dev/null",
                 name=container_name, 
                 detach=True,
                 volumes=volumes,
                 volumes_from=[os.environ['HOSTNAME']],
                 working_dir=workdir,
-                #user=1000,
                 auto_remove=True,
                 environment=env
             )

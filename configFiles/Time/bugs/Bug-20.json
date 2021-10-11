@@ -1,0 +1,14 @@
+{
+    "id": "20",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/126",
+    "fix_commit": "a92450e88df85d6b7a0fa53517da46286c24f53f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.format.TestDateTimeFormatterBuilder#test_printParseZoneDawsonCreek test",
+    "folder": "src/test/java/org/joda/time/format/",
+    "file": "TestDateTimeFormatterBuilder.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.format.TestDateTimeFormatterBuilder.xml"
+}

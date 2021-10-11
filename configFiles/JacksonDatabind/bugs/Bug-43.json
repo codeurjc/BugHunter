@@ -1,0 +1,14 @@
+{
+    "id": "43",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/pull/1150",
+    "fix_commit": "a290f09c4ba55b7724375099f5cf0cd0a9b48011",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.objectid.TestObjectIdSerialization#testNullStringPropertyId test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/objectid/",
+    "file": "TestObjectIdSerialization.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.objectid.TestObjectIdSerialization.xml"
+}

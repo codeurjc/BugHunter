@@ -12,7 +12,8 @@ from framework.utils.GitUtils  import cloneRepository
 class Project():
     
     @autowired
-    def __init__(self, projectName, experimentId, bug, dockerClient: Autowired(DockerClient), processManager:Autowired(ProcessManager)):
+    def __init__(self, projectName, experimentId, bug, 
+                    dockerClient: Autowired(DockerClient), processManager:Autowired(ProcessManager), d4j:Autowired(Defects4J)):
         
         with open('configFiles/{project}/project-config.json'.format(project=projectName)) as f:
             self.projectConfig = json.load(f)
@@ -25,12 +26,12 @@ class Project():
         self.pm = processManager
         self.dockerImage = self.projectConfig['docker_image']
         self.dockerClient = dockerClient
+        self.d4j = d4j
 
     def clone(self):
         if not os.path.isdir(self.path):
             if self.repository == "D4J":
-                d4j = Defects4J()
-                d4j.cloneRepository(self.name, self.experimentId)
+                self.d4j.cloneRepository(self.name, self.experimentId)
             else:
                 cloneRepository(self.repository,self.path)
 

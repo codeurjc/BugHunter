@@ -1,0 +1,14 @@
+{
+    "id": "21",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-151",
+    "fix_commit": "99a20785daf2bfc018552e2eabed1067bf225013",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.model.JXPath151Test#testMapValueEquality test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/model/",
+    "file": "JXPath151Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.model.JXPath151Test.xml"
+}

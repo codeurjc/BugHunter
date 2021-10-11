@@ -1,0 +1,14 @@
+{
+    "id": "13",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/pull/246",
+    "fix_commit": "d58d420f116e854bfd7b155cc1aed4e32939e1da",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures#testFieldNameQuotingEnabled test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/json/",
+    "file": "TestJsonGeneratorFeatures.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures.xml"
+}

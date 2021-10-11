@@ -1,0 +1,14 @@
+{
+    "id": "42",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1123",
+    "fix_commit": "2d90441ef0440f3a2f910b210234cb8b709ca727",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.TestJdkTypes#testLocale test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/deser/",
+    "file": "TestJdkTypes.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.TestJdkTypes.xml"
+}

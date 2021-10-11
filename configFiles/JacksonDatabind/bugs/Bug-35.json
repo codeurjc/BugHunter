@@ -1,0 +1,14 @@
+{
+    "id": "35",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1051",
+    "fix_commit": "cecd409aa97693beb87c4e9ca34ea7f734676216",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.jsontype.WrapperObjectWithObjectIdTest#testSimple test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
+    "file": "WrapperObjectWithObjectIdTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.WrapperObjectWithObjectIdTest.xml"
+}

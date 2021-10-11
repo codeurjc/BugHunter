@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-50",
+    "fix_commit": "716c03b3b12ec106974898451b149f6eb79c65da",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.compiler.ExtensionFunctionTest#testNodeSetReturn test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/compiler/",
+    "file": "ExtensionFunctionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.compiler.ExtensionFunctionTest.xml"
+}

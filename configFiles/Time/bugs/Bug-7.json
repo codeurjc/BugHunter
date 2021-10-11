@@ -1,0 +1,14 @@
+{
+    "id": "7",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/21",
+    "fix_commit": "1adb1e69863dcd1ff282692bf1452c422528eeb9",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.format.TestDateTimeFormatter#testParseInto_monthDay_feb29_newYork_startOfYear test",
+    "folder": "src/test/java/org/joda/time/format/",
+    "file": "TestDateTimeFormatter.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.format.TestDateTimeFormatter.xml"
+}

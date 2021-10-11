@@ -1,0 +1,14 @@
+{
+    "id": "53",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1215",
+    "fix_commit": "75a0953bcf6275a486243a67e91774c8d5ffb6ca",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.jsontype.TypeRefinementForMap1215Test#testMapRefinement test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
+    "file": "TypeRefinementForMap1215Test.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TypeRefinementForMap1215Test.xml"
+}

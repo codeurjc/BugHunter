@@ -1,0 +1,14 @@
+{
+    "id": "20",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/issues/318",
+    "fix_commit": "fa64390b1bd5f1435daa9d2b17a58594cfb22817",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.base64.Base64GenerationTest#testBinaryAsEmbeddedObject test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/base64/",
+    "file": "Base64GenerationTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.base64.Base64GenerationTest.xml"
+}

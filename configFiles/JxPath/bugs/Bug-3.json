@@ -1,0 +1,14 @@
+{
+    "id": "3",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-68",
+    "fix_commit": "984778f3c264df5d608eb9697df2a268122ac66f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.model.beans.BadlyImplementedFactoryTest#testBadFactoryImplementation test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/model/beans/",
+    "file": "BadlyImplementedFactoryTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.model.beans.BadlyImplementedFactoryTest.xml"
+}

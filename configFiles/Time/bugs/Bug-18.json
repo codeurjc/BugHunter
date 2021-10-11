@@ -1,0 +1,14 @@
+{
+    "id": "18",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/130",
+    "fix_commit": "b609d7d66d180f2eb537b27f5d605d0596e096ce",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.chrono.TestGJChronology#testLeapYearRulesConstruction test",
+    "folder": "src/test/java/org/joda/time/chrono/",
+    "file": "TestGJChronology.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.chrono.TestGJChronology.xml"
+}

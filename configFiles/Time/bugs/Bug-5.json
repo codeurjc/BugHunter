@@ -1,0 +1,14 @@
+{
+    "id": "5",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/79",
+    "fix_commit": "a6cb59ed2280ab0a32995fa8b5f1a7b0d47cb815",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestPeriod_Basics#testNormalizedStandard_periodType_months1 test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestPeriod_Basics.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPeriod_Basics.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "83",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1629",
+    "fix_commit": "9a083ad56b20711eab368a7818fb079a870feb93",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.filter.ProblemHandlerTest#testWeirdStringHandling test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/filter/",
+    "file": "ProblemHandlerTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.filter.ProblemHandlerTest.xml"
+}

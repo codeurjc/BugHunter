@@ -1,0 +1,14 @@
+{
+    "id": "108",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/2211",
+    "fix_commit": "e797b2271ab9a00b99694a963728f3835f31d1cf",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.node.EmptyContentAsTreeTest#testNullFromEOFWithParserAndReader test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/node/",
+    "file": "EmptyContentAsTreeTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.node.EmptyContentAsTreeTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "3",
+    "project": "JacksonXml",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-dataformat-xml/issues/204",
+    "fix_commit": "79a4b57f2bbe08ce46e6dabb0a8b76f4a787141c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.dataformat.xml.stream.XmlParserNextXxxTest#testXmlAttributesWithNextTextValue test",
+    "folder": "src/test/java/com/fasterxml/jackson/dataformat/xml/stream/",
+    "file": "XmlParserNextXxxTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.dataformat.xml.stream.XmlParserNextXxxTest.xml"
+}

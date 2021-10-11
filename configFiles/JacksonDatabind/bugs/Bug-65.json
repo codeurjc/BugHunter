@@ -1,0 +1,14 @@
+{
+    "id": "65",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1429",
+    "fix_commit": "9a666887d85349b35e0d80885a7c7cb38029467d",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.KeyDeser1429Test#testDeserializeKeyViaFactory test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/deser/",
+    "file": "KeyDeser1429Test.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.KeyDeser1429Test.xml"
+}

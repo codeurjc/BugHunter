@@ -1,0 +1,14 @@
+{
+    "id": "18",
+    "project": "JacksonCore",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-core/issues/315",
+    "fix_commit": "96642978dcf1b69cba68ec72cb2f652d59a8b5be",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures#testTooBigBigDecimal test",
+    "folder": "src/test/java/com/fasterxml/jackson/core/json/",
+    "file": "TestJsonGeneratorFeatures.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures.xml"
+}

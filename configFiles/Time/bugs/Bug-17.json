@@ -1,0 +1,14 @@
+{
+    "id": "17",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/141",
+    "fix_commit": "a8913f5ad5dfde59263c981c9e9eb28e43fd2e00",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZoneCutover#testBug3476684_adjustOffset test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestDateTimeZoneCutover.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZoneCutover.xml"
+}

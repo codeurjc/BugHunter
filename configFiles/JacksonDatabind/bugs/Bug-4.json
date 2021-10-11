@@ -1,0 +1,14 @@
+{
+    "id": "4",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/506",
+    "fix_commit": "9e080e298d8c0cfd7d77a56eb93d85a5da322555",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.TestCollectionDeserialization#testArrayIndexForExceptions test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/deser/",
+    "file": "TestCollectionDeserialization.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.TestCollectionDeserialization.xml"
+}

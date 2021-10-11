@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-97",
+    "fix_commit": "52d73022820d163104c6419f25ca955f86464f63",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.model.dom.DOMModelTest#testNamespaceMapping test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/model/dom/",
+    "file": "DOMModelTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.model.dom.DOMModelTest.xml"
+}

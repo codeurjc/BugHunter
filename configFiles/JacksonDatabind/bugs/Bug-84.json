@@ -1,0 +1,14 @@
+{
+    "id": "84",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1647",
+    "fix_commit": "1a0326fbc31d3d9f1e5145dc71b937820142d111",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.type.TestTypeFactoryWithRecursiveTypes#testBasePropertiesIncludedWhenSerializingSubWhenSubTypeLoadedAfterBaseType test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/type/",
+    "file": "TestTypeFactoryWithRecursiveTypes.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.type.TestTypeFactoryWithRecursiveTypes.xml"
+}

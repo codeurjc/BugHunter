@@ -1,0 +1,14 @@
+{
+    "id": "87",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1657",
+    "fix_commit": "5a0ce57b5d3a6d30420267b56b3d2282c76df581",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.TestDateDeserialization#testDateUtilISO8601NoTimezoneNonDefault test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/deser/",
+    "file": "TestDateDeserialization.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.TestDateDeserialization.xml"
+}

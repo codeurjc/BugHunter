@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/93",
+    "fix_commit": "8612f9e5b88c1bea933ef9ab1e431f5db3006b48",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestPartial_Basics#testWith_baseAndArgHaveNoRange test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestPartial_Basics.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPartial_Basics.xml"
+}

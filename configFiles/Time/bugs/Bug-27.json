@@ -1,0 +1,14 @@
+{
+    "id": "27",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/64",
+    "fix_commit": "e0559c503f65641b9546c37e7c84c866caf37e66",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.format.TestPeriodFormatterBuilder#testBug2495455 test",
+    "folder": "src/test/java/org/joda/time/format/",
+    "file": "TestPeriodFormatterBuilder.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.format.TestPeriodFormatterBuilder.xml"
+}

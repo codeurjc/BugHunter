@@ -1,0 +1,14 @@
+{
+    "id": "73",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/935",
+    "fix_commit": "4d34006e4d8a566c6c64a3a0e04c17e50d63bb82",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.ReadOrWriteOnlyTest#testReadOnlyAndWriteOnly test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/deser/",
+    "file": "ReadOrWriteOnlyTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.ReadOrWriteOnlyTest.xml"
+}

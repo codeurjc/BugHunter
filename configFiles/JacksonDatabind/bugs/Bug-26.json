@@ -1,0 +1,14 @@
+{
+    "id": "26",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/899",
+    "fix_commit": "2ea6e402d4cf86c3f7e9a16e667a40bab61cf11c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.TestJDKSerialization#testEnumHandlers test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/",
+    "file": "TestJDKSerialization.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.TestJDKSerialization.xml"
+}

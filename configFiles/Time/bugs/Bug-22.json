@@ -1,0 +1,14 @@
+{
+    "id": "22",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/113",
+    "fix_commit": "57c8aaf94b95323c295dcfec5f40f181846164e7",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestDuration_Basics#testToPeriod_fixedZone test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestDuration_Basics.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDuration_Basics.xml"
+}

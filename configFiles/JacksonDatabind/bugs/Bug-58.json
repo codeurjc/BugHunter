@@ -1,0 +1,14 @@
+{
+    "id": "58",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/877",
+    "fix_commit": "b2ccdee0fdc52cd46577a90cb50dc011d6d681bf",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.misc.AccessFixTest#testCauseOfThrowableIgnoral test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/misc/",
+    "file": "AccessFixTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.misc.AccessFixTest.xml"
+}

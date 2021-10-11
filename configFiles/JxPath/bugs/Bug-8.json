@@ -1,0 +1,14 @@
+{
+    "id": "8",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-95",
+    "fix_commit": "1befe1b93eec887971e729b89dd4d900319a06b0",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.compiler.CoreOperationTest#testNan test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/compiler/",
+    "file": "CoreOperationTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.compiler.CoreOperationTest.xml"
+}

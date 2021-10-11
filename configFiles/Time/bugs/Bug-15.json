@@ -1,0 +1,14 @@
+{
+    "id": "15",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/147",
+    "fix_commit": "0cefc4c212e92e5dccdfa658785c419483317558",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.field.TestFieldUtils#testSafeMultiplyLongInt test",
+    "folder": "src/test/java/org/joda/time/field/",
+    "file": "TestFieldUtils.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.field.TestFieldUtils.xml"
+}

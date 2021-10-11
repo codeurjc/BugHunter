@@ -1,0 +1,14 @@
+{
+    "id": "74",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1533",
+    "fix_commit": "10d5ab37f06f7925bf959312bfb6211f5bc4a1cb",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.jsontype.TestPolymorphicWithDefaultImpl#testWithEmptyStringAsNullObject1533 test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
+    "file": "TestPolymorphicWithDefaultImpl.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TestPolymorphicWithDefaultImpl.xml"
+}

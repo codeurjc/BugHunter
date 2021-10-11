@@ -6,6 +6,7 @@ warnings.filterwarnings("ignore")
 
 import sys
 import json
+import os
 from injectable import load_injection_container
 class RegressionSeeker():
 
@@ -54,7 +55,7 @@ class RegressionSeeker():
         
         created = createDirIfNotExist(commitResultsPath)
 
-        if not created:
+        if os.path.exists(commitResultsPath+"result.json"):
             self.experiment.log("Commit already checked", log_prefix=commit['hash'][0:17])
             return        
 

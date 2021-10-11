@@ -38,7 +38,7 @@ class Experiment():
 
         self.dockerClient = dockerClient
 
-        self.dockerClient.createVolumeIfNotExist(self.id)
+        #self.dockerClient.createVolumeIfNotExist(self.id)
 
     def initProjectContainer(self):
         m2_path=os.getcwd()+"/"+self.bug_folder+"libs/"

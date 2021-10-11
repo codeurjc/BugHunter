@@ -1,0 +1,14 @@
+{
+    "id": "22",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-154",
+    "fix_commit": "afa2deca94436837e785b89362cfaaf84a8ca1bd",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.model.JXPath154Test#testInnerEmptyNamespaceDOM test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/model/",
+    "file": "JXPath154Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.model.JXPath154Test.xml"
+}

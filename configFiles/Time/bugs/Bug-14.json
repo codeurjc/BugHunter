@@ -1,0 +1,14 @@
+{
+    "id": "14",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/151",
+    "fix_commit": "2ea856328ed5710537778d755a5ff52a6831a2ee",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestMonthDay_Basics#testPlusMonths_int_negativeFromLeap test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestMonthDay_Basics.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestMonthDay_Basics.xml"
+}

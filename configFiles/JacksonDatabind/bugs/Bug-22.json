@@ -1,0 +1,14 @@
+{
+    "id": "22",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/848",
+    "fix_commit": "a92e2be0ccbe6732e1fef39bf48b0f9dcc559fd6",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.ser.TestJsonValue#testJsonValueWithCustomOverride test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/ser/",
+    "file": "TestJsonValue.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.ser.TestJsonValue.xml"
+}

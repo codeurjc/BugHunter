@@ -1,0 +1,14 @@
+{
+    "id": "12",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/8",
+    "fix_commit": "77a6b3a44da7ae4af62e88b4b27eeefec2d768c2",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestLocalDateTime_Constructors#testFactory_fromDateFields_beforeYearZero1 test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestLocalDateTime_Constructors.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestLocalDateTime_Constructors.xml"
+}

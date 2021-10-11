@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/467",
+    "fix_commit": "9c5fec2302237ede0e797c13c0663a6bb52c798c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.node.TestConversions#testConversionOfPojos test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/node/",
+    "file": "TestConversions.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.node.TestConversions.xml"
+}

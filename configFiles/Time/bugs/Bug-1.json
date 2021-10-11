@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/93",
+    "fix_commit": "9a62b06be5d0df8e833ff8583398cca386608cac",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestPartial_Constructors#testConstructorEx7_TypeArray_intArray test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestPartial_Constructors.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPartial_Constructors.xml"
+}

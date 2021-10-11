@@ -1,18 +1,19 @@
 from framework.utils.DockerUtils import DockerClient
-from injectable import Autowired, autowired
+from injectable import Autowired, autowired, injectable
 import csv
 import json
 import re
 import os
 import sys
 
+@injectable(singleton=True)
 class Defects4J():
 
     @autowired
     def __init__(self, dockerClient: Autowired(DockerClient)):
         self.dockerClient = dockerClient
         self.container_name = "d4j-container"
-        self.dockerClient.initContainer(self, "defects4j:2.0.0", "d4j-container")
+        self.dockerClient.initContainer("defects4j:2.0.0", "d4j-container", reuse=True)
 
     def cloneRepository(self, projectName, experimentId):
         projectFolder = "/home/regseek/workdir/projects/{experimentId}".format(experimentId= experimentId)
@@ -70,18 +71,3 @@ class Defects4J():
         
         with open('configFiles/%s/bugs/Bug-%s.json' % (projectConfig['project'], bug['bug.id']), 'w+') as fp:
             json.dump(configFile, fp, indent=4)
-
-
-if __name__ == "__main__":
-
-    if len(sys.argv) < 2:
-        print("Use: python py/Defects4J.py <d4j_project_name>")
-        exit()
-
-    with open('configFiles/{project}/project-config.json'.format(project=sys.argv[1])) as f:
-        projectConfig = json.load(f)
-
-    d4j = Defects4J()
-    #d4j.cloneRepository(projectConfig['project'], projectConfig['project']+"-EXAMPLE")
-    bug_1 = d4j.getAllBugs(projectConfig['project'])[0]
-    d4j.generateBugConfigFile(projectConfig, bug_1)

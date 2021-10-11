@@ -1,0 +1,14 @@
+{
+    "id": "38",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1102",
+    "fix_commit": "21a2e4b7d680bf796f07d5d3b6119a3cd3fc356c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test#testExplicitMapType test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/interop/",
+    "file": "DeprecatedTypeHandling1102Test.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test.xml"
+}

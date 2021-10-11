@@ -1,0 +1,14 @@
+{
+    "id": "12",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-97",
+    "fix_commit": "d52074012200f55cbd3635591b914e2c1b19674f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.jxpath.ri.model.ExternalXMLNamespaceTest#testElementDOM test",
+    "folder": "src/test/java/org/apache/commons/jxpath/ri/model/",
+    "file": "ExternalXMLNamespaceTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.model.ExternalXMLNamespaceTest.xml"
+}

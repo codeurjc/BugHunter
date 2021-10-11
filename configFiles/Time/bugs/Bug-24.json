@@ -1,0 +1,14 @@
+{
+    "id": "24",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://sourceforge.net/p/joda-time/bugs/107",
+    "fix_commit": "d50efdf75a8daeced88d79b168f68d189fb87e13",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.format.TestDateTimeFormatter#testParseLocalDate_weekyear_month_week_2010 test",
+    "folder": "src/test/java/org/joda/time/format/",
+    "file": "TestDateTimeFormatter.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.format.TestDateTimeFormatter.xml"
+}

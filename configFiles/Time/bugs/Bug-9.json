@@ -1,0 +1,14 @@
+{
+    "id": "9",
+    "project": "Time",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/JodaOrg/joda-time/issues/43",
+    "fix_commit": "96f586cb8dac7eee62e9be519a3eab125c47bb23",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZone#testForOffsetHoursMinutes_int_int test",
+    "folder": "src/test/java/org/joda/time/",
+    "file": "TestDateTimeZone.java",
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZone.xml"
+}

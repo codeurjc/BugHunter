@@ -1,0 +1,14 @@
+{
+    "id": "102",
+    "project": "JacksonDatabind",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/FasterXML/jackson-databind/issues/2064",
+    "fix_commit": "323cd0b309697021f1883de1e53038d2d09fc160",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.ser.jdk.SqlDateSerializationTest#testSqlDateConfigOverride test",
+    "folder": "src/test/java/com/fasterxml/jackson/databind/ser/jdk/",
+    "file": "SqlDateSerializationTest.java",
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.ser.jdk.SqlDateSerializationTest.xml"
+}
