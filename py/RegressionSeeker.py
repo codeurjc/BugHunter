@@ -1,8 +1,9 @@
-from GitUtils import GitManager
-from utils import createDirIfNotExist
-from structure import Bug, Project, Experiment
+from framework.utils.GitUtils import GitManager
+from framework.Experiment import Experiment
+from framework.utils.utils import createDirIfNotExist
+import warnings
+warnings.filterwarnings("ignore")
 
-import os
 import sys
 import json
 from injectable import load_injection_container

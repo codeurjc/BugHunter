@@ -1,4 +1,4 @@
-from DockerUtils import DockerClient
+from framework.utils.DockerUtils import DockerClient
 from injectable import Autowired, autowired
 import csv
 import json

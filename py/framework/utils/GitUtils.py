@@ -1,6 +1,6 @@
-import git
 import os
 import csv
+import git
 
 DELIMITER="|=|"
 

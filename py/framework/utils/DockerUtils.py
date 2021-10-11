@@ -1,11 +1,6 @@
-# import subprocess
-# import re
 import os
-# import sys
 import docker
-import getpass
 from injectable import injectable
-from utils import replaceInFile
 
 DEFAULT_TIMEOUT=1200
 
