@@ -9,6 +9,7 @@ from GitUtils import GitManager, cloneRepository
 from utils import createDirIfNotExist
 from ProcessUtils import ProcessManager
 from DockerUtils import DockerClient
+from utils import replaceInFile
 
 class Experiment():
 
@@ -37,6 +38,21 @@ class Experiment():
         self.pm.setNewOutput(general_logs_folder+"Bug_"+bugId+"_"+date+".log", "REGRESSION SEEKER")
 
         self.dockerClient = dockerClient
+
+        self.dockerClient.createVolumeIfNotExist(self.id)
+
+    def initProjectContainer(self):
+        m2_path=os.getcwd()+"/"+self.bug_folder+"libs/"
+        
+        env = {
+            "M2_FOLDER": m2_path
+        }
+        self.dockerClient.initContainer(
+            self.project.dockerImage, 
+            self.id, 
+            workdir=self.project.path,
+            env=env
+        )
     
     def saveRegressionTest(self):
         shutil.copyfile(self.project.path+self.bug.testPath, self.bug_folder + self.bug.testFile)
@@ -67,6 +83,7 @@ class Project():
         self.repository = self.projectConfig['git_url']
         self.path = "{cwd}/projects/{experimentId}/".format(cwd=os.getcwd(), experimentId=self.experimentId)
         self.pm = processManager
+        self.dockerImage = self.projectConfig['docker_image']
         self.dockerClient = dockerClient
 
     def clone(self):
@@ -90,12 +107,7 @@ class Project():
 
     def executeOnCommit(self, cmd, log_path):
     
-        exit_code, log = self.dockerClient.execute(
-            self.projectConfig['docker_image'], 
-            self.experimentId, 
-            cmd, 
-            workdir=self.path
-        )
+        exit_code, log = self.dockerClient.execute(self.experimentId, cmd+" -Duser.home=$M2_FOLDER")
 
         with open(log_path, "wb+") as out:
             out.write(log)

@@ -30,6 +30,7 @@ class RegressionSeeker():
         # 0) GET REGRESSION TEST
         self.gitManager.change_commit(fix_commit['hash'])
         self.experiment.saveRegressionTest()
+        self.experiment.initProjectContainer()
 
         # 1) CHECK FIX COMMIT
         self.experiment.log("Checking FIX COMMIT: %s"%fix_commit['hash'])

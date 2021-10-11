@@ -12,15 +12,16 @@ class Defects4J():
     def __init__(self, dockerClient: Autowired(DockerClient)):
         self.dockerClient = dockerClient
         self.container_name = "d4j-container"
+        self.dockerClient.initContainer(self, "defects4j:2.0.0", "d4j-container")
 
     def cloneRepository(self, projectName, experimentId):
         projectFolder = "/home/regseek/workdir/projects/{experimentId}".format(experimentId= experimentId)
         cmd = "defects4j checkout -p {projectName} -v 1b -w {projectFolder} && chmod -R 777 {projectFolder}".format(projectName=projectName, projectFolder=projectFolder)
-        return self.dockerClient.execute("defects4j:2.0.0", self.container_name, cmd)
+        return self.dockerClient.execute(self.container_name, cmd)
 
     def getAllBugs(self, projectName):
         cmd = "cat /defects4j/framework/projects/{projectName}/active-bugs.csv".format(projectName=projectName)
-        exit_code, container_output = self.dockerClient.execute("defects4j:2.0.0", self.container_name, cmd)
+        exit_code, container_output = self.dockerClient.execute(self.container_name, cmd)
 
         lines = container_output.decode("utf-8") .splitlines()
         reader = csv.reader(lines)
@@ -31,7 +32,7 @@ class Defects4J():
 
     def generateBugConfigFile(self, projectConfig, bug):
         cmd = "defects4j info -p {projectName} -b {bugId}".format(projectName=projectConfig['project'], bugId=bug['bug.id'])
-        exit_code, container_output = self.dockerClient.execute("defects4j:2.0.0", self.container_name, cmd)
+        exit_code, container_output = self.dockerClient.execute(self.container_name, cmd)
         
         text = container_output.decode("utf-8") 
 
