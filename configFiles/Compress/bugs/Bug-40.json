@@ -1,0 +1,14 @@
+{
+    "id": "40",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-363",
+    "fix_commit": "52dd5908e374973d69c51856b74d4d93d591c90a",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.utils.BitInputStreamTest#littleEndianWithOverflow test",
+    "folder": "src/test/java/org/apache/commons/compress/utils/",
+    "file": "BitInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.utils.BitInputStreamTest.xml"
+}

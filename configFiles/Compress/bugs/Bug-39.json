@@ -1,0 +1,14 @@
+{
+    "id": "39",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-351",
+    "fix_commit": "11840dfde044fec90b0cb4a715ce9d213acea3ca",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.ArchiveUtilsTest#sanitizeShortensString test",
+    "folder": "src/test/java/org/apache/commons/compress/",
+    "file": "ArchiveUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.ArchiveUtilsTest.xml"
+}

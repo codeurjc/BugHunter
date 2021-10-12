@@ -1,0 +1,14 @@
+{
+    "id": "30",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-309",
+    "fix_commit": "5cf68bdc46c7bcc0fc5eb3cacd1c84514ef552cf",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamTest#readOfLength0ShouldReturn0 test",
+    "folder": "src/test/java/org/apache/commons/compress/compressors/bzip2/",
+    "file": "BZip2CompressorInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStreamTest.xml"
+}

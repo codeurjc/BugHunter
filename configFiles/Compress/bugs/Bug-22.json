@@ -1,0 +1,14 @@
+{
+    "id": "22",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-253",
+    "fix_commit": "71e4eeadcfc5eb390eca1142fc1f6ee5b1b4d5c1",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.compressors.bzip2.PythonTruncatedBzip2Test#testPartialReadTruncatedData test",
+    "folder": "src/test/java/org/apache/commons/compress/compressors/bzip2/",
+    "file": "PythonTruncatedBzip2Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.compressors.bzip2.PythonTruncatedBzip2Test.xml"
+}

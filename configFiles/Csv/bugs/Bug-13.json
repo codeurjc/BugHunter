@@ -1,0 +1,14 @@
+{
+    "id": "13",
+    "project": "Csv",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/CSV-168",
+    "fix_commit": "f8b80e83417c3c7eeed1282118f64fa0e85c4787",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.csv.CSVPrinterTest#testMySqlNullOutput test",
+    "folder": "src/test/java/org/apache/commons/csv/",
+    "file": "CSVPrinterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVPrinterTest.xml"
+}

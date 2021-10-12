@@ -1,0 +1,14 @@
+{
+    "id": "45",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-411",
+    "fix_commit": "02735ad7e6313515a846bc15bcc89cf254f8161f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarUtilsTest#testRoundTripOctalOrBinary8 test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
+    "file": "TarUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarUtilsTest.xml"
+}

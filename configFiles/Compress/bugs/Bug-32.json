@@ -1,0 +1,14 @@
+{
+    "id": "32",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-314",
+    "fix_commit": "3c4a09bf28e7cd600b919b8c799fbbfd19a94c0b",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarArchiveInputStreamTest#shouldReadBigGid test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
+    "file": "TarArchiveInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarArchiveInputStreamTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "27",
+    "project": "Collections",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COLLECTIONS-580",
+    "fix_commit": "3eee44cf63b1ebb0da6925e98b3dcc6ef1e4d610",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.collections4.map.MultiValueMapTest#testUnsafeDeSerialization test",
+    "folder": "src/test/java/org/apache/commons/collections4/map/",
+    "file": "MultiValueMapTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.collections4.map.MultiValueMapTest.xml"
+}

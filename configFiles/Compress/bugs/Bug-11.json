@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-171",
+    "fix_commit": "a933173f486614073b68b6c0a6ef09a9c72c94fc",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.ArchiveStreamFactoryTest#shortTextFilesAreNoTARs test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/",
+    "file": "ArchiveStreamFactoryTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.ArchiveStreamFactoryTest.xml"
+}

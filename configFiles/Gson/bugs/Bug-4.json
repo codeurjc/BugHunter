@@ -1,0 +1,14 @@
+{
+    "id": "4",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/pull/773",
+    "fix_commit": "af68d70cd55826fa7149effd7397d64667ca264c",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.stream.JsonReaderTest#testTopLevelValueTypeWithSkipValue test",
+    "folder": "gson/src/test/java/com/google/gson/stream/",
+    "file": "JsonReaderTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.stream.JsonReaderTest.xml"
+}

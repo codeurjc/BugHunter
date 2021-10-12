@@ -1,0 +1,14 @@
+{
+    "id": "7",
+    "project": "Csv",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/CSV-112",
+    "fix_commit": "ce4e72701b1ad4caabc3bd668bd058fff082f2b6",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.csv.CSVParserTest#testDuplicateHeaderEntries test",
+    "folder": "src/test/java/org/apache/commons/csv/",
+    "file": "CSVParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVParserTest.xml"
+}

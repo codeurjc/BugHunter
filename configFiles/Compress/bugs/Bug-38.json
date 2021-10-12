@@ -1,0 +1,14 @@
+{
+    "id": "38",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-356",
+    "fix_commit": "823cdee9b18508e9e51913d110a20a406f55582b",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarArchiveInputStreamTest#survivesPaxHeaderWithNameEndingInSlash test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
+    "file": "TarArchiveInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarArchiveInputStreamTest.xml"
+}

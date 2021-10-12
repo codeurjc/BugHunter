@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/pull/964",
+    "fix_commit": "44cad04a639b3a53f4205f93acda37b3f7d10871",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.functional.PrimitiveTest#testNumberAsStringDeserialization test",
+    "folder": "gson/src/test/java/com/google/gson/functional/",
+    "file": "PrimitiveTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.functional.PrimitiveTest.xml"
+}

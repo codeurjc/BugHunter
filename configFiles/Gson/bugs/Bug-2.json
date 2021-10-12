@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/pull/719",
+    "fix_commit": "fe101c10bc3597d8e715a31d94d2cc0cc54b660f",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.functional.DefaultTypeAdaptersTest#testJsonElementTypeMismatch test",
+    "folder": "gson/src/test/java/com/google/gson/functional/",
+    "file": "DefaultTypeAdaptersTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.functional.DefaultTypeAdaptersTest.xml"
+}

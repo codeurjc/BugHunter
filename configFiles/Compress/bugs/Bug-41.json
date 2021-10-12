@@ -1,0 +1,14 @@
+{
+    "id": "41",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-367",
+    "fix_commit": "f015344879f1bc3505bc616fc7ae517cf9f60838",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.ZipTestCase#testListAllFilesWithNestedArchive test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/",
+    "file": "ZipTestCase.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.ZipTestCase.xml"
+}

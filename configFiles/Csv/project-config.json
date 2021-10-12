@@ -1,0 +1,10 @@
+{
+    "project": "Csv",
+    "docker_image": "maven:3-jdk-8-slim",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=%s test",
+    "test_path": "src/test/java/%s.java",
+    "report_path": "target/surefire-reports/TEST-%s.xml",
+    "git_url": "D4J"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "6",
+    "project": "Csv",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/CSV-111",
+    "fix_commit": "9f03b06a1ec8cb2cb64aec6068d2a6c1f663fbc9",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.csv.CSVRecordTest#testToMapWithShortRecord test",
+    "folder": "src/test/java/org/apache/commons/csv/",
+    "file": "CSVRecordTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVRecordTest.xml"
+}

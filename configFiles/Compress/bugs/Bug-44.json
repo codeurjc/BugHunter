@@ -1,0 +1,14 @@
+{
+    "id": "44",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-412",
+    "fix_commit": "6f379134ae1807cd404ed6c9579707e5dc6a6df0",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.utils.ChecksumCalculatingInputStreamTest#testClassInstantiationWithParameterBeingNullThrowsNullPointerExceptionOne test",
+    "folder": "src/test/java/org/apache/commons/compress/utils/",
+    "file": "ChecksumCalculatingInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.utils.ChecksumCalculatingInputStreamTest.xml"
+}

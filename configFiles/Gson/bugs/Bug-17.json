@@ -1,0 +1,14 @@
+{
+    "id": "17",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/pull/1100",
+    "fix_commit": "7a9fd5962dce7f277efa15fcc996606be0733bac",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.DefaultDateTypeAdapterTest#testUnexpectedToken test",
+    "folder": "gson/src/test/java/com/google/gson/",
+    "file": "DefaultDateTypeAdapterTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.DefaultDateTypeAdapterTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "15",
+    "project": "Csv",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/CSV-219",
+    "fix_commit": "8b3de71fd99d0fa07cb6a3a35b583bbb170aab66",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.csv.CSVPrinterTest#testDontQuoteEuroFirstChar test",
+    "folder": "src/test/java/org/apache/commons/csv/",
+    "file": "CSVPrinterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVPrinterTest.xml"
+}

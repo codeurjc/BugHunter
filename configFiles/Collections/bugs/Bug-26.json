@@ -1,0 +1,14 @@
+{
+    "id": "26",
+    "project": "Collections",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COLLECTIONS-576",
+    "fix_commit": "f8bd75d37ca12c5d49c1b628c33c0b45e2d082eb",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.collections4.keyvalue.MultiKeyTest#testEqualsAfterSerializationOfDerivedClass test",
+    "folder": "src/test/java/org/apache/commons/collections4/keyvalue/",
+    "file": "MultiKeyTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.collections4.keyvalue.MultiKeyTest.xml"
+}

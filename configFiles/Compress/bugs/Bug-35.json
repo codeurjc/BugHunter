@@ -1,0 +1,14 @@
+{
+    "id": "35",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-335",
+    "fix_commit": "7250daa429020181bb5a4c40d1aaa169631b8496",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.DetectArchiverTestCase#testCOMPRESS335 test",
+    "folder": "src/test/java/org/apache/commons/compress/",
+    "file": "DetectArchiverTestCase.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.DetectArchiverTestCase.xml"
+}

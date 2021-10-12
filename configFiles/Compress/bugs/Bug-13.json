@@ -1,0 +1,14 @@
+{
+    "id": "13",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-176",
+    "fix_commit": "c75c10faae27781aeb51713f42153cad1fd242a4",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest#winzipBackSlashWorkaround test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
+    "file": "ZipArchiveInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest.xml"
+}

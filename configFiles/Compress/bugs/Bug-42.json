@@ -1,0 +1,14 @@
+{
+    "id": "42",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-379",
+    "fix_commit": "c59fc43c527610ae18d7596eb191817ce674cb29",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest#isUnixSymlinkIsFalseIfMoreThanOneFlagIsSet test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
+    "file": "ZipArchiveEntryTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest.xml"
+}

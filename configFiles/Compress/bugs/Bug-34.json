@@ -1,0 +1,14 @@
+{
+    "id": "34",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-321",
+    "fix_commit": "e6e24766377e705e89358fb9cf6253e2e9e645db",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.X7875_NewUnixTest#testParseReparse test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
+    "file": "X7875_NewUnixTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.X7875_NewUnixTest.xml"
+}

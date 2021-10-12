@@ -1,0 +1,14 @@
+{
+    "id": "3",
+    "project": "Csv",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/CSV-58",
+    "fix_commit": "2c6120826245f89fedf2f936ab4a0c3edd8717f3",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.csv.CSVLexerTest#testEscapedMySqlNullValue test",
+    "folder": "src/test/java/org/apache/commons/csv/",
+    "file": "CSVLexerTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVLexerTest.xml"
+}

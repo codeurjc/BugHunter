@@ -1,0 +1,14 @@
+{
+    "id": "25",
+    "project": "Collections",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COLLECTIONS-566",
+    "fix_commit": "73d69dfe8677210e44049bc1a2a7d1ff85bc1ca7",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.collections4.IteratorUtilsTest#testCollatedIterator test",
+    "folder": "src/test/java/org/apache/commons/collections4/",
+    "file": "IteratorUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.collections4.IteratorUtilsTest.xml"
+}

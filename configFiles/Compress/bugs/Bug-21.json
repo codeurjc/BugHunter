@@ -1,0 +1,14 @@
+{
+    "id": "21",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-252",
+    "fix_commit": "5c2d32b322fa797cf428b35c4c5998173d6403d5",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.sevenz.SevenZOutputFileTest#testSevenEmptyFiles test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/sevenz/",
+    "file": "SevenZOutputFileTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.sevenz.SevenZOutputFileTest.xml"
+}

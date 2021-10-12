@@ -1,0 +1,14 @@
+{
+    "id": "28",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-279",
+    "fix_commit": "ddb5fd6d8e4d5fa9f7fa659c93fb6eb04f238689",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarArchiveInputStreamTest#shouldThrowAnExceptionOnTruncatedEntries test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
+    "file": "TarArchiveInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarArchiveInputStreamTest.xml"
+}

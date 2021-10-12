@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-11",
+    "fix_commit": "d09177b98f4e956c1d366110f73c3341ea110bee",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.ArTestCase#testArDelete test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/",
+    "file": "ArTestCase.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.ArTestCase.xml"
+}

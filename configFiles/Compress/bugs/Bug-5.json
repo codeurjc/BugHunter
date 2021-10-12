@@ -1,0 +1,14 @@
+{
+    "id": "5",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-87",
+    "fix_commit": "dc3fc4703211876fb38cccf55adc92ee5cbc28d0",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.Maven221MultiVolumeTest#testRead7ZipMultiVolumeArchiveForStream test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
+    "file": "Maven221MultiVolumeTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.Maven221MultiVolumeTest.xml"
+}

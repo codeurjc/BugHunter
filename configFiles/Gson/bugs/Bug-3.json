@@ -1,0 +1,14 @@
+{
+    "id": "3",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/issues/624",
+    "fix_commit": "64107353a37e623ed1f8fecb4422c24212cf6fe1",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.functional.MapTest#testConcurrentMap test",
+    "folder": "gson/src/test/java/com/google/gson/functional/",
+    "file": "MapTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.functional.MapTest.xml"
+}

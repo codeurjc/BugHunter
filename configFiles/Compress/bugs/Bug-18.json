@@ -1,0 +1,14 @@
+{
+    "id": "18",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-203",
+    "fix_commit": "09b8f6d78e18b927491fc299973146fa74fd977f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest#testWriteNonAsciiDirectoryNamePosixMode test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
+    "file": "TarArchiveOutputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest.xml"
+}

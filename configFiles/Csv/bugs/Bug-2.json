@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "Csv",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/CSV-96",
+    "fix_commit": "a0d975933d6fe9eb5f359088de43508c1d3109bf",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.csv.CSVRecordTest#testGetStringInconsistentRecord test",
+    "folder": "src/test/java/org/apache/commons/csv/",
+    "file": "CSVRecordTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVRecordTest.xml"
+}

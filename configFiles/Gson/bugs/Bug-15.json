@@ -1,0 +1,14 @@
+{
+    "id": "15",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/issues/1090",
+    "fix_commit": "ada597e69a78b8b99f79f79493cbf51e16045202",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.stream.JsonWriterTest#testNonFiniteDoublesWhenLenient test",
+    "folder": "gson/src/test/java/com/google/gson/stream/",
+    "file": "JsonWriterTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.stream.JsonWriterTest.xml"
+}

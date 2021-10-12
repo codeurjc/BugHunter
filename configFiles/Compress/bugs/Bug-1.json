@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-28",
+    "fix_commit": "004124ac5dbf5edbf925078652526267468821e7",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.CpioTestCase#testCpioUnarchive test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/",
+    "file": "CpioTestCase.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.CpioTestCase.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "5",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/issues/768",
+    "fix_commit": "8383f5c7fa34ae68323fe2816ef8c1307b5d0f84",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.DefaultDateTypeAdapterTest#testDateDeserializationISO8601 test",
+    "folder": "gson/src/test/java/com/google/gson/",
+    "file": "DefaultDateTypeAdapterTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.DefaultDateTypeAdapterTest.xml"
+}

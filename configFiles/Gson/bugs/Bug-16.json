@@ -1,0 +1,14 @@
+{
+    "id": "16",
+    "project": "Gson",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/google/gson/pull/1128",
+    "fix_commit": "03a72e752ef68269990f984c9fd613cfd59224bc",
+    "build": "cd gson/ && mvn clean compile",
+    "build_test": "cd gson/ && mvn test-compile",
+    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.internal.bind.RecursiveTypesResolveTest#testRecursiveTypeVariablesResolve12 test",
+    "folder": "gson/src/test/java/com/google/gson/internal/bind/",
+    "file": "RecursiveTypesResolveTest.java",
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.internal.bind.RecursiveTypesResolveTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "25",
+    "project": "Compress",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-264",
+    "fix_commit": "aed56110ff582b96aecf7675a9cfe5247ffa3e7d",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest#testReadingOfFirstStoredEntry test",
+    "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
+    "file": "ZipArchiveInputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest.xml"
+}
