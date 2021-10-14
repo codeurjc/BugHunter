@@ -126,3 +126,5 @@ tmp/*
 
 *.png
 #*.zip
+
+analysis/results/**

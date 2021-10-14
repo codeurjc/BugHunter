@@ -1,0 +1,1 @@
+docker run -d -p 9000:8888 -v $PWD:/home/jovyan/work/ regression-seeker-analysis:0.1.0

@@ -22,7 +22,7 @@ class Experiment():
 
         # CREATE RESULTS FOLDER IF NOT EXIST
         project_results_folder = "results/%s" % (projectName)
-        createDirIfNotExist(project_results_folder+"/ExperimentLogsLogs/")
+        createDirIfNotExist(project_results_folder+"/ExperimentLogs/")
 
         # CREATE BUG FOLDER IF NOT EXIST
         self.bug_folder = "results/%s/Bug_%s/" % (projectName, bugId)
@@ -30,7 +30,7 @@ class Experiment():
         createDirIfNotExist(self.commits_folder)
 
         # CREATE PROCESS MANAGER AND GENERAL LOGS FOLDER
-        general_logs_folder = project_results_folder+"/ExperimentLogsLogs/Bug_"+bugId+"/"
+        general_logs_folder = project_results_folder+"/ExperimentLogs/Bug_"+bugId+"/"
         createDirIfNotExist(general_logs_folder)
         date = datetime.now().strftime('%Y%m%d%H%M%S')
         self.pm = processManager

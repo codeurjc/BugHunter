@@ -1,0 +1,4 @@
+junitparser==2.0.0
+dateparser
+pandas
+matplotlib

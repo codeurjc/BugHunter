@@ -103,7 +103,7 @@ class RegressionSeeker():
 if __name__ == "__main__":
     
     if len(sys.argv) < 3:
-        print("Use: python py/ExperimentLogs.py <project_name> <bugId>")
+        print("Use: python py/RegressionSeeker.py <project_name> <bugId>")
         exit()
 
     load_injection_container()
