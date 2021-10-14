@@ -64,5 +64,9 @@ if __name__ == "__main__":
             # "MAVEN_CONFIG": m2_path
     }
     dockerCli.initContainer("maven:3-jdk-8-slim", "example", env=env)
+
+    print(dockerCli.execute("example","cd /tmp/ && mvn clean"))
+
+    dockerCli.shutdownContainers()
     
     # replaceInFile(m2_path+"/settings-docker.xml", "/usr/share/maven/ref/repository", m2_path)

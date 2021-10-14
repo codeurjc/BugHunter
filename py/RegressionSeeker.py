@@ -8,6 +8,7 @@ import sys
 import json
 import os
 from injectable import load_injection_container
+
 class RegressionSeeker():
 
     def __init__(self, projectName, bugId):
@@ -36,29 +37,36 @@ class RegressionSeeker():
 
         # 1) CHECK FIX COMMIT
         self.experiment.log("Checking FIX COMMIT: %s"%fix_commit['hash'])
-        self.checkCommit(fix_commit)
+        fix_result = self.checkCommit(fix_commit)
+        if not fix_result['isTestExecutionSuccess']:
+            self.experiment.log("Test fail on fix commit: Abort experiment")
+            return
         
         # 2) CHECK PREVIOUS COMMIT (ASSERT NO FLAKY TEST)
         self.experiment.log("Checking PREVIOUS COMMIT: %s"%previous_commit['hash'])
-        self.checkCommit(previous_commit)
+        prev_result = self.checkCommit(previous_commit)
+        if prev_result['isTestExecutionSuccess']:
+            self.experiment.log("Test pass on previous commit (flaky test): Abort experiment")
+            return
 
         # 3) CHECK ALL PREVIOUS COMMITS
         self.experiment.log("Checking ALL PREVIOUS COMMITS")
 
         for commit in remain_previous_commits:
-            self.experiment.log("Checking commit %s"%commit['hash'])
+            self.experiment.log("Checking commit {c_id}-{c_hash}".format(c_id=commit['id'], c_hash=commit['hash']))
             self.checkCommit(commit)
 
     def checkCommit(self, commit):
 
         commitResultsPath = "{commitsFolder}/{id}-{hash}/".format(commitsFolder=self.experiment.commits_folder, id=commit['id'], hash=commit['hash'])
         
-        created = createDirIfNotExist(commitResultsPath)
+        createDirIfNotExist(commitResultsPath)
 
         if os.path.exists(commitResultsPath+"result.json"):
             self.experiment.log("Commit already checked", log_prefix=commit['hash'][0:17])
-            return        
-
+            with open(commitResultsPath+"result.json") as f:
+                return json.load(f)     
+        
         # 1) Checkout commit
         self.gitManager.change_commit(commit['hash'])
 
@@ -79,12 +87,14 @@ class RegressionSeeker():
 
         # Save results
         with open(commitResultsPath+"result.json",'w+') as json_file:
-            data = {
+            result = {
                 "isSourceBuildSuccess" : isSourceBuildSuccess,
                 "isTestBuildSuccess" : isTestBuildSuccess,
                 "isTestExecutionSuccess" : isTestExecutionSuccess
             }
-            json.dump(data, json_file, indent=4)
+            json.dump(result, json_file, indent=4)
+        
+        return result
             
     def finish(self, message):
         self.experiment.close(message)

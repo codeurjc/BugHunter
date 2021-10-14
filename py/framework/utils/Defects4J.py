@@ -15,9 +15,10 @@ class Defects4J():
         self.container_name = "d4j-container"
         self.dockerClient.initContainer("defects4j:2.0.0", "d4j-container", reuse=True)
 
-    def cloneRepository(self, projectName, experimentId):
+    def cloneRepository(self, projectName, experimentId, bugId):
         projectFolder = "/home/regseek/workdir/projects/{experimentId}".format(experimentId= experimentId)
-        cmd = "defects4j checkout -p {projectName} -v 1b -w {projectFolder} && chmod -R 777 {projectFolder}".format(projectName=projectName, projectFolder=projectFolder)
+        cmd = "defects4j checkout -p {projectName} -v {bugId}b -w {projectFolder} && chmod -R 777 {projectFolder}".format(
+            projectName=projectName, projectFolder=projectFolder, bugId=bugId)
         return self.dockerClient.execute(self.container_name, cmd)
 
     def getAllBugs(self, projectName):

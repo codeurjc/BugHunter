@@ -31,7 +31,7 @@ class Project():
     def clone(self):
         if not os.path.isdir(self.path):
             if self.repository == "D4J":
-                self.d4j.cloneRepository(self.name, self.experimentId)
+                self.d4j.cloneRepository(self.name, self.experimentId, self.bug.id)
             else:
                 cloneRepository(self.repository,self.path)
 
@@ -43,7 +43,10 @@ class Project():
 
     def executeTest(self, resultsPath):
         isSuccess = self.executeOnCommit(self.bug.test_command, resultsPath + "test-execution.log")
-        shutil.copyfile(self.path+self.bug.test_report, resultsPath + "test-report.xml")
+        if os.path.isfile(self.path+self.bug.test_report):
+            shutil.copyfile(self.path+self.bug.test_report, resultsPath + "test-report.xml")
+        else:
+            self.pm.log("Test report not found!")
         return isSuccess
 
     def executeOnCommit(self, cmd, log_path):
