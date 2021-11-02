@@ -1,0 +1,14 @@
+{
+    "id": "46",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/523",
+    "fix_commit": "3ba88d8c2ab500c07f9e2ddbc07a4bd01fadbd78",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.DocumentTest#testShiftJisRoundtrip test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "DocumentTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.DocumentTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "26",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/154",
+    "fix_commit": "d7b5d5b28a6dd7ff198f02e1ee82160220135a74",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.safety.CleanerTest#handlesFramesets test",
+    "folder": "src/test/java/org/jsoup/safety/",
+    "file": "CleanerTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.safety.CleanerTest.xml"
+}

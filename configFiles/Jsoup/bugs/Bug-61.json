@@ -1,0 +1,14 @@
+{
+    "id": "61",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/814",
+    "fix_commit": "83f01fd864e59fa69c894da06f4a15489222d401",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.select.ElementsTest#hasClassCaseInsensitive test",
+    "folder": "src/test/java/org/jsoup/select/",
+    "file": "ElementsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.select.ElementsTest.xml"
+}

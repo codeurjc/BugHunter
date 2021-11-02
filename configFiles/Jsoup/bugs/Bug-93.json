@@ -1,0 +1,14 @@
+{
+    "id": "93",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/1231",
+    "fix_commit": "a9439f0c503ac8e0f009a0ec39f8bff1a6271d51",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.FormElementTest#createsFormData test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "FormElementTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.FormElementTest.xml"
+}

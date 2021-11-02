@@ -1,0 +1,14 @@
+{
+    "id": "84",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/848",
+    "fix_commit": "a810d2e3615da9a37ad74a7db2ca8bc6945ab9a8",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.helper.W3CDomTest#treatsUndeclaredNamespaceAsLocalName test",
+    "folder": "src/test/java/org/jsoup/helper/",
+    "file": "W3CDomTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.helper.W3CDomTest.xml"
+}

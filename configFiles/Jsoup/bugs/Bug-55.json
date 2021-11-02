@@ -1,0 +1,14 @@
+{
+    "id": "55",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/746",
+    "fix_commit": "f0f0e41e6c581de43dfaa98f5c2af52e43e42e62",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.AttributeParseTest#dropsSlashFromAttributeName test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "AttributeParseTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.AttributeParseTest.xml"
+}

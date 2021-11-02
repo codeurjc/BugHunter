@@ -1,0 +1,14 @@
+{
+    "id": "48",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/618",
+    "fix_commit": "65553582d184e18de10e496b0eaa53fbe206ba17",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.helper.HttpConnectionTest#sameHeadersCombineWithComma test",
+    "folder": "src/test/java/org/jsoup/helper/",
+    "file": "HttpConnectionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.helper.HttpConnectionTest.xml"
+}

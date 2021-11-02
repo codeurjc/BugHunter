@@ -1,0 +1,14 @@
+{
+    "id": "66",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/951",
+    "fix_commit": "c324fabe86c0a59eb635610dc85d8d7a7be25c74",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.ElementTest#testNextElementSiblingAfterClone test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "ElementTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.ElementTest.xml"
+}

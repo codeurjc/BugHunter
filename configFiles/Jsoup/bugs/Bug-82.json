@@ -1,0 +1,14 @@
+{
+    "id": "82",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/1007",
+    "fix_commit": "6be19a6fa26e6e5e3d716283bad4b5de0348a8b7",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.HtmlParserTest#fallbackToUtfIfCantEncode test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "HtmlParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml"
+}

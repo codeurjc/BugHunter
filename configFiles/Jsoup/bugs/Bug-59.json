@@ -1,0 +1,14 @@
+{
+    "id": "59",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/793",
+    "fix_commit": "a623db776696c0e03f68e849147f6a0c57063c02",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.HtmlParserTest#handlesControlCodeInAttributeName test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "HtmlParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml"
+}

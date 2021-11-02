@@ -1,0 +1,14 @@
+{
+    "id": "85",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/1159",
+    "fix_commit": "25ba713e1d1a97ebfee38c0df3e7e6d4d9615f97",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.AttributeTest#validatesKeysNotEmpty test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "AttributeTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.AttributeTest.xml"
+}

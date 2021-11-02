@@ -1,0 +1,14 @@
+{
+    "id": "47",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/528",
+    "fix_commit": "a025d87deb9cc4cda49ae1b77feb0f29805dd7c5",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.EntitiesTest#escapesGtInXmlAttributesButNotInHtml test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "EntitiesTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.EntitiesTest.xml"
+}

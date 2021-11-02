@@ -1,0 +1,14 @@
+{
+    "id": "72",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/972",
+    "fix_commit": "b8411990753314ed3b746d3402dec5a65ff6d603",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.CharacterReaderTest#consumeToNonexistentEndWhenAtAnd test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "CharacterReaderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.CharacterReaderTest.xml"
+}

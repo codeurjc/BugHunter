@@ -1,0 +1,14 @@
+{
+    "id": "78",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/980",
+    "fix_commit": "2c4e79b104c0ff32566ce247617d47c0b39cc2c7",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.integration.ConnectTest#handlesEmptyStreamDuringParseRead test",
+    "folder": "src/test/java/org/jsoup/integration/",
+    "file": "ConnectTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.integration.ConnectTest.xml"
+}

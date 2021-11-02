@@ -1,0 +1,14 @@
+{
+    "id": "63",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/868",
+    "fix_commit": "35bceca331e07938a9c4cd62d68e08740cd39575",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.HtmlParserTest#selfClosingOnNonvoidIsError test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "HtmlParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml"
+}

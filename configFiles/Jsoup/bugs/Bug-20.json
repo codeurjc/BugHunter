@@ -1,0 +1,14 @@
+{
+    "id": "20",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/134",
+    "fix_commit": "1d31086acba06579c4e7d5928dbba9ca8a0128b1",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.helper.DataUtilTest#discardsSpuriousByteOrderMark test",
+    "folder": "src/test/java/org/jsoup/helper/",
+    "file": "DataUtilTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.helper.DataUtilTest.xml"
+}

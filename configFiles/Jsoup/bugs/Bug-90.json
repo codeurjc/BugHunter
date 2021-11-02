@@ -1,0 +1,14 @@
+{
+    "id": "90",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/1172",
+    "fix_commit": "7de614ffd01161d8718d7458bab9d9690ad2334f",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.helper.HttpConnectionTest#handlesHeaderEncodingOnRequest test",
+    "folder": "src/test/java/org/jsoup/helper/",
+    "file": "HttpConnectionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.helper.HttpConnectionTest.xml"
+}

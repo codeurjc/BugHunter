@@ -1,0 +1,14 @@
+{
+    "id": "35",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/313",
+    "fix_commit": "76399e5b273d63d6affeb94597d8dfddce811964",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.HtmlParserTest#handlesUnclosedAnchors test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "HtmlParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml"
+}

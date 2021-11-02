@@ -1,0 +1,14 @@
+{
+    "id": "73",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/977",
+    "fix_commit": "3475dc846d78e56422b3e6fdf36dfd4416f359f5",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.helper.W3CDomTest#namespacePreservation test",
+    "folder": "src/test/java/org/jsoup/helper/",
+    "file": "W3CDomTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.helper.W3CDomTest.xml"
+}

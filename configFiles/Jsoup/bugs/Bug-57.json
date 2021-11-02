@@ -1,0 +1,14 @@
+{
+    "id": "57",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/759",
+    "fix_commit": "2c58e975ab00eb369ee3dfbba07a4a78a1ef9e19",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.ElementTest#testChainedRemoveAttributes test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "ElementTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.ElementTest.xml"
+}

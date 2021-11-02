@@ -1,0 +1,14 @@
+{
+    "id": "76",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/825",
+    "fix_commit": "02668f757c59f0c1a7ad8f3169faf061b4b787c1",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.HtmlParserTest#preSkipsFirstNewline test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "HtmlParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml"
+}

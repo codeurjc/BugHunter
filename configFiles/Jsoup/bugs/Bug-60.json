@@ -1,0 +1,14 @@
+{
+    "id": "60",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/803",
+    "fix_commit": "8fecf72da0c9d1d6da7ec1aab0214ff68588da88",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.select.QueryParserTest#testParsesSingleQuoteInContains test",
+    "folder": "src/test/java/org/jsoup/select/",
+    "file": "QueryParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.select.QueryParserTest.xml"
+}

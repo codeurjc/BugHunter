@@ -1,0 +1,14 @@
+{
+    "id": "12",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/52",
+    "fix_commit": "d0a7e3a00350ea9bdca6a1f005ccc75e5b2d19d4",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.select.SelectorTest#testByAttributeRegexCombined test",
+    "folder": "src/test/java/org/jsoup/select/",
+    "file": "SelectorTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.select.SelectorTest.xml"
+}

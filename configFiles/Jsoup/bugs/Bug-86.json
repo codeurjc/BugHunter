@@ -1,0 +1,14 @@
+{
+    "id": "86",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/1139",
+    "fix_commit": "38c13b5ae97c294afb859c49ded903beb7b9b100",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.XmlTreeBuilderTest#handlesLTinScript test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "XmlTreeBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.XmlTreeBuilderTest.xml"
+}

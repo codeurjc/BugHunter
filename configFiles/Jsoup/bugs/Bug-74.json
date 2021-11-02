@@ -1,0 +1,14 @@
+{
+    "id": "74",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/978",
+    "fix_commit": "c3f8caa7c16c08b803b0f34bfffdf9777c7e382c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.ElementTest#testNormalizesInvisiblesInText test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "ElementTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.ElementTest.xml"
+}

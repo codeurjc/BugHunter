@@ -1,0 +1,14 @@
+{
+    "id": "4",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/31",
+    "fix_commit": "5e52f1b266173593fab32fe9d8a4963066b2f2fe",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.EntitiesTest#escape test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "EntitiesTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.EntitiesTest.xml"
+}

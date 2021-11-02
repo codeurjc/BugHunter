@@ -1,0 +1,14 @@
+{
+    "id": "18",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/110",
+    "fix_commit": "128b3f8212e357468cb608546a52da3826903fad",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.CharacterReaderTest#handleCarriageReturnAsLineFeed test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "CharacterReaderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.CharacterReaderTest.xml"
+}

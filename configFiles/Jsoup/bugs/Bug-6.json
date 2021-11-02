@@ -1,0 +1,14 @@
+{
+    "id": "6",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/34",
+    "fix_commit": "20ed24cefb5df53c48021459af98bef83c55f241",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.integration.ParseTest#testYahooArticle test",
+    "folder": "src/test/java/org/jsoup/integration/",
+    "file": "ParseTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.integration.ParseTest.xml"
+}

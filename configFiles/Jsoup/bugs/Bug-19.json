@@ -1,0 +1,14 @@
+{
+    "id": "19",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/127",
+    "fix_commit": "c98349a7fb5598f0cbac88130520171bd6f253c1",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.safety.CleanerTest#handlesCustomProtocols test",
+    "folder": "src/test/java/org/jsoup/safety/",
+    "file": "CleanerTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.safety.CleanerTest.xml"
+}

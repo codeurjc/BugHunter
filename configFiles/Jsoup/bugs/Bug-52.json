@@ -1,0 +1,14 @@
+{
+    "id": "52",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/701",
+    "fix_commit": "4eb4f2b2e88a2f9e6c5c1e8d0477060954f24218",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.DocumentTest#testMetaCharsetUpdateXmlNoCharset test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "DocumentTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.DocumentTest.xml"
+}

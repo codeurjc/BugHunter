@@ -1,0 +1,14 @@
+{
+    "id": "77",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/998",
+    "fix_commit": "df272b77c2cf89e9cbe2512bbddf8a3bc28a704b",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.parser.XmlTreeBuilderTest#normalizesDiscordantTags test",
+    "folder": "src/test/java/org/jsoup/parser/",
+    "file": "XmlTreeBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.XmlTreeBuilderTest.xml"
+}

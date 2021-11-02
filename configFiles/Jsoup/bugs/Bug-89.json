@@ -1,0 +1,14 @@
+{
+    "id": "89",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/1107",
+    "fix_commit": "1d663eeb1c0d1c08bcfe5d30f05170768bb0438e",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.nodes.AttributeTest#settersOnOrphanAttribute test",
+    "folder": "src/test/java/org/jsoup/nodes/",
+    "file": "AttributeTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.AttributeTest.xml"
+}

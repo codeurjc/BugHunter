@@ -1,0 +1,14 @@
+{
+    "id": "58",
+    "project": "Jsoup",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://github.com/jhy/jsoup/issues/245",
+    "fix_commit": "f44d6e64ac97d4a5c119e3e22f22f4d87c94b7e1",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.jsoup.safety.CleanerTest#testIsValidBodyHtml test",
+    "folder": "src/test/java/org/jsoup/safety/",
+    "file": "CleanerTest.java",
+    "test_report": "target/surefire-reports/TEST-org.jsoup.safety.CleanerTest.xml"
+}
