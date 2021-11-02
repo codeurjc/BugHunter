@@ -25,7 +25,7 @@ class GitManager:
         if not os.path.isfile(history_file_path):
 
             # GET COMMITS
-            res = self.repo.git.log(self.base_commit,'--pretty=format:%%H%s%%ad%s%%s'%(DELIMITER, DELIMITER),'--date=iso8601','--reverse')
+            res = self.repo.git.log('--pretty=format:%%H%s%%ad%s%%s'%(DELIMITER, DELIMITER),'--date=iso8601','--reverse', self.base_commit, "--")
             allCommits = list(map(lambda commit_info: commit_info.split(DELIMITER),res.split('\n')))
             allCommits.reverse()
 
