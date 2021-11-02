@@ -2,9 +2,14 @@
 
 ## SetUp
 
-#### Build images
+### Requirements
 
-Defects4J image
+- Git >= 2.25
+- Docker >= 20.10 (used: build f0df350)
+
+### Build images
+
+- __Defects4J image__
 ```
 git clone https://github.com/rjust/defects4j.git tmp/defects4j/
 cd tmp/defects4j/
@@ -14,7 +19,7 @@ cd ../../
 rm -rf tmp/defects4j/
 ```
 
-RegressionSeeker image
+- __RegressionSeeker image__
 ```
 docker build -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.1 .
 ```
