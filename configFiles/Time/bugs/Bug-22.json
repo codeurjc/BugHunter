@@ -5,10 +5,10 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://sourceforge.net/p/joda-time/bugs/113",
     "fix_commit": "57c8aaf94b95323c295dcfec5f40f181846164e7",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.joda.time.TestDuration_Basics#testToPeriod_fixedZone test",
-    "folder": "src/test/java/org/joda/time/",
+    "build": "mvn clean compile -f JodaTime/pom.xml",
+    "build_test": "mvn test-compile -f JodaTime/pom.xml",
+    "test_command": "mvn -Dtest=org.joda.time.TestDuration_Basics#testToPeriod_fixedZone test -f JodaTime/pom.xml",
+    "folder": "JodaTime/src/test/java/org/joda/time/",
     "file": "TestDuration_Basics.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDuration_Basics.xml"
+    "test_report": "JodaTime/target/surefire-reports/TEST-org.joda.time.TestDuration_Basics.xml"
 }

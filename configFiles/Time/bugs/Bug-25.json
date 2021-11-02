@@ -5,10 +5,10 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://sourceforge.net/p/joda-time/bugs/90",
     "fix_commit": "552be4b677ec30a34d04d234395ba1a8c7beaacf",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZoneCutover#test_DateTime_constructor_Moscow_Autumn test",
-    "folder": "src/test/java/org/joda/time/",
+    "build": "mvn clean compile -f JodaTime/pom.xml",
+    "build_test": "mvn test-compile -f JodaTime/pom.xml",
+    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZoneCutover#test_DateTime_constructor_Moscow_Autumn test -f JodaTime/pom.xml",
+    "folder": "JodaTime/src/test/java/org/joda/time/",
     "file": "TestDateTimeZoneCutover.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZoneCutover.xml"
+    "test_report": "JodaTime/target/surefire-reports/TEST-org.joda.time.TestDateTimeZoneCutover.xml"
 }

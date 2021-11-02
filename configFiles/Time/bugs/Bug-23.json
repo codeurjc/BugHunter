@@ -5,10 +5,10 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://sourceforge.net/p/joda-time/bugs/112",
     "fix_commit": "14dedcbc04682c1b1b6c5ebe91bc930b79eeb572",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZone#testForID_String_old test",
-    "folder": "src/test/java/org/joda/time/",
+    "build": "mvn clean compile -f JodaTime/pom.xml",
+    "build_test": "mvn test-compile -f JodaTime/pom.xml",
+    "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZone#testForID_String_old test -f JodaTime/pom.xml",
+    "folder": "JodaTime/src/test/java/org/joda/time/",
     "file": "TestDateTimeZone.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZone.xml"
+    "test_report": "JodaTime/target/surefire-reports/TEST-org.joda.time.TestDateTimeZone.xml"
 }
