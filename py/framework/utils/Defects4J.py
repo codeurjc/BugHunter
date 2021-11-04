@@ -70,5 +70,5 @@ class Defects4J():
         if not os.path.isdir("configFiles/%s/bugs/" % (projectConfig['project'])):
             os.makedirs("configFiles/%s/bugs/" % (projectConfig['project']))
         
-        with open('configFiles/%s/bugs/Bug-%s.json' % (projectConfig['project'], bug['bug.id']), 'w+') as fp:
+        with open('configFiles/%s/bugs/Bug_%s.json' % (projectConfig['project'], bug['bug.id']), 'w+') as fp:
             json.dump(configFile, fp, indent=4)
