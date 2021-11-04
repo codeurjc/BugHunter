@@ -3,7 +3,7 @@ import json
 class Bug():
     
     def __init__(self, project, bugId):
-        with open('configFiles/{project}/bugs/Bug-{bugId}.json'.format(project=project, bugId=bugId)) as f:
+        with open('configFiles/{project}/bugs/Bug_{bugId}.json'.format(project=project, bugId=bugId)) as f:
             self.bugConfig = json.load(f)
         self.id = bugId
         self.fixCommit = self.bugConfig['fix_commit']
