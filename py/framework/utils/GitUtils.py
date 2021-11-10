@@ -20,6 +20,10 @@ class GitManager:
         self.repo.git.clean("-fdx")
         self.repo.git.checkout('-f',commit_hash) 
 
+    def getParents(self, commit_hash):
+        parents_raw = self.repo.git.log("--pretty=%P", "-n 1", commit_hash)
+        return parents_raw.split(" ")
+
     def generateCommitList(self, history_file_path):
 
         if not os.path.isfile(history_file_path):
@@ -36,7 +40,6 @@ class GitManager:
                 n=0
                 for commit in allCommits:
                     commit_hash, date, comment = commit
-                    #print(commit)
                     commits.append({
                         "id": n,
                         "hash": commit_hash.strip(),
@@ -61,5 +64,5 @@ class GitManager:
 
 
 if __name__ == "__main__":
-    gm = GitManager("~/workdir/projects/JacksonDatabind_Bug_1","88f44d87d4c2251d7cf55d9aa9c3452a397ae19b")
-    commits = gm.generateCommitList("/home/regseek/workdir/results/JacksonDatabind/Bug_1/commit_history.csv")
+    gm = GitManager("~/work/projects/JacksonCore_Bug_1","ca3efaae")
+    print(gm.getParents("ca3efaae"))
