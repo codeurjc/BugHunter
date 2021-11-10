@@ -11,7 +11,7 @@ class GitManager:
 
     HEADERS = ["id", "hash", "date", "comment"]
 
-    def __init__(self, project_path, base_commit, url=None):
+    def __init__(self, project_path, base_commit=None, url=None):
         self.project_path = project_path
         self.base_commit = base_commit
         self.repo = git.Repo(project_path)

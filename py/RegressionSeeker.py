@@ -27,8 +27,7 @@ class RegressionSeeker():
         allCommits = self.gitManager.generateCommitList(self.experiment.bug_folder+"commit_history.csv")
 
         fix_commit = allCommits[0]
-        previous_commit = allCommits[1]
-        remain_previous_commits = allCommits[2:]
+        previous_commits = allCommits[1:]
 
         # 0) GET REGRESSION TEST
         self.gitManager.change_commit(fix_commit['hash'])
@@ -41,18 +40,11 @@ class RegressionSeeker():
         if not fix_result['isTestExecutionSuccess']:
             self.experiment.log("Test fail on fix commit: Abort experiment")
             return
-        
-        # 2) CHECK PREVIOUS COMMIT (ASSERT NO FLAKY TEST)
-        self.experiment.log("Checking PREVIOUS COMMIT: %s"%previous_commit['hash'])
-        prev_result = self.checkCommit(previous_commit)
-        if prev_result['isTestExecutionSuccess']:
-            self.experiment.log("Test pass on previous commit (flaky test): Abort experiment")
-            return
 
-        # 3) CHECK ALL PREVIOUS COMMITS
+        # 2) CHECK ALL PREVIOUS COMMITS
         self.experiment.log("Checking ALL PREVIOUS COMMITS")
 
-        for commit in remain_previous_commits:
+        for commit in previous_commits:
             self.experiment.log("Checking commit {c_id}-{c_hash}".format(c_id=commit['id'], c_hash=commit['hash']))
             self.checkCommit(commit)
 
