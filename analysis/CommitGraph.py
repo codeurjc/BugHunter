@@ -9,7 +9,7 @@ import csv
 sys.path.append('../py')
 from framework.utils.GitUtils import GitManager
 
-sys.setrecursionlimit(2000) # Current limit = 999
+sys.setrecursionlimit(20000) # Current limit = 999
 
 COLORS = {
     'TestSuccess' : 'green',
@@ -66,6 +66,12 @@ class CommitGraph():
                         self.graph[row['hash']] = result 
                         commit_list.append(result)
 
+            # SAVE COMMIT HISTORY
+            with open(results_dir+"commit_history_results.csv", 'w+') as csvfile: 
+                writer = csv.DictWriter(csvfile, fieldnames = commit_list[0].keys()) 
+                writer.writeheader()
+                writer.writerows(commit_list)
+
             # ADD CHILDREN INFO
             for result in self.graph.values():
                 for parent_hash in result['parents']:
@@ -73,12 +79,6 @@ class CommitGraph():
                     if not 'children' in self.graph[parent_hash]:
                         self.graph[parent_hash]['children'] = []
                     self.graph[parent_hash]['children'].append(result['commit'])
-
-            # SAVE COMMIT HISTORY
-            with open(results_dir+"commit_history_results.csv", 'w+') as csvfile: 
-                writer = csv.DictWriter(csvfile, fieldnames = result.keys()) 
-                writer.writeheader()
-                writer.writerows(commit_list)
 
             # SAVE GRAPH
             with open(graph_file_path, 'wb') as handle:
