@@ -128,3 +128,4 @@ tmp/*
 #*.zip
 
 analysis/results/**
+*.tar.gz

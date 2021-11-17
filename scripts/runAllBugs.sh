@@ -3,12 +3,7 @@ project=$1
 
 for bug in configFiles/$project/bugs/*; do
     bug=$(basename $bug)
-    bug_id=$(echo $bug | sed -E 's/Bug-([0-9]*)\.json/\1/')
-
-    # if [[ ($bug_id == "46" )]]
-    # then
-    #     exit
-    # fi
+    bug_id=$(echo $bug | sed -E 's/Bug_([0-9]*)\.json/\1/')
 
     if [[ ! -d results/$project/Bug_$bug_id ]]
     then

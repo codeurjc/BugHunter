@@ -103,7 +103,7 @@ if __name__ == "__main__":
     rs = RegressionSeeker(sys.argv[1], str(sys.argv[2]))
 
     try:
-        rs.searchRegression()
+        pass#rs.searchRegression()
     except KeyboardInterrupt as e:
         rs.finish("FINISHED EXPERIMENT WITH KeyboardInterrupt")
     except Exception as e:
