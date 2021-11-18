@@ -5,6 +5,7 @@ import graphviz
 import pickle
 import json
 import csv
+import copy
 
 sys.path.append('../py')
 from framework.utils.GitUtils import GitManager
@@ -108,11 +109,11 @@ class CommitGraph():
 
     def draw_commit_history(self, fix_commit_hash, output_dir):
         fix_commit = self.graph[fix_commit_hash]
-        reduced_graph_1 = reduceGraph_1(self.graph, fix_commit)
-        reduced_graph_2 = reduceGraph_2(self.graph, fix_commit)
+        reduced_graph_4 = reduceGraph_4(self.graph, fix_commit)
+        #reduced_graph_2 = reduceGraph_2(self.graph, fix_commit)
         self._draw(self.graph, output_dir, "Full")
-        self._draw(reduced_graph_1, output_dir, "Reduced")
-        self._draw(reduced_graph_2, output_dir, "Compact")
+        self._draw(reduced_graph_4, output_dir, "Reduced")
+        #self._draw(reduced_graph_2, output_dir, "Compact")
 
 def reduceGraph_1(graph, fix_commit):
     reduced_graph = {}
@@ -220,4 +221,65 @@ def reduceGraph_2(graph, init_commit):
             commit['id'] = str(commit['id']) + "-" + str(last_id)
         reduced_graph[commit['commit']] = commit
 
+    return reduced_graph
+
+def reduceGraph_4(old_graph, init):
+    visited = list()
+    graph = copy.deepcopy(old_graph)
+    reduced_graph = {}
+
+    def dfs(visited, graph, node_hash):
+        node = graph[node_hash]
+        if node['commit'] not in visited:
+
+            visited.append(node['commit'])
+
+            if "" in node['parents']: node['parents'].remove("")
+
+            if len(node['parents']) > 0: 
+
+                if len(node['parents']) == 1:
+
+                    if node['parents'][0] not in graph: 
+                        # CASE FOR FAILING FIX                        
+                        return node
+
+                    parent = graph[node['parents'][0]]
+
+                    new_parent = dfs(visited, graph, parent['commit'])
+
+                    if new_parent is not None:
+                        
+                        if new_parent['commit'] not in reduced_graph and len(new_parent['parents']) > 0:
+                            antecesor = new_parent['parents'][0]
+                            node['parents'] = [antecesor]
+                        else:
+                            node['parents'] = [new_parent['commit']]
+
+                    if parent['State'] != node['State'] or len(parent['children']) > 1:
+                        reduced_graph[node['commit']] = node
+                        return node    
+                    else:
+                        if new_parent is not None and len(new_parent['parents']) > 0:
+                            return new_parent                    
+
+                else:
+                    reduced_graph[node['commit']] = node
+
+                    new_parents = []
+                    for parent_hash in node['parents']:
+                        parent = graph[parent_hash]
+                        new_parent = dfs(visited, graph, parent['commit'])
+
+                        if new_parent['commit'] not in reduced_graph and len(new_parent['parents']) > 0:
+                            antecesor = new_parent['parents'][0]
+                            new_parents.append(antecesor)
+                        else:
+                            new_parents.append(new_parent['commit'])
+
+                    node['parents'] = new_parents
+
+        return node 
+                    
+    dfs(visited, graph, init['commit'])
     return reduced_graph
