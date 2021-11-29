@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 if len(sys.argv) < 2:
-    print("Use: python py/Defects4J.py <d4j_project_name>")
+    print("Use: python py/ExtractBugsD4J.py <d4j_project_name>")
     exit()
 
 load_injection_container()
