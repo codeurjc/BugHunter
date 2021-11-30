@@ -6,8 +6,6 @@ from py.framework.Bug import Bug
 from py.framework.Project import Project
 from py.framework.utils.utils import createDirIfNotExist
 
-import time
-
 WORKDIR="/home/regseek/workdir"
 
 def executeSZZUnleashed(project_name, bugId): 
@@ -23,26 +21,21 @@ def executeSZZUnleashed(project_name, bugId):
     createDirIfNotExist(results_dir)
 
     # Generate and save Issue info
-    issue = {
-        "ISSUE-1": {
-            "creationdate": "2013-12-01 09:33:58 +0000",
-            "resolutiondate": "2013-12-02 19:14:54 +0000",
-            "hash": bug.fixCommit,
-            "commitdate": "2013-12-02 21:11:47 +0000"
-        }
+    issue = {}
+    issue[experiment_id] = {
+        "creationdate": bug.bugConfig['issue_created_at'],
+        "resolutiondate": bug.bugConfig['issue_closed_at'],
+        "hash": bug.fixCommit,
+        "commitdate":bug.bugConfig['fix_date']
     }
+
     with open(results_dir+"issue.json",'w+') as json_file:
         json.dump(issue, json_file, indent=4)
 
     # Launch container with SZZ
     
-    project.dockerClient.initContainer(
-        "szz-unleashed:0.1.0", 
-        experiment_id, 
-        workdir=results_dir,
-        env={}
-    )
-    #time.sleep(300000)
+    project.dockerClient.initContainer("szz-unleashed:0.1.0", experiment_id, workdir=results_dir)
+
     issue_path = results_dir+"/issue.json"
     project_path = WORKDIR+"/projects/"+experiment_id
     _, log = project.dockerClient.execute(experiment_id, "java -jar /home/szz/szz.jar -i {issue_path} -r {project_path}".format(issue_path=issue_path, project_path=project_path), withTimeout=False)
@@ -60,4 +53,4 @@ if __name__ == "__main__":
         print("Use: python py/szz/SZZUnleashed.py <project_name> <bugId>")
         exit()
 
-    rs = executeSZZUnleashed("Time", "1")
+    rs = executeSZZUnleashed(sys.argv[1], str(sys.argv[2]))

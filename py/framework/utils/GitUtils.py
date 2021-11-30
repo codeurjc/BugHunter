@@ -20,6 +20,9 @@ class GitManager:
         self.repo.git.clean("-fdx")
         self.repo.git.checkout('-f',commit_hash) 
 
+    def getCommitDate(self,commit_hash):
+        return self.repo.git.show('-s','--format=%ci',commit_hash)
+        
     def getParents(self, commit_hash):
         parents_raw = self.repo.git.log("--pretty=%P", "-n 1", commit_hash)
         return parents_raw.split(" ")
