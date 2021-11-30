@@ -1,3 +1,4 @@
 docker==4.1.0
 gitpython
+PyGithub
 injectable==3.4.7

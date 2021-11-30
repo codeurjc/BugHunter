@@ -1,0 +1,14 @@
+{
+    "id": "47",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-412",
+    "fix_commit": "d5e343049c2610c31ddacb24f0d173942f6d5ac9",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.text.StrBuilderTest#testLang412Left test",
+    "folder": "src/test/java/org/apache/commons/lang/text/",
+    "file": "StrBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.text.StrBuilderTest.xml"
+}

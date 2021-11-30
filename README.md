@@ -21,11 +21,11 @@ rm -rf tmp/defects4j/
 
 - __RegressionSeeker image__
 ```
-docker build -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.1 .
+docker build -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.2 .
 ```
 
 > If in later steps the container generated from this image does not have permissions on Docker, you must build the image using the GID of the Docker socket as argument
 ```
 DOCKER_GID=$(stat -c '%g' /var/run/docker.sock)
-docker build --build-arg DOCKER_GID=$DOCKER_GID -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.1 .
+docker build --build-arg DOCKER_GID=$DOCKER_GID -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.2 .
 ```

@@ -1,0 +1,14 @@
+{
+    "id": "61",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-294",
+    "fix_commit": "88c76d207f642831ca899e144159424aaa60cf8e",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.text.StrBuilderTest#testIndexOfLang294 test",
+    "folder": "src/test/java/org/apache/commons/lang/text/",
+    "file": "StrBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.text.StrBuilderTest.xml"
+}

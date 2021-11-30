@@ -1,0 +1,14 @@
+{
+    "id": "32",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-586",
+    "fix_commit": "006fca88e86bd6f650d4d021d2ff3573a572827d",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.builder.HashCodeBuilderTest#testReflectionObjectCycle test",
+    "folder": "src/test/java/org/apache/commons/lang3/builder/",
+    "file": "HashCodeBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.builder.HashCodeBuilderTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "21",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-677",
+    "fix_commit": "55f642725742513824975af0e5e91cb1920b6d72",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.time.DateUtilsTest#testIsSameLocalTime_Cal test",
+    "folder": "src/test/java/org/apache/commons/lang3/time/",
+    "file": "DateUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.time.DateUtilsTest.xml"
+}

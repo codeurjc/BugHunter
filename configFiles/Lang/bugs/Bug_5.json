@@ -1,0 +1,14 @@
+{
+    "id": "5",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-865",
+    "fix_commit": "75944e541d358d5b06ebbba3098a919fbf2539d4",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.LocaleUtilsTest#testLang865 test",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "LocaleUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.LocaleUtilsTest.xml"
+}

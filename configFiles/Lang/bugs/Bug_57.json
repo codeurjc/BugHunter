@@ -1,0 +1,14 @@
+{
+    "id": "57",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-304",
+    "fix_commit": "bbd990b81fd7f8ab9dde75c8070b973b9ce500fc",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.LocaleUtilsTest#testAvailableLocaleSet test",
+    "folder": "src/test/java/org/apache/commons/lang/",
+    "file": "LocaleUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.LocaleUtilsTest.xml"
+}

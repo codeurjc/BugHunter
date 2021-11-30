@@ -1,0 +1,14 @@
+{
+    "id": "6",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-857",
+    "fix_commit": "cff0f1ae37bb2b7ab2dcdb10dec1f3cad7532e1c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.StringUtilsTest#testEscapeSurrogatePairs test",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "StringUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringUtilsTest.xml"
+}

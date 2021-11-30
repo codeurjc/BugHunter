@@ -1,0 +1,14 @@
+{
+    "id": "22",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-662",
+    "fix_commit": "0b2b82ad923b0455cde93286e3f504a1abd0863b",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.math.FractionTest#testReducedFactory_int_int test",
+    "folder": "src/test/java/org/apache/commons/lang3/math/",
+    "file": "FractionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.math.FractionTest.xml"
+}

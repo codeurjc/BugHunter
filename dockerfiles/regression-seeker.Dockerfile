@@ -20,8 +20,10 @@ RUN mkdir /home/regseek/workdir/
 VOLUME ["/home/regseek/workdir/"]
 WORKDIR /home/regseek/workdir/
 
-RUN echo "PS1='\[\033[1;36m\]RegressionSeeker-0.1.1 \[\033[1;34m\]\w\[\033[0;35m\] \[\033[1;36m\]# \[\033[0m\]'" >> ~/.bashrc
+ENV PYTHONPATH="${PYTHONPATH}:/home/regseek/workdir/py/"
+
+RUN echo "PS1='\[\033[1;36m\]RegressionSeeker-0.2.2 \[\033[1;34m\]\w\[\033[0;35m\] \[\033[1;36m\]# \[\033[0m\]'" >> ~/.bashrc
 
 CMD ["bash"]
 
-# BUILD docker build --build-arg DOCKER_GID=999 -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.1 .
+# BUILD docker build --build-arg DOCKER_GID=999 -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.2 .

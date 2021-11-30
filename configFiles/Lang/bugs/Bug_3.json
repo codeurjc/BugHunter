@@ -1,0 +1,14 @@
+{
+    "id": "3",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-693",
+    "fix_commit": "2c9c8753165dc7ce5dd1d5a6d741b445b33302c2",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.math.NumberUtilsTest#testStringCreateNumberEnsureNoPrecisionLoss test",
+    "folder": "src/test/java/org/apache/commons/lang3/math/",
+    "file": "NumberUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.math.NumberUtilsTest.xml"
+}

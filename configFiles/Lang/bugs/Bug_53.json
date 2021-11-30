@@ -1,0 +1,14 @@
+{
+    "id": "53",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-346",
+    "fix_commit": "d3b1163073c7aeb6011a5b65bfadad15bfc0f108",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.time.DateUtilsTest#testRoundLang346 test",
+    "folder": "src/test/java/org/apache/commons/lang/time/",
+    "file": "DateUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.time.DateUtilsTest.xml"
+}

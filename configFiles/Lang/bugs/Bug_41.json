@@ -1,0 +1,14 @@
+{
+    "id": "41",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-535",
+    "fix_commit": "4d3629f310e84cc24c0e5f09d97f5126692d0128",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.ClassUtilsTest#test_getShortClassName_Class test",
+    "folder": "src/test/java/org/apache/commons/lang/",
+    "file": "ClassUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.ClassUtilsTest.xml"
+}

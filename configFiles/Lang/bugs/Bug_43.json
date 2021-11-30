@@ -1,0 +1,14 @@
+{
+    "id": "43",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-477",
+    "fix_commit": "eb3e2ae1f3734986a9f0225c661888baac3cb13b",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.text.ExtendedMessageFormatTest#testEscapedQuote_LANG_477 test",
+    "folder": "src/test/java/org/apache/commons/lang/text/",
+    "file": "ExtendedMessageFormatTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.text.ExtendedMessageFormatTest.xml"
+}

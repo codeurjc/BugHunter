@@ -1,0 +1,14 @@
+{
+    "id": "8",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-818",
+    "fix_commit": "a4a455053e7e4a77320efd6db0814f4de82d754d",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.time.FastDateFormat_PrinterTest#testCalendarTimezoneRespected test",
+    "folder": "src/test/java/org/apache/commons/lang3/time/",
+    "file": "FastDateFormat_PrinterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.time.FastDateFormat_PrinterTest.xml"
+}

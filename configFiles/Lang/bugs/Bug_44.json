@@ -1,0 +1,14 @@
+{
+    "id": "44",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-457",
+    "fix_commit": "81f10d7f1ef52d44f43b38d81ac3dc1c83d45134",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.NumberUtilsTest#testLang457 test",
+    "folder": "src/test/java/org/apache/commons/lang/",
+    "file": "NumberUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.NumberUtilsTest.xml"
+}

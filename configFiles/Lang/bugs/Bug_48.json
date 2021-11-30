@@ -1,0 +1,14 @@
+{
+    "id": "48",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-393",
+    "fix_commit": "eb8f74efb75e71fc91e515a38becc2aac203e339",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.builder.EqualsBuilderTest#testBigDecimal test",
+    "folder": "src/test/java/org/apache/commons/lang/builder/",
+    "file": "EqualsBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.builder.EqualsBuilderTest.xml"
+}

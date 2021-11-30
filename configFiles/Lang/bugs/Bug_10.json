@@ -1,0 +1,14 @@
+{
+    "id": "10",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-831",
+    "fix_commit": "afe5dff79fc23d222ba1f1481fbbf55e09d2e6da",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.time.FastDateFormat_ParserTest#testLANG_831 test",
+    "folder": "src/test/java/org/apache/commons/lang3/time/",
+    "file": "FastDateFormat_ParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.time.FastDateFormat_ParserTest.xml"
+}

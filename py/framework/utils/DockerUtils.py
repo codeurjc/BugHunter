@@ -48,11 +48,14 @@ class DockerClient():
         self.containers.append(container)
 
 
-    def execute(self, container_name, command):
+    def execute(self, container_name, command, withTimeout=True):
         
         container = self.client.containers.get(container_name)
-        
-        (exit_code, container_output) = container.exec_run("timeout %d bash -c '%s'"%(DEFAULT_TIMEOUT,command), user="1000")
+
+        if withTimeout:
+            (exit_code, container_output) = container.exec_run("timeout %d bash -c '%s'"%(DEFAULT_TIMEOUT,command), user="1000")
+        else:
+            (exit_code, container_output) = container.exec_run(command, user="1000")
         return exit_code, container_output
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{
+    "id": "25",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-658",
+    "fix_commit": "2bae68787d15c3d3540380164e62759485078ec1",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.text.translate.EntityArraysTest#testISO8859_1_ESCAPE test",
+    "folder": "src/test/java/org/apache/commons/lang3/text/translate/",
+    "file": "EntityArraysTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.text.translate.EntityArraysTest.xml"
+}

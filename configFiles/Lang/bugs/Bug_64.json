@@ -1,0 +1,14 @@
+{
+    "id": "64",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-259",
+    "fix_commit": "8de71ae52958ae70fe651b7327319c9beecd9b84",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.enums.ValuedEnumTest#testCompareTo_otherEnumType test",
+    "folder": "src/test/java/org/apache/commons/lang/enums/",
+    "file": "ValuedEnumTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.enums.ValuedEnumTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "37",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-567",
+    "fix_commit": "ea140fb5c327e2b58f6c5bf1057c7dede909a50c",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.ArrayUtilsAddTest#testJira567 test",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "ArrayUtilsAddTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.ArrayUtilsAddTest.xml"
+}

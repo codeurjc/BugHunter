@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-807",
+    "fix_commit": "c821fafce06adefc040e8983fb12d49399a48627",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang3.RandomStringUtilsTest#testLANG807 test",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "RandomStringUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.RandomStringUtilsTest.xml"
+}

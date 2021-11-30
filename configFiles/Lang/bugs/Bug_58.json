@@ -1,0 +1,14 @@
+{
+    "id": "58",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "maven:3-jdk-8-slim",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-300",
+    "fix_commit": "1fd45a4f68ea497dfbdf1a67b8b8805a4a9b1166",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.lang.math.NumberUtilsTest#testLang300 test",
+    "folder": "src/test/java/org/apache/commons/lang/math/",
+    "file": "NumberUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.math.NumberUtilsTest.xml"
+}
