@@ -1,49 +1,64 @@
 import sys
 import json
-from injectable import load_injection_container
+from injectable import Autowired, autowired, load_injection_container
 
 from py.framework.Bug import Bug
 from py.framework.Project import Project
+from py.framework.utils.DockerUtils import DockerClient
 from py.framework.utils.utils import createDirIfNotExist
+import warnings
+warnings.filterwarnings("ignore")
 
 WORKDIR="/home/regseek/workdir"
 
-def executeSZZUnleashed(project_name, bugId): 
+class SZZUnleashed():
 
-    experiment_id = project_name + "_Bug_" + bugId + "_SZZUnleashed"
-    bug = Bug(project_name, bugId)
-    project = Project(project_name, experiment_id, bug)
-    project.clone()
+    @autowired
+    def __init__(self, project_name, bugId, dockerClient: Autowired(DockerClient)):
+        self.experiment_id = project_name + "_Bug_" + bugId + "_SZZUnleashed"
+        self.bug = Bug(project_name, bugId)
+        self.dockerClient = dockerClient
+        self.project = Project(project_name, self.experiment_id, self.bug)
+        self.project.clone()
+        # Create results folder
+        self.results_dir = WORKDIR+"/results/szz/SZZUnleashed/"+self.experiment_id+"/"
+        self.log_path = self.results_dir + "SZZUnleashed.log"
+        createDirIfNotExist(self.results_dir)
+        self._generateIssueInfo()
 
-    # Create results folder
-    results_dir = WORKDIR+"/results/szz/SZZUnleashed/"+experiment_id+"/"
-    log_path = results_dir + "SZZUnleashed.log"
-    createDirIfNotExist(results_dir)
+    def _generateIssueInfo(self):
+        # Generate and save Issue info
+        issue = {}
+        issue[self.experiment_id] = {
+            "creationdate": self.bug.bugConfig['issue_created_at'],
+            "resolutiondate": self.bug.bugConfig['issue_closed_at'],
+            "hash": self.bug.fixCommit,
+            "commitdate":self.bug.bugConfig['fix_date']
+        }
 
-    # Generate and save Issue info
-    issue = {}
-    issue[experiment_id] = {
-        "creationdate": bug.bugConfig['issue_created_at'],
-        "resolutiondate": bug.bugConfig['issue_closed_at'],
-        "hash": bug.fixCommit,
-        "commitdate":bug.bugConfig['fix_date']
-    }
+        with open(self.results_dir+"issue.json",'w+') as json_file:
+            json.dump(issue, json_file, indent=4)
 
-    with open(results_dir+"issue.json",'w+') as json_file:
-        json.dump(issue, json_file, indent=4)
+    def execute(self): 
 
-    # Launch container with SZZ
-    
-    project.dockerClient.initContainer("szz-unleashed:0.1.0", experiment_id, workdir=results_dir)
+        # Launch container with SZZ
+        
+        self.dockerClient.initContainer("szz-unleashed:0.1.0", self.experiment_id, workdir=self.results_dir)
 
-    issue_path = results_dir+"/issue.json"
-    project_path = WORKDIR+"/projects/"+experiment_id
-    _, log = project.dockerClient.execute(experiment_id, "java -jar /home/szz/szz.jar -i {issue_path} -r {project_path}".format(issue_path=issue_path, project_path=project_path), withTimeout=False)
+        issue_path = self.results_dir+"/issue.json"
+        project_path = WORKDIR+"/projects/"+self.experiment_id
 
-    with open(log_path, "wb+") as out:
-        out.write(log)
+        # Execute SZZ
+        _, log = self.dockerClient.execute(
+            self.experiment_id, 
+            "java -jar /home/szz/szz.jar -i {issue_path} -r {project_path} -c 1".format(issue_path=issue_path, project_path=project_path), 
+            withTimeout=False
+        )
 
-    project.dockerClient.shutdownContainers()
+        with open(self.log_path, "wb+") as out:
+            out.write(log)
+
+        self.dockerClient.shutdownContainers()
 
 if __name__ == "__main__":
 
@@ -53,4 +68,5 @@ if __name__ == "__main__":
         print("Use: python py/szz/SZZUnleashed.py <project_name> <bugId>")
         exit()
 
-    rs = executeSZZUnleashed(sys.argv[1], str(sys.argv[2]))
+    szz = SZZUnleashed(sys.argv[1], str(sys.argv[2]))
+    szz.execute()
