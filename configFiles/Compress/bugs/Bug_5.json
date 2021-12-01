@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.Maven221MultiVolumeTest#testRead7ZipMultiVolumeArchiveForStream test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
     "file": "Maven221MultiVolumeTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.Maven221MultiVolumeTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.Maven221MultiVolumeTest.xml",
+    "issue_created_at": "2014-04-23 08:11:16 +0000",
+    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "fix_date": "2009-10-30 05:29:17 +0000"
 }

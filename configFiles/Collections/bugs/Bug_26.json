@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.apache.commons.collections4.keyvalue.MultiKeyTest#testEqualsAfterSerializationOfDerivedClass test",
     "folder": "src/test/java/org/apache/commons/collections4/keyvalue/",
     "file": "MultiKeyTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.collections4.keyvalue.MultiKeyTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.collections4.keyvalue.MultiKeyTest.xml",
+    "issue_created_at": "2014-04-23 08:11:16 +0000",
+    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "fix_date": "2015-09-28 08:53:44 +0000"
 }

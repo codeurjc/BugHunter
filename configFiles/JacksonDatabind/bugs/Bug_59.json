@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.jsontype.TypeRefinementForMapTest#testMapKeyRefinement1384 test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
     "file": "TypeRefinementForMapTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TypeRefinementForMapTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TypeRefinementForMapTest.xml",
+    "issue_created_at": "2016-09-24 21:02:53 +0000",
+    "issue_closed_at": "2016-09-26 06:11:42 +0000",
+    "fix_date": "2016-09-25 23:10:58 -0700"
 }

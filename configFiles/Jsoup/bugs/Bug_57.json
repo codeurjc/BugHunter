@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.jsoup.nodes.ElementTest#testChainedRemoveAttributes test",
     "folder": "src/test/java/org/jsoup/nodes/",
     "file": "ElementTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.ElementTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.ElementTest.xml",
+    "issue_created_at": "2016-09-13 23:11:10 +0000",
+    "issue_closed_at": "2016-10-26 19:58:39 +0000",
+    "fix_date": "2016-10-26 12:58:24 -0700"
 }

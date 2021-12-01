@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.jsoup.nodes.EntitiesTest#letterDigitEntities test",
     "folder": "src/test/java/org/jsoup/nodes/",
     "file": "EntitiesTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.EntitiesTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.EntitiesTest.xml",
+    "issue_created_at": "2011-12-01 10:01:37 +0000",
+    "issue_closed_at": "2012-04-14 19:32:06 +0000",
+    "fix_date": "2012-04-14 12:31:46 -0700"
 }

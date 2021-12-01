@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.creators.InnerClassCreatorTest#testIssue1501 test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/creators/",
     "file": "InnerClassCreatorTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.InnerClassCreatorTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.InnerClassCreatorTest.xml",
+    "issue_created_at": "2017-01-23 22:24:29 +0000",
+    "issue_closed_at": "2017-01-25 05:45:38 +0000",
+    "fix_date": "2017-01-24 21:41:59 -0800"
 }

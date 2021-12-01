@@ -7,4 +7,4 @@ docker run -it --rm \
     -w /home/regseek/workdir/ \
     --name regression-seeker \
     --privileged=true \
-    regression-seeker:0.2.2 bash
+    regression-seeker:0.2.3 bash

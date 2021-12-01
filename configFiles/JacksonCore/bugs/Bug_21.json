@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.filter.TokenVerifyingParserFiltering330Test#testTokensSingleMatchWithPath test",
     "folder": "src/test/java/com/fasterxml/jackson/core/filter/",
     "file": "TokenVerifyingParserFiltering330Test.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.filter.TokenVerifyingParserFiltering330Test.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.filter.TokenVerifyingParserFiltering330Test.xml",
+    "issue_created_at": "2016-11-06 00:20:30 +0000",
+    "issue_closed_at": "2017-06-03 01:33:03 +0000",
+    "fix_date": "2017-05-23 16:08:31 -0700"
 }

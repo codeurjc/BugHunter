@@ -10,6 +10,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 WORKDIR="/home/regseek/workdir"
+MAX_CORES=1
 
 class SZZUnleashed():
 
@@ -51,7 +52,7 @@ class SZZUnleashed():
         # Execute SZZ
         _, log = self.dockerClient.execute(
             self.experiment_id, 
-            "java -jar /home/szz/szz.jar -i {issue_path} -r {project_path} -c 1".format(issue_path=issue_path, project_path=project_path), 
+            "java -jar /home/szz/szz.jar -i {issue_path} -r {project_path} -c {cores}".format(issue_path=issue_path, project_path=project_path, cores=MAX_CORES), 
             withTimeout=False
         )
 

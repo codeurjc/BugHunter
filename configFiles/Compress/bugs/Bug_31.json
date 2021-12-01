@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.TarTestCase#testCOMPRESS178 test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/",
     "file": "TarTestCase.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.TarTestCase.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.TarTestCase.xml",
+    "issue_created_at": "2014-04-23 08:11:16 +0000",
+    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "fix_date": "2015-02-20 16:30:45 +0000"
 }

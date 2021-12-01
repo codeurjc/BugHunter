@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.apache.commons.csv.CSVFormatTest#testNullRecordSeparatorCsv106 test",
     "folder": "src/test/java/org/apache/commons/csv/",
     "file": "CSVFormatTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVFormatTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.csv.CSVFormatTest.xml",
+    "issue_created_at": "2014-04-23 08:11:16 +0000",
+    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "fix_date": "2014-03-13 00:16:57 +0000"
 }

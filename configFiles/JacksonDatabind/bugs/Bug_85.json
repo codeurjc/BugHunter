@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.ser.DateSerializationTest#testFormatWithoutPattern test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/ser/",
     "file": "DateSerializationTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.ser.DateSerializationTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.ser.DateSerializationTest.xml",
+    "issue_created_at": "2017-06-08 07:01:45 +0000",
+    "issue_closed_at": "2017-06-09 05:23:36 +0000",
+    "fix_date": "2017-06-08 22:20:50 -0700"
 }

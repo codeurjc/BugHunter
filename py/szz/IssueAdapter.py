@@ -3,9 +3,14 @@ from github import Github
 import re
 import sys
 import json
+import datetime
+from jira import JIRA
 
 from py.framework.Bug import Bug
 from py.framework.utils.GitUtils import GitManager
+
+def parseDateJira(date:str):
+    return datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%f%z').strftime('%Y-%m-%d %H:%M:%S %z')
 
 def updateIssue(project_name, bugId):
     bug = Bug(project_name, bugId)
@@ -24,10 +29,15 @@ def updateIssue(project_name, bugId):
         g = Github()
         gh_issue = g.get_repo(repo).get_issue(number=issue_id)
 
-        bug.bugConfig['issue_closed_at'] = str(gh_issue.closed_at)+" +0000"
         bug.bugConfig['issue_created_at'] = str(gh_issue.created_at)+" +0000"
+        bug.bugConfig['issue_closed_at'] = str(gh_issue.closed_at)+" +0000"
+    elif "apache" in report_path:
+        jira = JIRA('https://issues.apache.org/jira/')
+        jira_issue = jira.issue("COMPRESS-279")
+        bug.bugConfig['issue_created_at'] = parseDateJira(jira_issue.fields.created)
+        bug.bugConfig['issue_closed_at'] = parseDateJira(jira_issue.fields.resolutiondate)
     else:
-        raise Exception("Not implemented yet")
+        raise Exception("Get issue info not implemented for %s"%report_path)
 
     # GET DATE OF FIX COMMIT
 

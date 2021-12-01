@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest#testNullCommentEqualsEmptyComment test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
     "file": "ZipArchiveEntryTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest.xml",
+    "issue_created_at": "2014-04-23 08:11:16 +0000",
+    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "fix_date": "2012-06-03 15:30:31 +0000"
 }

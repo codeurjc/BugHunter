@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.TestDateDeserialization#testDateUtilISO8601NoTimezoneNonDefault test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/deser/",
     "file": "TestDateDeserialization.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.TestDateDeserialization.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.TestDateDeserialization.xml",
+    "issue_created_at": "2017-06-13 18:55:58 +0000",
+    "issue_closed_at": "2017-06-14 04:27:54 +0000",
+    "fix_date": "2017-06-13 21:25:31 -0700"
 }

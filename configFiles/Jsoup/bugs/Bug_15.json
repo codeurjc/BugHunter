@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.jsoup.parser.ParserTest#handlesDataOnlyTags test",
     "folder": "src/test/java/org/jsoup/parser/",
     "file": "ParserTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.ParserTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.ParserTest.xml",
+    "issue_created_at": "2011-06-14 06:58:10 +0000",
+    "issue_closed_at": "2011-06-14 11:19:50 +0000",
+    "fix_date": "2011-07-02 21:12:10 +1000"
 }

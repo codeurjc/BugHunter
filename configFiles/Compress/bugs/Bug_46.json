@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest#testGettersSetters test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
     "file": "X5455_ExtendedTimestampTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.X5455_ExtendedTimestampTest.xml",
+    "issue_created_at": "2014-04-23 08:11:16 +0000",
+    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "fix_date": "2017-07-04 08:51:32 +0200"
 }

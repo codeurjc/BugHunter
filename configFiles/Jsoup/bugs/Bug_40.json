@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.jsoup.nodes.DocumentTypeTest#constructorValidationOkWithBlankName test",
     "folder": "src/test/java/org/jsoup/nodes/",
     "file": "DocumentTypeTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.DocumentTypeTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.nodes.DocumentTypeTest.xml",
+    "issue_created_at": "2014-09-13 09:29:29 +0000",
+    "issue_closed_at": "2014-09-27 22:35:01 +0000",
+    "fix_date": "2014-09-27 15:34:56 -0700"
 }

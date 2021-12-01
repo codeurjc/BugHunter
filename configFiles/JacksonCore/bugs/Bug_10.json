@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.sym.TestByteBasedSymbols#testIssue207 test",
     "folder": "src/test/java/com/fasterxml/jackson/core/sym/",
     "file": "TestByteBasedSymbols.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.sym.TestByteBasedSymbols.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.sym.TestByteBasedSymbols.xml",
+    "issue_created_at": "2015-07-30 22:37:14 +0000",
+    "issue_closed_at": "2015-08-01 02:44:00 +0000",
+    "fix_date": "2015-07-31 19:43:48 -0700"
 }

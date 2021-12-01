@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestPartial_Constructors#testConstructorEx7_TypeArray_intArray test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestPartial_Constructors.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPartial_Constructors.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPartial_Constructors.xml",
+    "issue_created_at": "2013-12-01 09:33:58 +0000",
+    "issue_closed_at": "2013-12-02 19:14:54 +0000",
+    "fix_date": "2013-12-02 21:11:47 +0000"
 }

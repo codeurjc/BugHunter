@@ -10,5 +10,8 @@
     "test_command": "cd gson/ && mvn -Dtest=com.google.gson.internal.bind.JsonTreeReaderTest#testSkipValue_filledJsonObject test",
     "folder": "gson/src/test/java/com/google/gson/internal/bind/",
     "file": "JsonTreeReaderTest.java",
-    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.internal.bind.JsonTreeReaderTest.xml"
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.internal.bind.JsonTreeReaderTest.xml",
+    "issue_created_at": "2017-02-08 10:57:07 +0000",
+    "issue_closed_at": "2017-02-18 16:52:44 +0000",
+    "fix_date": "2017-02-15 18:41:39 -0800"
 }
