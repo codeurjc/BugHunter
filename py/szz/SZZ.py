@@ -4,6 +4,7 @@ from injectable import Autowired, autowired
 from py.framework.Bug import Bug
 from py.framework.Project import Project
 from py.framework.utils.DockerUtils import DockerClient
+from py.framework.utils.GitUtils import GitManager
 from py.framework.utils.utils import createDirIfNotExist
 
 warnings.filterwarnings("ignore")
@@ -23,6 +24,9 @@ class SZZ():
         self.results_dir = WORKDIR+"/results/szz/"+algName+"/"+self.experiment_id+"/"
         self.log_path = self.results_dir + algName + ".log"
         createDirIfNotExist(self.results_dir)
+        # Checkout project
+        gitManager = GitManager(self.project.path, self.bug.fixCommit)
+        gitManager.change_commit(self.bug.fixCommit)
 
     def execute(self): 
         pass

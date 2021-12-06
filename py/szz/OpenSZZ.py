@@ -25,8 +25,6 @@ class OpenSZZ(SZZ):
         issue_created = self._dateToMillis(self.bug.bugConfig['issue_created_at'])
         project_path = WORKDIR+"/projects/"+self.experiment_id
 
-        print(issue_created, self.bug.fixCommit)
-
         _, log = self.dockerClient.execute(
             self.experiment_id, 
             "java -jar /home/szz/szz.jar -bfc {bfc} -d {project_path} -i {issue_created} -o {results_output}".format(
