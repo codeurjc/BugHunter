@@ -1,30 +1,20 @@
-import sys
 import json
-from injectable import Autowired, autowired, load_injection_container
-
-from py.framework.Bug import Bug
-from py.framework.Project import Project
-from py.framework.utils.DockerUtils import DockerClient
-from py.framework.utils.utils import createDirIfNotExist
+import sys
 import warnings
+
+from injectable import load_injection_container
+from py.framework.utils.utils import createDirIfNotExist
+from py.szz.SZZ import SZZ
+
 warnings.filterwarnings("ignore")
 
 WORKDIR="/home/regseek/workdir"
 MAX_CORES=1
 
-class SZZUnleashed():
+class SZZUnleashed(SZZ):
 
-    @autowired
-    def __init__(self, project_name, bugId, dockerClient: Autowired(DockerClient)):
-        self.experiment_id = project_name + "_Bug_" + bugId + "_SZZUnleashed"
-        self.bug = Bug(project_name, bugId)
-        self.dockerClient = dockerClient
-        self.project = Project(project_name, self.experiment_id, self.bug)
-        self.project.clone()
-        # Create results folder
-        self.results_dir = WORKDIR+"/results/szz/SZZUnleashed/"+self.experiment_id+"/"
-        self.log_path = self.results_dir + "SZZUnleashed.log"
-        createDirIfNotExist(self.results_dir)
+    def __init__(self, project_name, bugId):
+        SZZ.__init__(self, project_name, bugId, "SZZUnleashed")
         self._generateIssueInfo()
 
     def _generateIssueInfo(self):
