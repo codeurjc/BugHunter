@@ -25,8 +25,8 @@ class SZZ():
         self.log_path = self.results_dir + algName + ".log"
         createDirIfNotExist(self.results_dir)
         # Checkout project
-        gitManager = GitManager(self.project.path, self.bug.fixCommit)
-        gitManager.change_commit(self.bug.fixCommit)
+        self.gitManager = GitManager(self.project.path, self.bug.fixCommit)
+        self.gitManager.change_commit(self.bug.fixCommit)
 
     def execute(self): 
         pass

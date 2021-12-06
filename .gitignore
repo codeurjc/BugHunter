@@ -129,3 +129,5 @@ tmp/*
 
 analysis/results/**
 *.tar.gz
+
+pyszz-master/

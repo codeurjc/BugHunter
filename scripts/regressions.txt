@@ -1,0 +1,4 @@
+Time 1
+Compress 28
+Compress 45
+JacksonCore 11
