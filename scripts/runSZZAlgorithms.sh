@@ -1,6 +1,6 @@
 #!/bin/bash
 # Read a string with spaces using for loop
-ALGS=("ag" "l" "r" "ma" "ra")
+ALGS=("ra")
 
 while read reg; do
     for alg in ${ALGS[*]}

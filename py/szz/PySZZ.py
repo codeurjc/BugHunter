@@ -38,7 +38,7 @@ class PySZZ(SZZ):
 
         # Launch container with SZZ
         
-        self.dockerClient.initContainer("pyszz:0.1.0", self.experiment_id, workdir="/home/szz/")
+        self.dockerClient.initContainer("pyszz:0.1.1", self.experiment_id, workdir="/home/szz/")
 
         issue_path = self.results_dir+"issue.json"
         project_path = WORKDIR
@@ -54,8 +54,8 @@ class PySZZ(SZZ):
             ), 
             withTimeout=False
         )
-
-        self.dockerClient.execute(self.experiment_id, "cp -r out/ "+self.results_dir, withTimeout=False)
+        # find . -name 'out/*json' -exec bash -c 'mv $0
+        self.dockerClient.execute(self.experiment_id, "find out/ -type f -name '*json' -exec bash -c 'mv $0 "+self.results_dir+"result.json' {} \;", withTimeout=False)
 
         with open(self.log_path, "wb+") as out:
             out.write(log)
