@@ -44,11 +44,16 @@ class Defects4J():
         matches = re.search(r"Root cause in triggering tests:\n\s+-\s+(.*)\n\s+-->\s+(.*)", text)
         
         test_info = matches.group(1)
-        test_command = projectConfig['test_command']%test_info.replace('::','#')
         test_path = projectConfig['test_path'] % test_info.split('::')[0].replace('.','/')
         test_file= test_path.split('/')[-1]
         test_folder= "/".join(test_path.split('/')[:-1]) + "/"
         report_path= projectConfig['report_path'] % test_info.split('::')[0]
+
+        if projectConfig['test_command'].startswith("ant"):
+            test_file_path, test_method = test_info.split('::')
+            test_command = projectConfig['test_command']%(test_file_path, test_method)
+        else:
+            test_command = projectConfig['test_command']%test_info.replace('::','#')
 
 
         configFile = {

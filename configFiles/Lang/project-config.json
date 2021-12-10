@@ -1,9 +1,9 @@
 {
     "project": "Lang",
-    "docker_image": "maven:3-jdk-8-slim",
-    "build": "ant compile",
-    "build_test": "ant compile.tests",
-    "test_command": "mvn -Dtest=%s test",
+    "docker_image": "defects4j:2.1.0",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=%s -Dtest.entry.method=%s run.dev.tests",
     "test_path": "src/test/java/%s.java",
     "report_path": "target/surefire-reports/TEST-%s.xml",
     "git_url": "D4J"

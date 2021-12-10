@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-747",
+    "fix_commit": "687b2e62b7c6e81cd9d5c872b7fa9cc8fd3f1509",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.math.NumberUtilsTest -Dtest.entry.method=TestLang747 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/math/",
+    "file": "NumberUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.math.NumberUtilsTest.xml"
+}

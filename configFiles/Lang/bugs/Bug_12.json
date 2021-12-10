@@ -1,0 +1,14 @@
+{
+    "id": "12",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-805",
+    "fix_commit": "c9d786a4fe2639581047d878a64bab6fb24f1ab3",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.RandomStringUtilsTest -Dtest.entry.method=testExceptions run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "RandomStringUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.RandomStringUtilsTest.xml"
+}

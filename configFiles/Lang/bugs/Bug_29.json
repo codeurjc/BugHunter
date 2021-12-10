@@ -1,0 +1,14 @@
+{
+    "id": "29",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-624",
+    "fix_commit": "982e295053663787bb0396b81a8956c3c87dc25b",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.SystemUtilsTest -Dtest.entry.method=testJavaVersionAsInt run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "SystemUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.SystemUtilsTest.xml"
+}

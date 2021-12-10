@@ -1,0 +1,90 @@
+<!--
+Copyright (c) 2014-2017 René Just, Darioush Jalali, and Defects4J contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+################################################################################
+                     This is the main Defects4J build file.
+
+It defines properties and targets valid for all projects. It also imports the
+build file that defines all export targets (defect4j.export.xml) and the
+project-specific build file ("project_id"/"project_id".build.xml) for the
+"project_id" (Lang, Math, etc.) of the checked-out project version.
+#############################################################################-->
+<project name="Defects4J" basedir="${basedir}">
+    <!-- Ensure basedir is properly set -->
+    <property name="d4j.workdir" value="${basedir}" />
+
+    <!-- The default location for the projects meta data -->
+    <property name="d4j.dir.projects" value="${d4j.home}/framework/projects" />
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml"
+            classpath="${d4j.home}/framework/lib/ant-contrib.jar"/>
+
+    <!-- Dependencies used by all projects -->
+    <property name="junit.jar"  value="${d4j.home}/framework/projects/lib/junit-4.11.jar"/>
+    <property name="cobertura.jar" value="${d4j.home}/framework/projects/lib/cobertura-2.0.3.jar"/>
+
+    <!-- Define output for test reports -->
+    <property name="junit.dir" value="target/surefire-reports/"/>
+
+    <!-- Additional properties such as tests to exclude.
+         This property file is automatically generated. -->
+    <property file="${d4j.workdir}/${d4j.properties}"/>
+
+    <!-- Include build file that defines all export targets -->
+    <import file="${d4j.home}/framework/projects/defects4j.export.xml"/>
+
+    <!-- Include project-specific build file -->
+    <import file="${d4j.dir.projects}/${d4j.project.id}/${d4j.project.id}.build.xml"/>
+<!--
+     Check whether all properties and paths are configured
+-->
+    <target name="sanity.check" description="Check whether project version is correctly set up">
+        <fail unless="d4j.home"/>
+        <fail unless="d4j.workdir"/>
+        <fail unless="d4j.project.id"/>
+        <fail unless="test.home"/>
+        <fail unless="build.home"/>
+        <fail unless="ant.refid:d4j.test.classpath"/>
+        <fail unless="ant.refid:compile.classpath"/>
+        <fail unless="ant.refid:all.manual.tests" />
+    </target>
+<!--
+    Run developer-written tests
+-->
+
+    <target name="run.dev.tests" depends="compile.tests" description="Run unit tests">
+        <mkdir dir="${junit.dir}"/>
+        <junit printsummary="yes" haltonfailure="yes" fork="no" showOutput="true">
+            
+            <classpath>
+                <pathelement location="${d4j.dir.classes.instrumented}" />
+                <pathelement path="${formatter.jar}" />
+                <pathelement path="${cobertura.jar}" />
+                <path refid="d4j.test.classpath"/>
+            </classpath>
+            
+            <formatter type="xml"/>
+
+            <test name="${test.entry.class}" methods="${test.entry.method}" if="test.entry.class" toDir="${junit.dir}"/>
+        </junit>
+    </target>
+
+</project>

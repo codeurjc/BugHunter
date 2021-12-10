@@ -1,0 +1,14 @@
+{
+    "id": "47",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-412",
+    "fix_commit": "d5e343049c2610c31ddacb24f0d173942f6d5ac9",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.text.StrBuilderTest -Dtest.entry.method=testLang412Left run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang/text/",
+    "file": "StrBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.text.StrBuilderTest.xml"
+}

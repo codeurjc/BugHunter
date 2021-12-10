@@ -1,0 +1,14 @@
+{
+    "id": "18",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-719",
+    "fix_commit": "2aa9dca994b006ccbfcb528de5ff0da6a5578411",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.time.FastDateFormatTest -Dtest.entry.method=testFormat run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/time/",
+    "file": "FastDateFormatTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.time.FastDateFormatTest.xml"
+}

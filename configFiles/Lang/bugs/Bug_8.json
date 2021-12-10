@@ -1,0 +1,14 @@
+{
+    "id": "8",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-818",
+    "fix_commit": "a4a455053e7e4a77320efd6db0814f4de82d754d",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.time.FastDateFormat_PrinterTest -Dtest.entry.method=testCalendarTimezoneRespected run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/time/",
+    "file": "FastDateFormat_PrinterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.time.FastDateFormat_PrinterTest.xml"
+}

@@ -1,0 +1,2 @@
+#! /bin/sh
+/defects4j/major/bin/ant -f /defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/defects4j -Dd4j.dir.projects=/defects4j/framework/projects -Dbuild.compiler=javac1.7 -Dbasedir=$(pwd) $@

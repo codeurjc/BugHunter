@@ -1,0 +1,14 @@
+{
+    "id": "45",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-419",
+    "fix_commit": "d95fcd8e24568b4f9d3cb9da922a4029e293c793",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.WordUtilsTest -Dtest.entry.method=testAbbreviate run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang/",
+    "file": "WordUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.WordUtilsTest.xml"
+}

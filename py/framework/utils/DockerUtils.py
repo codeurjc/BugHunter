@@ -61,15 +61,11 @@ class DockerClient():
 if __name__ == "__main__":
 
     dockerCli = DockerClient()
-    #dockerCli.createVolumeIfNotExist("example-1")
-    # m2_path="/home/regseek/workdir/results/SpringBootSamples/Bug_1/libs"
-    env = {
-            # "MAVEN_CONFIG": m2_path
-    }
-    dockerCli.initContainer("maven:3-jdk-8-slim", "example", env=env)
 
-    print(dockerCli.execute("example","cd /tmp/ && mvn clean"))
+    dockerCli.initContainer("defects4j:2.1.0", "example")
 
-    dockerCli.shutdownContainers()
+    print(dockerCli.execute("example","ant"))
+
+    #dockerCli.shutdownContainers()
     
     # replaceInFile(m2_path+"/settings-docker.xml", "/usr/share/maven/ref/repository", m2_path)

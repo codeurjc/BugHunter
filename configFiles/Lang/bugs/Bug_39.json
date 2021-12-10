@@ -1,0 +1,14 @@
+{
+    "id": "39",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-552",
+    "fix_commit": "cb40e35f5e0990fad4c5278964fcc24e112dde8c",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.StringUtilsTest -Dtest.entry.method=testReplace_StringStringArrayStringArray run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "StringUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringUtilsTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "37",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-567",
+    "fix_commit": "ea140fb5c327e2b58f6c5bf1057c7dede909a50c",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.ArrayUtilsAddTest -Dtest.entry.method=testJira567 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang3/",
+    "file": "ArrayUtilsAddTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.ArrayUtilsAddTest.xml"
+}

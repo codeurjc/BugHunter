@@ -1,0 +1,14 @@
+{
+    "id": "48",
+    "project": "Lang",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/LANG-393",
+    "fix_commit": "eb8f74efb75e71fc91e515a38becc2aac203e339",
+    "build": "ant -Dd4j.project.id=Lang compile",
+    "build_test": "ant -Dd4j.project.id=Lang compile.tests",
+    "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.builder.EqualsBuilderTest -Dtest.entry.method=testBigDecimal run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/lang/builder/",
+    "file": "EqualsBuilderTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.builder.EqualsBuilderTest.xml"
+}
