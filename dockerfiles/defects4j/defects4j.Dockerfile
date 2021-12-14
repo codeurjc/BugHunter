@@ -50,6 +50,7 @@ ENV PATH="/defects4j/framework/bin:${PATH}"
 # EXTRA STEP - Use custom build.xml
 
 COPY dockerfiles/defects4j/defects4j.build.xml /defects4j/framework/projects/defects4j.build.xml
+COPY dockerfiles/defects4j/Mockito.build.xml /defects4j/framework/projects/Mockito/Mockito.build.xml
 
 RUN useradd -m -u 1000 regseek
 

@@ -1,0 +1,14 @@
+{
+    "id": "54",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-567",
+    "fix_commit": "c00ac8120a4215125e49775cd9351e689586b467",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.dfp.DfpTest -Dtest.entry.method=testIssue567 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/dfp/",
+    "file": "DfpTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.dfp.DfpTest.xml"
+}

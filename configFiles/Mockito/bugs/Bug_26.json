@@ -1,0 +1,14 @@
+{
+    "id": "26",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/352",
+    "fix_commit": "af44738c7de74f24e37ea0c1242e73b07c3f4362",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.progress.HandyReturnValuesTest -Dtest.entry.method=should_default_values_for_primitive run.dev.tests",
+    "folder": "test/org/mockito/internal/progress/",
+    "file": "HandyReturnValuesTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.progress.HandyReturnValuesTest.xml"
+}

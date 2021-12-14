@@ -1,0 +1,14 @@
+{
+    "id": "32",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/216",
+    "fix_commit": "4f7060cc54bb50292ccfbf3b9fca27f0282abf51",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.SpyShouldHaveNiceNameTest -Dtest.entry.method=shouldPrintNiceName run.dev.tests",
+    "folder": "test/org/mockitousage/bugs/",
+    "file": "SpyShouldHaveNiceNameTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.SpyShouldHaveNiceNameTest.xml"
+}

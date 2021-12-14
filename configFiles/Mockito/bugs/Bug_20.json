@@ -1,0 +1,14 @@
+{
+    "id": "20",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/92",
+    "fix_commit": "7616cd17d5e1dc7c3dee080c6969183821d4797a",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.annotation.SpyAnnotationTest -Dtest.entry.method=should_spy_inner_class run.dev.tests",
+    "folder": "test/org/mockitousage/annotation/",
+    "file": "SpyAnnotationTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.annotation.SpyAnnotationTest.xml"
+}

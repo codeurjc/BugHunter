@@ -1,0 +1,14 @@
+{
+    "id": "69",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-371",
+    "fix_commit": "a2711c189d9754c22e3aba2de1c6c125e52626aa",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.stat.correlation.PearsonsCorrelationTest -Dtest.entry.method=testPValueNearZero run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/stat/correlation/",
+    "file": "PearsonsCorrelationTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.correlation.PearsonsCorrelationTest.xml"
+}

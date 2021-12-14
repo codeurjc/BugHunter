@@ -1,0 +1,14 @@
+{
+    "id": "2",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/197",
+    "fix_commit": "80452c7a42777513c35fd30c4e12bcd7ee438fb9",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.util.TimerTest -Dtest.entry.method=should_throw_friendly_reminder_exception_when_duration_is_negative run.dev.tests",
+    "folder": "test/org/mockito/internal/util/",
+    "file": "TimerTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.util.TimerTest.xml"
+}

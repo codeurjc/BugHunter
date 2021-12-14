@@ -1,0 +1,14 @@
+{
+    "id": "4",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/187",
+    "fix_commit": "42b391d4209024292b6101048389570e4ec36b2a",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.exceptions.ReporterTest -Dtest.entry.method=can_use_print_mock_name_even_when_mock_bogus_default_answer_and_when_reporting_no_more_interaction_wanted_in_order run.dev.tests",
+    "folder": "test/org/mockito/exceptions/",
+    "file": "ReporterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.exceptions.ReporterTest.xml"
+}

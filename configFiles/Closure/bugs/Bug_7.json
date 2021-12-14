@@ -1,0 +1,14 @@
+{
+    "id": "7",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-841.json",
+    "fix_commit": "e736b1c92981fafdc87f3f41f66918305f173734",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.ClosureReverseAbstractInterpreterTest -Dtest.entry.method=testGoogIsFunction2 run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "ClosureReverseAbstractInterpreterTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.ClosureReverseAbstractInterpreterTest.xml"
+}

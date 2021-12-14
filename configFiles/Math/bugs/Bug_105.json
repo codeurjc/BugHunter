@@ -1,0 +1,14 @@
+{
+    "id": "105",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-85",
+    "fix_commit": "fc21b26f84312e4f75e8b144238618c73a8b091f",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.stat.regression.SimpleRegressionTest -Dtest.entry.method=testSSENonNegative run.dev.tests",
+    "folder": "src/test/org/apache/commons/math/stat/regression/",
+    "file": "SimpleRegressionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.regression.SimpleRegressionTest.xml"
+}

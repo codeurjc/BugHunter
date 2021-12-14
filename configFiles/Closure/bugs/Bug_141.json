@@ -1,0 +1,14 @@
+{
+    "id": "141",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-116.json",
+    "fix_commit": "3ce4716848eb71b6e78a4545a2cc0c27e74a29b3",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.ExpresssionDecomposerTest -Dtest.entry.method=testCanExposeExpression2 run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "ExpresssionDecomposerTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.ExpresssionDecomposerTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "64",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-489.json",
+    "fix_commit": "de726510af4329fb8eeb8a54b2d93d8d37c87545",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CommandLineRunnerTest -Dtest.entry.method=testES5StrictUseStrictMultipleInputs run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "CommandLineRunnerTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CommandLineRunnerTest.xml"
+}

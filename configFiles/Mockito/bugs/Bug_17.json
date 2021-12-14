@@ -1,0 +1,14 @@
+{
+    "id": "17",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/152",
+    "fix_commit": "77cb2037314dd024eb53ffe2e9e06304088a2d53",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.basicapi.MocksSerializationTest -Dtest.entry.method=shouldBeSerializeAndHaveExtraInterfaces run.dev.tests",
+    "folder": "test/org/mockitousage/basicapi/",
+    "file": "MocksSerializationTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.basicapi.MocksSerializationTest.xml"
+}

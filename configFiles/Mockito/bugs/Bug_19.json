@@ -1,0 +1,14 @@
+{
+    "id": "19",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/205",
+    "fix_commit": "110ffa80070bf54ab8efabdaaa27b193a93d6128",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest -Dtest.entry.method=shouldInsertFieldWithCorrectNameWhenMultipleTypesAvailable run.dev.tests",
+    "folder": "test/org/mockitousage/annotation/",
+    "file": "MockInjectionUsingSetterOrPropertyTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest.xml"
+}

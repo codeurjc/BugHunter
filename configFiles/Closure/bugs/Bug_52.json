@@ -1,0 +1,14 @@
+{
+    "id": "52",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-569.json",
+    "fix_commit": "5909c3db59b16886917456ab950ef9661a7fe6b1",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CodePrinterTest -Dtest.entry.method=testNumericKeys run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "CodePrinterTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CodePrinterTest.xml"
+}

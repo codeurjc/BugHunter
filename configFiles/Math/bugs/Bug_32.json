@@ -1,0 +1,14 @@
+{
+    "id": "32",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-780",
+    "fix_commit": "f81847d8079753ce45b049813730055188a22efb",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest -Dtest.entry.method=testIssue780 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math3/geometry/euclidean/threed/",
+    "file": "PolyhedronsSetTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSetTest.xml"
+}

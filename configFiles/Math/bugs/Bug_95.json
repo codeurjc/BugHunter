@@ -1,0 +1,14 @@
+{
+    "id": "95",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-227",
+    "fix_commit": "fbf87122e0f7229892b6dbbf2e211cc46acea008",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.distribution.FDistributionTest -Dtest.entry.method=testSmallDegreesOfFreedom run.dev.tests",
+    "folder": "src/test/org/apache/commons/math/distribution/",
+    "file": "FDistributionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.distribution.FDistributionTest.xml"
+}

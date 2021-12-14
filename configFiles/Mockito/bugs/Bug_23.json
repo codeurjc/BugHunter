@@ -1,0 +1,14 @@
+{
+    "id": "23",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/399",
+    "fix_commit": "82935114a09390cbab0c6b6df9b6fd6788bf55d9",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.stubbing.DeepStubsSerializableTest -Dtest.entry.method=should_serialize_and_deserialize_mock_created_by_deep_stubs run.dev.tests",
+    "folder": "test/org/mockitousage/stubbing/",
+    "file": "DeepStubsSerializableTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.stubbing.DeepStubsSerializableTest.xml"
+}

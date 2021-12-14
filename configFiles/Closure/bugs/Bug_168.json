@@ -1,0 +1,14 @@
+{
+    "id": "168",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-726.json",
+    "fix_commit": "b675d1da9d5f8b36849db4943f580969105901a4",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.TypeCheckTest -Dtest.entry.method=testIssue726 run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "TypeCheckTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.TypeCheckTest.xml"
+}

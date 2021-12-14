@@ -1,0 +1,14 @@
+{
+    "id": "18",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/210",
+    "fix_commit": "8ceb04ad7317d8db24476b3b5f56ec9f658bc43a",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesTest -Dtest.entry.method=should_return_empty_iterable run.dev.tests",
+    "folder": "test/org/mockito/internal/stubbing/defaultanswers/",
+    "file": "ReturnsEmptyValuesTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValuesTest.xml"
+}

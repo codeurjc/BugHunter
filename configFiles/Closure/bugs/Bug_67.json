@@ -1,0 +1,14 @@
+{
+    "id": "67",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-459.json",
+    "fix_commit": "aa89d05b48332d68b8e6ebcee427b2ac3b4e3184",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.RemoveUnusedPrototypePropertiesTest -Dtest.entry.method=testAliasing7 run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "RemoveUnusedPrototypePropertiesTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.RemoveUnusedPrototypePropertiesTest.xml"
+}

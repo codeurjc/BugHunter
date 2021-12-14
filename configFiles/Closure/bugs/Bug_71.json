@@ -1,0 +1,14 @@
+{
+    "id": "71",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-254.json",
+    "fix_commit": "db1fdf97454a6e4ff2d29cab5f1ef2273b54c0b4",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CheckAccessControlsTest -Dtest.entry.method=testNoPrivateAccessForProperties6 run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "CheckAccessControlsTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CheckAccessControlsTest.xml"
+}

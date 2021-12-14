@@ -1,0 +1,14 @@
+{
+    "id": "12",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/188",
+    "fix_commit": "7a647a702c8af81ccf5d37b09c11529c6c0cb1b7",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.util.reflection.GenericMasterTest -Dtest.entry.method=shouldDealWithNestedGenerics run.dev.tests",
+    "folder": "test/org/mockito/internal/util/reflection/",
+    "file": "GenericMasterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.util.reflection.GenericMasterTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "30",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/225",
+    "fix_commit": "3c924f80a4db3692a13341f0da4517052ab77a2a",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest -Dtest.entry.method=shouldPrintTheParametersOnSmartNullPointerExceptionMessage run.dev.tests",
+    "folder": "test/org/mockito/internal/stubbing/defaultanswers/",
+    "file": "ReturnsSmartNullsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest.xml"
+}

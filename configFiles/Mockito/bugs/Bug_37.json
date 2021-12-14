@@ -1,0 +1,14 @@
+{
+    "id": "37",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/140",
+    "fix_commit": "c0222c2dbfbd2b053961a46e4c2a3973aec55a75",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.stubbing.answers.AnswersValidatorTest -Dtest.entry.method=shouldFailWhenCallingRealMethodOnIterface run.dev.tests",
+    "folder": "test/org/mockito/internal/stubbing/answers/",
+    "file": "AnswersValidatorTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.stubbing.answers.AnswersValidatorTest.xml"
+}

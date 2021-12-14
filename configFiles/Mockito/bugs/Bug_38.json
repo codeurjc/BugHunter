@@ -1,0 +1,14 @@
+{
+    "id": "38",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/79",
+    "fix_commit": "c1f2c4e6b5bab4cfc004f22999e11e8ac140d377",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.verification.argumentmatching.ArgumentMatchingToolTest -Dtest.entry.method=shouldWorkFineWhenGivenArgIsNull run.dev.tests",
+    "folder": "test/org/mockito/internal/verification/argumentmatching/",
+    "file": "ArgumentMatchingToolTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.verification.argumentmatching.ArgumentMatchingToolTest.xml"
+}

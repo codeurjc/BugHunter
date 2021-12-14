@@ -1,0 +1,14 @@
+{
+    "id": "45",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-679",
+    "fix_commit": "bc4e9db01c2a03062965fa4bac65782376ab2287",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.linear.OpenMapRealMatrixTest -Dtest.entry.method=testMath679 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/linear/",
+    "file": "OpenMapRealMatrixTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.OpenMapRealMatrixTest.xml"
+}

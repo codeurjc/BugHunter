@@ -1,0 +1,14 @@
+{
+    "id": "86",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-274",
+    "fix_commit": "bd8f05c4dda4b5b00e525e08fd6c95d256423c97",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.linear.CholeskyDecompositionImplTest -Dtest.entry.method=testMath274 run.dev.tests",
+    "folder": "src/test/org/apache/commons/math/linear/",
+    "file": "CholeskyDecompositionImplTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.CholeskyDecompositionImplTest.xml"
+}

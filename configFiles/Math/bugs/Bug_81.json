@@ -1,0 +1,14 @@
+{
+    "id": "81",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-308",
+    "fix_commit": "7d903ca533833e5db8d2fe150f1e31b54ddda700",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.linear.EigenDecompositionImplTest -Dtest.entry.method=testMath308 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/linear/",
+    "file": "EigenDecompositionImplTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.EigenDecompositionImplTest.xml"
+}

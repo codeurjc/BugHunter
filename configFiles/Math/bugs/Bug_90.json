@@ -1,0 +1,14 @@
+{
+    "id": "90",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-259",
+    "fix_commit": "0c84b28c3542f3340f7ec0dffc34c60dff66604e",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.stat.FrequencyTest -Dtest.entry.method=testAddNonComparable run.dev.tests",
+    "folder": "src/test/org/apache/commons/math/stat/",
+    "file": "FrequencyTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.FrequencyTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "81",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-251.json",
+    "fix_commit": "084b868bc2fbf9d6d0319e5a362ade1d7f43f899",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.parsing.ParserTest -Dtest.entry.method=testUnnamedFunctionStatement run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/parsing/",
+    "file": "ParserTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.parsing.ParserTest.xml"
+}

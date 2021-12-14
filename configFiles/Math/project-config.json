@@ -1,0 +1,10 @@
+{
+    "project": "Math",
+    "docker_image": "defects4j:2.1.0",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=%s -Dtest.entry.method=%s run.dev.tests",
+    "test_path": "src/test/java/%s.java",
+    "report_path": "target/surefire-reports/TEST-%s.xml",
+    "git_url": "D4J"
+}

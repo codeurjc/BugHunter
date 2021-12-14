@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "project": "Chart",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://sourceforge.net/p/jfreechart/bugs/868",
+    "fix_commit": "1025",
+    "build": "ant -Dd4j.project.id=Chart compile",
+    "build_test": "ant -Dd4j.project.id=Chart compile.tests",
+    "test_command": "ant -Dd4j.project.id=Chart -Dtest.entry.class=org.jfree.chart.util.junit.ShapeUtilitiesTests -Dtest.entry.method=testEqualGeneralPaths run.dev.tests",
+    "folder": "src/test/java/org/jfree/chart/util/junit/",
+    "file": "ShapeUtilitiesTests.java",
+    "test_report": "target/surefire-reports/TEST-org.jfree.chart.util.junit.ShapeUtilitiesTests.xml"
+}

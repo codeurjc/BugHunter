@@ -1,0 +1,10 @@
+{
+    "project": "Closure",
+    "docker_image": "defects4j:2.1.0",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=%s -Dtest.entry.method=%s run.dev.tests",
+    "test_path": "test/%s.java",
+    "report_path": "target/surefire-reports/TEST-%s.xml",
+    "git_url": "D4J"
+}

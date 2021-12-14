@@ -1,0 +1,14 @@
+{
+    "id": "134",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-86.json",
+    "fix_commit": "6d374c3ee4c9c2651ffb44048924e127fd2bf37c",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.AmbiguatePropertiesTest -Dtest.entry.method=testImplementsAndExtends run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "AmbiguatePropertiesTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.AmbiguatePropertiesTest.xml"
+}

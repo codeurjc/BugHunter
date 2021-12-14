@@ -1,0 +1,14 @@
+{
+    "id": "5",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/152",
+    "fix_commit": "42a24dde02923185db3f79ae57e7819f7d70af55",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitointegration.NoJUnitDependenciesTest -Dtest.entry.method=pure_mockito_should_not_depend_JUnit run.dev.tests",
+    "folder": "test/org/mockitointegration/",
+    "file": "NoJUnitDependenciesTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitointegration.NoJUnitDependenciesTest.xml"
+}

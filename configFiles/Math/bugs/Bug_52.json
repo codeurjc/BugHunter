@@ -1,0 +1,14 @@
+{
+    "id": "52",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-639",
+    "fix_commit": "3c319db494928e9d51ea6091b301302c65f4eceb",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.geometry.euclidean.threed.RotationTest -Dtest.entry.method=testIssue639 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/geometry/euclidean/threed/",
+    "file": "RotationTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.geometry.euclidean.threed.RotationTest.xml"
+}

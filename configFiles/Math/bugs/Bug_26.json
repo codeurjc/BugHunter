@@ -1,0 +1,14 @@
+{
+    "id": "26",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-836",
+    "fix_commit": "1566dd339f6efc2347b0962fac7fce22adbc31ff",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.fraction.FractionTest -Dtest.entry.method=testIntegerOverflow run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math3/fraction/",
+    "file": "FractionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.fraction.FractionTest.xml"
+}

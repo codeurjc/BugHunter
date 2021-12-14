@@ -8,7 +8,7 @@
     "build": "ant -Dd4j.project.id=Lang compile",
     "build_test": "ant -Dd4j.project.id=Lang compile.tests",
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.ArrayUtilsAddTest -Dtest.entry.method=testJira567 run.dev.tests",
-    "folder": "src/test/java/org/apache/commons/lang3/",
+    "folder": "src/test/org/apache/commons/lang3/",
     "file": "ArrayUtilsAddTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.ArrayUtilsAddTest.xml"
 }

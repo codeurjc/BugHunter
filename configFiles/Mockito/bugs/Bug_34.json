@@ -1,0 +1,14 @@
+{
+    "id": "34",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/157",
+    "fix_commit": "e8cebe01abae49a09aadd6a26c6f7e2f90e5e772",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.invocation.InvocationMatcherTest -Dtest.entry.method=shouldMatchCaptureArgumentsWhenArgsCountDoesNOTMatch run.dev.tests",
+    "folder": "test/org/mockito/internal/invocation/",
+    "file": "InvocationMatcherTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.invocation.InvocationMatcherTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "103",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-113.json",
+    "fix_commit": "2f5cb1622371de540fe20dcbe0411651ec89f952",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CheckUnreachableCodeTest -Dtest.entry.method=testInstanceOfThrowsException run.dev.tests",
+    "folder": "test/com/google/javascript/jscomp/",
+    "file": "CheckUnreachableCodeTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CheckUnreachableCodeTest.xml"
+}

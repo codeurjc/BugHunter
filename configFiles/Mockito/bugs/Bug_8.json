@@ -1,0 +1,14 @@
+{
+    "id": "8",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/114",
+    "fix_commit": "5a03bf5d0c9aedac9cfbf074833167c1eca6439f",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.util.reflection.GenericMetadataSupportTest -Dtest.entry.method=typeVariable_of_self_type run.dev.tests",
+    "folder": "test/org/mockito/internal/util/reflection/",
+    "file": "GenericMetadataSupportTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.util.reflection.GenericMetadataSupportTest.xml"
+}

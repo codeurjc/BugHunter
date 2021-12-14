@@ -1,0 +1,14 @@
+{
+    "id": "46",
+    "project": "Closure",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-603.json",
+    "fix_commit": "4a1a31c6a50a0fbe25fa33277909bd51f1deb8e9",
+    "build": "ant -Dd4j.project.id=Closure compile",
+    "build_test": "ant -Dd4j.project.id=Closure compile.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.rhino.jstype.JSTypeTest -Dtest.entry.method=testRecordTypeLeastSuperType2 run.dev.tests",
+    "folder": "test/com/google/javascript/rhino/jstype/",
+    "file": "JSTypeTest.java",
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.rhino.jstype.JSTypeTest.xml"
+}

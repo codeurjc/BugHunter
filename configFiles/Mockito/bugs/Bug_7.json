@@ -1,0 +1,14 @@
+{
+    "id": "7",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/128",
+    "fix_commit": "0aaa36ce6924ca87f88e3723771413b42b80dc5a",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.deepstubs.DeepStubFailingWhenGenricNestedAsRawTypeTest -Dtest.entry.method=discoverDeepMockingOfGenerics run.dev.tests",
+    "folder": "test/org/mockitousage/bugs/deepstubs/",
+    "file": "DeepStubFailingWhenGenricNestedAsRawTypeTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.deepstubs.DeepStubFailingWhenGenricNestedAsRawTypeTest.xml"
+}

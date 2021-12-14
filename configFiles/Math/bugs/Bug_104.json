@@ -1,0 +1,14 @@
+{
+    "id": "104",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-166",
+    "fix_commit": "e39a7750ef362679599b623b05bfadb150832515",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.special.GammaTest -Dtest.entry.method=testRegularizedGammaPositivePositive run.dev.tests",
+    "folder": "src/test/org/apache/commons/math/special/",
+    "file": "GammaTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.special.GammaTest.xml"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "25",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/230",
+    "fix_commit": "a6ccf070a267e0a165b8efaaefa8938e787bb6a0",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.stubbing.defaultanswers.ReturnsGenericDeepStubsTest -Dtest.entry.method=will_return_default_value_on_non_mockable_nested_generic run.dev.tests",
+    "folder": "test/org/mockito/internal/stubbing/defaultanswers/",
+    "file": "ReturnsGenericDeepStubsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.stubbing.defaultanswers.ReturnsGenericDeepStubsTest.xml"
+}

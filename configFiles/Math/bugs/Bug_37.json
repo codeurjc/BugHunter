@@ -1,0 +1,14 @@
+{
+    "id": "37",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-722",
+    "fix_commit": "65ed08e15af15617e967d3ea9d635dc55a0ef866",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.complex.ComplexTest -Dtest.entry.method=testTanhInf run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/complex/",
+    "file": "ComplexTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.complex.ComplexTest.xml"
+}

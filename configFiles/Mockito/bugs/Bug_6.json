@@ -1,0 +1,14 @@
+{
+    "id": "6",
+    "project": "Mockito",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://github.com/mockito/mockito/issues/134",
+    "fix_commit": "dc205824dbc289acbcde919e430176ad72da847f",
+    "build": "ant -Dd4j.project.id=Mockito compile",
+    "build_test": "ant -Dd4j.project.id=Mockito compile.tests",
+    "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.matchers.AnyXMatchersAcceptNullsTest -Dtest.entry.method=shouldNotAcceptNullInAllAnyPrimitiveWrapperMatchers run.dev.tests",
+    "folder": "test/org/mockitousage/matchers/",
+    "file": "AnyXMatchersAcceptNullsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.matchers.AnyXMatchersAcceptNullsTest.xml"
+}

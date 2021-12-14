@@ -1,0 +1,14 @@
+{
+    "id": "4",
+    "project": "Chart",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "UNKNOWN",
+    "fix_commit": "2183",
+    "build": "ant -Dd4j.project.id=Chart compile",
+    "build_test": "ant -Dd4j.project.id=Chart compile.tests",
+    "test_command": "ant -Dd4j.project.id=Chart -Dtest.entry.class=org.jfree.chart.axis.junit.LogAxisTests -Dtest.entry.method=testXYAutoRange1 run.dev.tests",
+    "folder": "src/test/java/org/jfree/chart/axis/junit/",
+    "file": "LogAxisTests.java",
+    "test_report": "target/surefire-reports/TEST-org.jfree.chart.axis.junit.LogAxisTests.xml"
+}

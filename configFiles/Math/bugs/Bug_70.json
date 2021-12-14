@@ -1,0 +1,14 @@
+{
+    "id": "70",
+    "project": "Math",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.0",
+    "bug_report": "https://issues.apache.org/jira/browse/MATH-369",
+    "fix_commit": "f41fcd85ca62a2109a6e550be0353d292d351213",
+    "build": "ant -Dd4j.project.id=Math compile",
+    "build_test": "ant -Dd4j.project.id=Math compile.tests",
+    "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.analysis.solvers.BisectionSolverTest -Dtest.entry.method=testMath369 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/math/analysis/solvers/",
+    "file": "BisectionSolverTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.analysis.solvers.BisectionSolverTest.xml"
+}
