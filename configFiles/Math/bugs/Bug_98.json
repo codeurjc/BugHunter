@@ -11,5 +11,5 @@
     "folder": "src/test/org/apache/commons/math/linear/",
     "file": "BigMatrixImplTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.BigMatrixImplTest.xml",
-    "fixes": "sed -i 's/<javac/<javac encoding=\"iso-8859-1\"/' build.xml"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
 }

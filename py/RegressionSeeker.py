@@ -62,8 +62,9 @@ class RegressionSeeker():
         # 1) Checkout commit
         self.gitManager.change_commit(commit['hash'])
 
-        # 2) Apply regression test
+        # 2) Apply regression test and fixes
         self.experiment.applyRegressionTest()
+        self.experiment.project.applyFixes(commitResultsPath)
 
         # 3) Build source
         isSourceBuildSuccess = self.experiment.project.buildSource(commitResultsPath)

@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.SystemUtilsTest -Dtest.entry.method=testJavaVersionAsInt run.dev.tests",
     "folder": "src/test/java/org/apache/commons/lang3/",
     "file": "SystemUtilsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.SystemUtilsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.SystemUtilsTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file.sh"
 }

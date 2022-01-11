@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.StringUtilsEqualsIndexOfTest -Dtest.entry.method=testContainsIgnoreCase_LocaleIndependence run.dev.tests",
     "folder": "src/test/org/apache/commons/lang/",
     "file": "StringUtilsEqualsIndexOfTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.StringUtilsEqualsIndexOfTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.StringUtilsEqualsIndexOfTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file-old.sh"
 }

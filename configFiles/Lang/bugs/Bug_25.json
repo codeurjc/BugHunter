@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.text.translate.EntityArraysTest -Dtest.entry.method=testISO8859_1_ESCAPE run.dev.tests",
     "folder": "src/test/java/org/apache/commons/lang3/text/translate/",
     "file": "EntityArraysTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.text.translate.EntityArraysTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.text.translate.EntityArraysTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file.sh"
 }

@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.optimization.direct.CMAESOptimizerTest -Dtest.entry.method=testBoundaryRangeTooLarge run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math3/optimization/direct/",
     "file": "CMAESOptimizerTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.optimization.direct.CMAESOptimizerTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.optimization.direct.CMAESOptimizerTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
 }

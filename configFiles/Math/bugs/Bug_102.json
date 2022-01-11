@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.stat.inference.ChiSquareFactoryTest -Dtest.entry.method=testChiSquareLargeTestStatistic run.dev.tests",
     "folder": "src/test/org/apache/commons/math/stat/inference/",
     "file": "ChiSquareFactoryTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.inference.ChiSquareFactoryTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.inference.ChiSquareFactoryTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
 }

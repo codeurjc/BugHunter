@@ -14,17 +14,14 @@ class Project():
     @autowired
     def __init__(self, projectName, experimentId, bug, 
                     dockerClient: Autowired(DockerClient), processManager:Autowired(ProcessManager), d4j:Autowired(Defects4J)):
-        
-        with open('configFiles/{project}/project-config.json'.format(project=projectName)) as f:
-            self.projectConfig = json.load(f)
 
         self.name = projectName
         self.bug = bug
         self.experimentId = experimentId
-        self.repository = self.projectConfig['git_url']
+        self.repository = self.bug.bugConfig['git_url']
         self.path = "{cwd}/projects/{experimentId}/".format(cwd=os.getcwd(), experimentId=self.experimentId)
         self.pm = processManager
-        self.dockerImage = self.projectConfig['docker_image']
+        self.dockerImage = self.bug.bugConfig['docker_image']
         self.dockerClient = dockerClient
         self.d4j = d4j
 
@@ -35,23 +32,32 @@ class Project():
             else:
                 cloneRepository(self.repository,self.path)
 
+    def applyFixes(self, resultsPath):
+        if 'fixes' in self.bug.bugConfig:
+            fix_cmd = self.bug.bugConfig['fixes']
+            self.pm.log("Applying fixes: %s"%fix_cmd)
+            self.executeOnCommit(fix_cmd, resultsPath + "apply-fixes.log")
+
     def buildSource(self, resultsPath): 
-        return self.executeOnCommit(self.bug.build_source_command , resultsPath + "source-build.log")
+        return self.executeOnCommitWithJava(self.bug.build_source_command, resultsPath + "source-build.log")
 
     def buildTests(self, resultsPath):
-        return self.executeOnCommit(self.bug.build_test_command, resultsPath + "test-build.log")
+        return self.executeOnCommitWithJava(self.bug.build_test_command, resultsPath + "test-build.log")
 
     def executeTest(self, resultsPath):
-        isSuccess = self.executeOnCommit(self.bug.test_command, resultsPath + "test-execution.log")
+        isSuccess = self.executeOnCommitWithJava(self.bug.test_command, resultsPath + "test-execution.log")
         if os.path.isfile(self.path+self.bug.test_report):
             shutil.copyfile(self.path+self.bug.test_report, resultsPath + "test-report.xml")
         else:
             self.pm.log("Test report not found!")
         return isSuccess
 
+    def executeOnCommitWithJava(self, cmd, log_path):
+        return self.executeOnCommit(cmd+" -Duser.home=$M2_FOLDER", log_path)
+
     def executeOnCommit(self, cmd, log_path):
     
-        exit_code, log = self.dockerClient.execute(self.experimentId, cmd+" -Duser.home=$M2_FOLDER")
+        exit_code, log = self.dockerClient.execute(self.experimentId, cmd)
 
         with open(log_path, "wb+") as out:
             out.write(log)

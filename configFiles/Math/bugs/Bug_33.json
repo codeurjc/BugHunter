@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.optimization.linear.SimplexSolverTest -Dtest.entry.method=testMath781 run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math3/optimization/linear/",
     "file": "SimplexSolverTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.optimization.linear.SimplexSolverTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.optimization.linear.SimplexSolverTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
 }

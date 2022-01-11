@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.StringUtilsTest -Dtest.entry.method=testReplace_StringStringArrayStringArray run.dev.tests",
     "folder": "src/test/org/apache/commons/lang3/",
     "file": "StringUtilsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringUtilsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringUtilsTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file-old.sh"
 }
