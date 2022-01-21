@@ -11,7 +11,7 @@
     "folder": "src/test/java/org/apache/commons/compress/utils/",
     "file": "ChecksumCalculatingInputStreamTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.utils.ChecksumCalculatingInputStreamTest.xml",
-    "issue_created_at": "2014-04-23 08:11:16 +0000",
-    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "issue_created_at": "2017-06-16 18:31:56 +0000",
+    "issue_closed_at": "2017-06-17 18:32:57 +0000",
     "fix_date": "2017-06-17 20:29:37 +0200"
 }

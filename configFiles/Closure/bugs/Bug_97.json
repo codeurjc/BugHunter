@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.PeepholeFoldConstantsTest -Dtest.entry.method=testFoldBitShifts run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "PeepholeFoldConstantsTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.PeepholeFoldConstantsTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.PeepholeFoldConstantsTest.xml",
+    "issue_created_at": "2010-07-18 18:44:21 +0000",
+    "issue_closed_at": "2010-07-20 17:52:00 +0000",
+    "fix_date": "2010-07-19 23:41:45 +0000"
 }

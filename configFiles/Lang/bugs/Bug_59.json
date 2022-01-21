@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.text.StrBuilderAppendInsertTest -Dtest.entry.method=testLang299 run.dev.tests",
     "folder": "src/test/org/apache/commons/lang/text/",
     "file": "StrBuilderAppendInsertTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.text.StrBuilderAppendInsertTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.text.StrBuilderAppendInsertTest.xml",
+    "issue_created_at": "2006-12-11 11:58:25 +0000",
+    "issue_closed_at": "2006-12-12 22:35:59 +0000",
+    "fix_date": "2006-12-12 22:34:39 +0000"
 }

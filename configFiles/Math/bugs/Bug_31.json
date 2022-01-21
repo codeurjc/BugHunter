@@ -11,5 +11,8 @@
     "folder": "src/test/java/org/apache/commons/math3/distribution/",
     "file": "BinomialDistributionTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.distribution.BinomialDistributionTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh",
+    "issue_created_at": "2011-12-04 00:40:44 +0000",
+    "issue_closed_at": "2012-05-21 19:56:36 +0000",
+    "fix_date": "2012-05-21 19:55:30 +0000"
 }

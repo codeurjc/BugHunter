@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CollapsePropertiesTest -Dtest.entry.method=testAliasedTopLevelEnum run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "CollapsePropertiesTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CollapsePropertiesTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CollapsePropertiesTest.xml",
+    "issue_created_at": "2011-03-23 14:33:49 +0000",
+    "issue_closed_at": "2011-03-31 03:41:11 +0000",
+    "fix_date": "2011-03-29 23:46:31 +0000"
 }

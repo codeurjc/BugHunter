@@ -11,7 +11,7 @@
     "folder": "src/test/java/org/apache/commons/collections4/trie/",
     "file": "PatriciaTrieTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.collections4.trie.PatriciaTrieTest.xml",
-    "issue_created_at": "2014-04-23 08:11:16 +0000",
-    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "issue_created_at": "2016-04-12 21:59:19 +0000",
+    "issue_closed_at": "2016-08-04 17:33:10 +0000",
     "fix_date": "2016-08-04 17:32:17 +0000"
 }

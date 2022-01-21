@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestMutableDateTime_Adds#testAddYears_int_dstOverlapWinter_addZero test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestMutableDateTime_Adds.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestMutableDateTime_Adds.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestMutableDateTime_Adds.xml",
+    "issue_created_at": "2013-10-16 15:36:22 +0000",
+    "issue_closed_at": "2013-11-27 12:50:47 +0000",
+    "fix_date": "2013-11-27 12:36:35 +0000"
 }

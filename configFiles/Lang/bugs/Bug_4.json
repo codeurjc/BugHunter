@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.text.translate.LookupTranslatorTest -Dtest.entry.method=testLang882 run.dev.tests",
     "folder": "src/test/java/org/apache/commons/lang3/text/translate/",
     "file": "LookupTranslatorTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.text.translate.LookupTranslatorTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.text.translate.LookupTranslatorTest.xml",
+    "issue_created_at": "2013-03-28 16:25:26 +0000",
+    "issue_closed_at": "2013-04-23 06:03:28 +0000",
+    "fix_date": "2013-04-23 06:00:41 +0000"
 }

@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.util.FastMathTest -Dtest.entry.method=testMinMaxFloat run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/util/",
     "file": "FastMathTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.util.FastMathTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.util.FastMathTest.xml",
+    "issue_created_at": "2011-01-17 19:52:10 +0000",
+    "issue_closed_at": "2011-01-17 20:01:32 +0000",
+    "fix_date": "2011-01-17 19:55:01 +0000"
 }

@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestPeriod_Basics#testNormalizedStandard_periodType_months1 test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestPeriod_Basics.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPeriod_Basics.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPeriod_Basics.xml",
+    "issue_created_at": "2013-10-17 20:36:31 +0000",
+    "issue_closed_at": "2013-11-01 14:07:10 +0000",
+    "fix_date": "2013-11-01 14:06:59 +0000"
 }

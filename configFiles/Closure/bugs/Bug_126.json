@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.MinimizeExitPointsTest -Dtest.entry.method=testDontRemoveBreakInTryFinally run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "MinimizeExitPointsTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.MinimizeExitPointsTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.MinimizeExitPointsTest.xml",
+    "issue_created_at": "2013-03-05 10:22:11 +0000",
+    "issue_closed_at": "2013-03-23 00:56:04 +0000",
+    "fix_date": "2013-03-22 17:55:49 -0700"
 }

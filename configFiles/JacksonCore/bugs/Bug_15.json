@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.filter.BasicParserFilteringTest#testNotAllowMultipleMatches test",
     "folder": "src/test/java/com/fasterxml/jackson/core/filter/",
     "file": "BasicParserFilteringTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.filter.BasicParserFilteringTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.filter.BasicParserFilteringTest.xml",
+    "issue_created_at": "2015-08-04 11:14:16 +0000",
+    "issue_closed_at": "2016-03-22 04:35:54 +0000",
+    "fix_date": "2016-03-21 21:27:04 -0700"
 }

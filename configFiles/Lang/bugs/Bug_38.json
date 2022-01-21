@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/lang3/time/",
     "file": "FastDateFormatTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.time.FastDateFormatTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file-old.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file-old.sh",
+    "issue_created_at": "2009-10-16 16:47:39 +0000",
+    "issue_closed_at": "2009-12-17 06:05:11 +0000",
+    "fix_date": "2009-12-17 06:04:28 +0000"
 }

@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.LooseTypeCheckTest -Dtest.entry.method=testDuplicateLocalVarDecl run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "LooseTypeCheckTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.LooseTypeCheckTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.LooseTypeCheckTest.xml",
+    "issue_created_at": "2011-04-26 17:30:58 +0000",
+    "issue_closed_at": "2011-05-21 17:15:36 +0000",
+    "fix_date": "2011-05-20 19:48:47 +0000"
 }

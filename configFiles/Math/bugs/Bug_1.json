@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.fraction.BigFractionTest -Dtest.entry.method=testDigitLimitConstructor run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math3/fraction/",
     "file": "BigFractionTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.fraction.BigFractionTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.fraction.BigFractionTest.xml",
+    "issue_created_at": "2013-06-24 17:21:18 +0000",
+    "issue_closed_at": "2013-08-31 19:43:25 +0000",
+    "fix_date": "2013-08-31 19:43:02 +0000"
 }

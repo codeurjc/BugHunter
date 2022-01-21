@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test#testNestedUnwrappedLists180 test",
     "folder": "src/test/java/com/fasterxml/jackson/dataformat/xml/lists/",
     "file": "NestedUnwrappedLists180Test.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.dataformat.xml.lists.NestedUnwrappedLists180Test.xml",
+    "issue_created_at": "2016-01-05 23:29:32 +0000",
+    "issue_closed_at": "2016-01-07 03:35:54 +0000",
+    "fix_date": "2016-01-06 19:35:47 -0800"
 }

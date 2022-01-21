@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures#testTooBigBigDecimal test",
     "folder": "src/test/java/com/fasterxml/jackson/core/json/",
     "file": "TestJsonGeneratorFeatures.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestJsonGeneratorFeatures.xml",
+    "issue_created_at": "2016-08-25 05:19:22 +0000",
+    "issue_closed_at": "2016-08-26 21:25:57 +0000",
+    "fix_date": "2016-08-24 22:53:20 -0700"
 }

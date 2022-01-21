@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestMonthDay_Basics#testPlusMonths_int_negativeFromLeap test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestMonthDay_Basics.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestMonthDay_Basics.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestMonthDay_Basics.xml",
+    "fix_date": "2012-05-23 12:45:41 +0100",
+    "issue_created_at": "2012-05-22 00:00:00 +0000",
+    "issue_closed_at": "2015-01-19 00:00:00 +0000"
 }

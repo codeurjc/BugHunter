@@ -5,12 +5,21 @@ import sys
 import json
 import datetime
 from jira import JIRA
+import urllib.request, json 
+import requests
+from bs4 import BeautifulSoup
 
 from py.framework.Bug import Bug
 from py.framework.utils.GitUtils import GitManager
 
 def parseDateJira(date:str):
     return datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%f%z').strftime('%Y-%m-%d %H:%M:%S %z')
+
+def parseDateSourceforge(date:str):
+    return datetime.datetime.strptime(date, '%Y-%m-%d').strftime('%Y-%m-%d %H:%M:%S %z') + "+0000"
+
+def parseDateFromTimestamp(timestamp):
+    return str(datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S %z')) + "+0000"
 
 def updateIssue(project_name, bugId):
     bug = Bug(project_name, bugId)
@@ -32,10 +41,28 @@ def updateIssue(project_name, bugId):
         bug.bugConfig['issue_created_at'] = str(gh_issue.created_at)+" +0000"
         bug.bugConfig['issue_closed_at'] = str(gh_issue.closed_at)+" +0000"
     elif "apache" in report_path:
+        regex = r"https:\/\/issues.apache.org\/(.*)\/browse\/(.*)"
+        m = re.search(regex, report_path)
+        if m is None: exit(1)
+        issue_id = m.group(2)
+
         jira = JIRA('https://issues.apache.org/jira/')
-        jira_issue = jira.issue("COMPRESS-279")
+        jira_issue = jira.issue(issue_id)
         bug.bugConfig['issue_created_at'] = parseDateJira(jira_issue.fields.created)
         bug.bugConfig['issue_closed_at'] = parseDateJira(jira_issue.fields.resolutiondate)
+    elif "storage.googleapis.com" in report_path:
+        with urllib.request.urlopen(report_path) as url:
+            data = json.loads(url.read().decode())
+            bug.bugConfig['issue_created_at'] = parseDateFromTimestamp(data['comments'][0]['timestamp'])
+            bug.bugConfig['issue_closed_at'] =parseDateFromTimestamp(data['comments'][-1]['timestamp'])
+    elif "sourceforge.net" in report_path:
+        with urllib.request.urlopen(report_path) as url:
+            html = url.read().decode()
+            soup = BeautifulSoup(html, 'html.parser')
+            created = soup.find(string="Created:").find_next('span').getText().strip()
+            updated = soup.find(string="Updated:").find_next('span').find('span').getText().strip()
+            bug.bugConfig['issue_created_at'] = parseDateSourceforge(created)
+            bug.bugConfig['issue_closed_at'] = parseDateSourceforge(updated)
     else:
         raise Exception("Get issue info not implemented for %s"%report_path)
 

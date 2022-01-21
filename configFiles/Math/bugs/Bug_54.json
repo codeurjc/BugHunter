@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.dfp.DfpTest -Dtest.entry.method=testIssue567 run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/dfp/",
     "file": "DfpTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.dfp.DfpTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.dfp.DfpTest.xml",
+    "issue_created_at": "2011-05-05 17:49:00 +0000",
+    "issue_closed_at": "2011-05-05 19:44:09 +0000",
+    "fix_date": "2011-05-05 19:41:28 +0000"
 }

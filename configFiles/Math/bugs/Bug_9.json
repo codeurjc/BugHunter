@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.geometry.euclidean.threed.LineTest -Dtest.entry.method=testRevert run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math3/geometry/euclidean/threed/",
     "file": "LineTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.geometry.euclidean.threed.LineTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.geometry.euclidean.threed.LineTest.xml",
+    "issue_created_at": "2013-03-05 16:10:13 +0000",
+    "issue_closed_at": "2013-03-06 09:00:43 +0000",
+    "fix_date": "2013-03-06 08:53:28 +0000"
 }

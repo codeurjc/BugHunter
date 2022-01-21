@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.optimization.direct.BOBYQAOptimizerTest -Dtest.entry.method=testConstrainedRosenWithMoreInterpolationPoints run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/optimization/direct/",
     "file": "BOBYQAOptimizerTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.optimization.direct.BOBYQAOptimizerTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.optimization.direct.BOBYQAOptimizerTest.xml",
+    "issue_created_at": "2011-12-20 02:05:20 +0000",
+    "issue_closed_at": "2012-02-11 23:15:55 +0000",
+    "fix_date": "2011-12-20 13:30:29 +0000"
 }

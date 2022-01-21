@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.LocationInObjectTest#testOffsetWithObjectFieldsUsingReader test",
     "folder": "src/test/java/com/fasterxml/jackson/core/json/",
     "file": "LocationInObjectTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.LocationInObjectTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.LocationInObjectTest.xml",
+    "issue_created_at": "2012-11-05 01:53:19 +0000",
+    "issue_closed_at": "2015-11-26 05:02:40 +0000",
+    "fix_date": "2015-11-25 21:02:31 -0800"
 }

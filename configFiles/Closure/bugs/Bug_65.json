@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CodePrinterTest -Dtest.entry.method=testZero run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "CodePrinterTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CodePrinterTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CodePrinterTest.xml",
+    "issue_created_at": "2011-06-10 01:19:35 +0000",
+    "issue_closed_at": "2011-06-15 21:33:58 +0000",
+    "fix_date": "2011-06-15 00:09:44 +0000"
 }

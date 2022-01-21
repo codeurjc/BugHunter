@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.LocaleUtilsTest -Dtest.entry.method=testAvailableLocaleSet run.dev.tests",
     "folder": "src/test/org/apache/commons/lang/",
     "file": "LocaleUtilsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.LocaleUtilsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.LocaleUtilsTest.xml",
+    "issue_created_at": "2006-12-22 20:32:58 +0000",
+    "issue_closed_at": "2006-12-22 20:35:51 +0000",
+    "fix_date": "2006-12-22 20:34:37 +0000"
 }

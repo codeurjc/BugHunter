@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.TypeInferenceTest -Dtest.entry.method=testRecordInference run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "TypeInferenceTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.TypeInferenceTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.TypeInferenceTest.xml",
+    "issue_created_at": "2012-07-31 18:51:32 +0000",
+    "issue_closed_at": "2012-08-03 14:43:58 +0000",
+    "fix_date": "2012-08-01 23:56:31 +0000"
 }

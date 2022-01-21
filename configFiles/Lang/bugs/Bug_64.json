@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.enums.ValuedEnumTest -Dtest.entry.method=testCompareTo_otherEnumType run.dev.tests",
     "folder": "src/test/org/apache/commons/lang/enums/",
     "file": "ValuedEnumTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.enums.ValuedEnumTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.enums.ValuedEnumTest.xml",
+    "issue_created_at": "2006-05-22 21:10:15 +0000",
+    "issue_closed_at": "2006-08-18 22:21:34 +0000",
+    "fix_date": "2006-08-18 22:21:47 +0000"
 }

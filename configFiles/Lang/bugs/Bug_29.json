@@ -11,5 +11,8 @@
     "folder": "src/test/java/org/apache/commons/lang3/",
     "file": "SystemUtilsTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.SystemUtilsTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Lang/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2010-05-27 21:09:29 +0000",
+    "issue_closed_at": "2011-02-01 16:31:42 +0000",
+    "fix_date": "2010-05-28 16:33:23 +0000"
 }

@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.stat.correlation.PearsonsCorrelationTest -Dtest.entry.method=testPValueNearZero run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/stat/correlation/",
     "file": "PearsonsCorrelationTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.correlation.PearsonsCorrelationTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.correlation.PearsonsCorrelationTest.xml",
+    "issue_created_at": "2010-05-13 19:48:46 +0000",
+    "issue_closed_at": "2010-05-16 23:49:08 +0000",
+    "fix_date": "2010-05-16 23:48:07 +0000"
 }

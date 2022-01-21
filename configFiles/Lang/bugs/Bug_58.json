@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.math.NumberUtilsTest -Dtest.entry.method=testLang300 run.dev.tests",
     "folder": "src/test/org/apache/commons/lang/math/",
     "file": "NumberUtilsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.math.NumberUtilsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.math.NumberUtilsTest.xml",
+    "issue_created_at": "2006-12-19 17:47:43 +0000",
+    "issue_closed_at": "2006-12-19 21:50:46 +0000",
+    "fix_date": "2006-12-19 21:50:04 +0000"
 }

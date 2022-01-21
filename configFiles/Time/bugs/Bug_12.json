@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestLocalDateTime_Constructors#testFactory_fromDateFields_beforeYearZero1 test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestLocalDateTime_Constructors.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestLocalDateTime_Constructors.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestLocalDateTime_Constructors.xml",
+    "issue_created_at": "2012-11-20 23:46:28 +0000",
+    "issue_closed_at": "2012-11-27 12:42:26 +0000",
+    "fix_date": "2012-11-27 12:41:26 +0000"
 }

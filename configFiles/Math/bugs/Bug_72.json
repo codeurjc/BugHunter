@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.analysis.solvers.BrentSolverTest -Dtest.entry.method=testRootEndpoints run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/analysis/solvers/",
     "file": "BrentSolverTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.analysis.solvers.BrentSolverTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.analysis.solvers.BrentSolverTest.xml",
+    "issue_created_at": "2010-02-23 20:23:21 +0000",
+    "issue_closed_at": "2010-02-23 21:10:00 +0000",
+    "fix_date": "2010-02-23 21:09:25 +0000"
 }

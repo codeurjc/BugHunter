@@ -11,5 +11,8 @@
     "folder": "src/test/java/org/apache/commons/math3/linear/",
     "file": "SparseRealVectorTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.linear.SparseRealVectorTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh",
+    "issue_created_at": "2012-06-09 18:51:33 +0000",
+    "issue_closed_at": "2014-02-20 15:58:58 +0000",
+    "fix_date": "2012-06-11 05:52:16 +0000"
 }

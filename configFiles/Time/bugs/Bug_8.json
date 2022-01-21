@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestDateTimeZone#testForOffsetHoursMinutes_int_int test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestDateTimeZone.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZone.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZone.xml",
+    "issue_created_at": "2013-07-18 16:12:52 +0000",
+    "issue_closed_at": "2013-07-20 11:08:53 +0000",
+    "fix_date": "2013-07-20 11:49:21 +0100"
 }

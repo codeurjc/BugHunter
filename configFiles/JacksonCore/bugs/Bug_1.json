@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestParserNonStandard#testAllowNaN test",
     "folder": "src/test/java/com/fasterxml/jackson/core/json/",
     "file": "TestParserNonStandard.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestParserNonStandard.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestParserNonStandard.xml",
+    "issue_created_at": "2013-08-29 03:20:41 +0000",
+    "issue_closed_at": "2013-08-29 04:04:40 +0000",
+    "fix_date": "2013-08-28 21:04:32 -0700"
 }

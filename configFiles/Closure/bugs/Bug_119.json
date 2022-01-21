@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.CheckGlobalNamesTest -Dtest.entry.method=testGlobalCatch run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "CheckGlobalNamesTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CheckGlobalNamesTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.CheckGlobalNamesTest.xml",
+    "issue_created_at": "2013-08-21 21:36:24 +0000",
+    "issue_closed_at": "2013-10-16 18:20:30 +0000",
+    "fix_date": "2013-08-26 12:47:25 -0400"
 }

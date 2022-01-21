@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.linear.OpenMapRealMatrixTest -Dtest.entry.method=testMath679 run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/linear/",
     "file": "OpenMapRealMatrixTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.OpenMapRealMatrixTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.OpenMapRealMatrixTest.xml",
+    "issue_created_at": "2011-10-03 05:36:20 +0000",
+    "issue_closed_at": "2011-10-10 19:57:12 +0000",
+    "fix_date": "2011-10-10 19:56:03 +0000"
 }

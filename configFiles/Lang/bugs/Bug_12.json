@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.RandomStringUtilsTest -Dtest.entry.method=testExceptions run.dev.tests",
     "folder": "src/test/java/org/apache/commons/lang3/",
     "file": "RandomStringUtilsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.RandomStringUtilsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.RandomStringUtilsTest.xml",
+    "issue_created_at": "2012-06-09 13:46:34 +0000",
+    "issue_closed_at": "2012-06-09 15:06:42 +0000",
+    "fix_date": "2012-06-09 14:58:34 +0000"
 }

@@ -11,7 +11,7 @@
     "folder": "src/test/java/org/apache/commons/compress/archivers/",
     "file": "ZipTestCase.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.ZipTestCase.xml",
-    "issue_created_at": "2014-04-23 08:11:16 +0000",
-    "issue_closed_at": "2014-04-27 09:16:34 +0000",
+    "issue_created_at": "2016-10-28 12:10:33 +0000",
+    "issue_closed_at": "2016-12-09 22:04:44 +0000",
     "fix_date": "2016-12-09 23:01:42 +0100"
 }

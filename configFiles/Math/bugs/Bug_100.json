@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/math/estimation/",
     "file": "GaussNewtonEstimatorTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math.estimation.GaussNewtonEstimatorTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh",
+    "issue_created_at": "2008-03-25 22:22:21 +0000",
+    "issue_closed_at": "2008-03-28 20:11:06 +0000",
+    "fix_date": "2008-03-28 20:06:54 +0000"
 }

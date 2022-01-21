@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/math/linear/",
     "file": "BigMatrixImplTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math.linear.BigMatrixImplTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh",
+    "issue_created_at": "2008-06-17 03:02:48 +0000",
+    "issue_closed_at": "2008-06-17 19:10:53 +0000",
+    "fix_date": "2008-06-17 19:09:36 +0000"
 }

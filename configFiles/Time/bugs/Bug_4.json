@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.TestPartial_Basics#testWith3 test",
     "folder": "src/test/java/org/joda/time/",
     "file": "TestPartial_Basics.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPartial_Basics.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.TestPartial_Basics.xml",
+    "issue_created_at": "2013-11-25 19:15:46 +0000",
+    "issue_closed_at": "2013-11-27 12:50:47 +0000",
+    "fix_date": "2013-11-27 12:36:35 +0000"
 }

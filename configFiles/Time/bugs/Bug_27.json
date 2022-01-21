@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=org.joda.time.format.TestPeriodFormatterBuilder#testBug2495455 test",
     "folder": "src/test/java/org/joda/time/format/",
     "file": "TestPeriodFormatterBuilder.java",
-    "test_report": "target/surefire-reports/TEST-org.joda.time.format.TestPeriodFormatterBuilder.xml"
+    "test_report": "target/surefire-reports/TEST-org.joda.time.format.TestPeriodFormatterBuilder.xml",
+    "issue_created_at": "2009-01-09 00:00:00 +0000",
+    "issue_closed_at": "2012-10-08 00:00:00 +0000",
+    "fix_date": "2010-10-27 23:15:42 +0000"
 }

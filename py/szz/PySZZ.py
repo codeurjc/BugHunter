@@ -3,6 +3,7 @@ import sys
 import warnings
 import datetime
 
+from git.exc import GitCommandError
 from injectable import load_injection_container
 from py.framework.utils.utils import createDirIfNotExist
 from py.szz.SZZ import SZZ
@@ -17,7 +18,11 @@ class PySZZ(SZZ):
         SZZ.__init__(self, project_name, bugId, "PySZZ_"+algorithm)
         self.algorithm = algorithm
         self._generateIssueInfo()
-        self.gitManager.change_commit("master")
+
+        try:
+            self.gitManager.change_commit("master")
+        except GitCommandError as ex:
+            self.gitManager.change_commit("trunk")
 
     def _generateIssueInfo(self):
         # Generate and save Issue info

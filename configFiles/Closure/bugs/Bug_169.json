@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.TypeCheckTest -Dtest.entry.method=testIssue791 run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "TypeCheckTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.TypeCheckTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.TypeCheckTest.xml",
+    "issue_created_at": "2012-08-03 05:04:57 +0000",
+    "issue_closed_at": "2012-10-22 13:57:51 +0000",
+    "fix_date": "2012-10-19 16:41:16 +0000"
 }

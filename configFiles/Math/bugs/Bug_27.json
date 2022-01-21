@@ -11,5 +11,8 @@
     "folder": "src/test/java/org/apache/commons/math3/fraction/",
     "file": "FractionTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.fraction.FractionTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh",
+    "issue_created_at": "2012-07-31 13:09:24 +0000",
+    "issue_closed_at": "2012-07-31 15:01:01 +0000",
+    "fix_date": "2012-07-31 14:58:01 +0000"
 }

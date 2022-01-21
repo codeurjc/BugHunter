@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.InlineVariablesTest -Dtest.entry.method=testNoInlineAliasesInLoop run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "InlineVariablesTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.InlineVariablesTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.InlineVariablesTest.xml",
+    "issue_created_at": "2010-06-08 17:48:12 +0000",
+    "issue_closed_at": "2010-06-10 20:12:42 +0000",
+    "fix_date": "2010-06-10 20:12:38 +0000"
 }

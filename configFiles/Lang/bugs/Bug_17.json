@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.StringEscapeUtilsTest -Dtest.entry.method=testLang720 run.dev.tests",
     "folder": "src/test/java/org/apache/commons/lang3/",
     "file": "StringEscapeUtilsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringEscapeUtilsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringEscapeUtilsTest.xml",
+    "issue_created_at": "2011-07-14 13:24:55 +0000",
+    "issue_closed_at": "2011-07-14 18:50:17 +0000",
+    "fix_date": "2011-07-14 18:49:51 +0000"
 }

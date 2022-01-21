@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest -Dtest.entry.method=testPerformClusterAnalysisDegenerate run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/stat/clustering/",
     "file": "KMeansPlusPlusClustererTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest.xml",
+    "issue_created_at": "2009-10-22 06:35:08 +0000",
+    "issue_closed_at": "2009-11-27 21:46:44 +0000",
+    "fix_date": "2009-11-27 21:45:38 +0000"
 }

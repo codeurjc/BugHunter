@@ -10,5 +10,8 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.core.json.TestNumericValues#testLongerFloatingPoint test",
     "folder": "src/test/java/com/fasterxml/jackson/core/json/",
     "file": "TestNumericValues.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestNumericValues.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.core.json.TestNumericValues.xml",
+    "issue_created_at": "2016-08-31 05:38:31 +0000",
+    "issue_closed_at": "2016-09-01 04:12:57 +0000",
+    "fix_date": "2016-08-31 21:09:22 -0700"
 }

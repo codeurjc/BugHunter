@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang3.StringUtilsEqualsIndexOfTest -Dtest.entry.method=testEquals run.dev.tests",
     "folder": "src/test/java/org/apache/commons/lang3/",
     "file": "StringUtilsEqualsIndexOfTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.xml",
+    "issue_created_at": "2012-01-20 19:50:47 +0000",
+    "issue_closed_at": "2012-01-23 17:52:39 +0000",
+    "fix_date": "2012-01-23 17:47:21 +0000"
 }

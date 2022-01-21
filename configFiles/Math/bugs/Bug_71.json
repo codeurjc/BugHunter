@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest -Dtest.entry.method=testMissedEndEvent run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/ode/nonstiff/",
     "file": "ClassicalRungeKuttaIntegratorTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest.xml",
+    "issue_created_at": "2010-03-24 17:25:37 +0000",
+    "issue_closed_at": "2010-03-24 22:13:19 +0000",
+    "fix_date": "2010-03-24 22:11:51 +0000"
 }

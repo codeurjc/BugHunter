@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math.optimization.linear.SimplexSolverTest -Dtest.entry.method=testMath288 run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math/optimization/linear/",
     "file": "SimplexSolverTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.optimization.linear.SimplexSolverTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.math.optimization.linear.SimplexSolverTest.xml",
+    "issue_created_at": "2009-08-24 22:31:11 +0000",
+    "issue_closed_at": "2009-08-25 18:10:08 +0000",
+    "fix_date": "2009-08-25 18:07:13 +0000"
 }

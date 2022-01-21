@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=org.apache.commons.lang.time.FastDateFormatTest -Dtest.entry.method=test_changeDefault_Locale_DateInstance run.dev.tests",
     "folder": "src/test/org/apache/commons/lang/time/",
     "file": "FastDateFormatTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.time.FastDateFormatTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.lang.time.FastDateFormatTest.xml",
+    "issue_created_at": "2007-10-30 13:52:38 +0000",
+    "issue_closed_at": "2007-10-31 03:59:37 +0000",
+    "fix_date": "2007-10-31 03:58:52 +0000"
 }

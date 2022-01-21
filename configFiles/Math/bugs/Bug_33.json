@@ -11,5 +11,8 @@
     "folder": "src/test/java/org/apache/commons/math3/optimization/linear/",
     "file": "SimplexSolverTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.optimization.linear.SimplexSolverTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding.sh",
+    "issue_created_at": "2012-04-21 07:11:57 +0000",
+    "issue_closed_at": "2012-05-02 18:29:29 +0000",
+    "fix_date": "2012-05-02 18:28:37 +0000"
 }

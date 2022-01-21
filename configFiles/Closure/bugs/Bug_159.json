@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.InlineFunctionsTest -Dtest.entry.method=testIssue423 run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/",
     "file": "InlineFunctionsTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.InlineFunctionsTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.InlineFunctionsTest.xml",
+    "issue_created_at": "2011-04-13 21:37:05 +0000",
+    "issue_closed_at": "2011-04-16 01:10:49 +0000",
+    "fix_date": "2011-04-14 17:48:58 +0000"
 }

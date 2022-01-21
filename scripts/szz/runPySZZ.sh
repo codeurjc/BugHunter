@@ -1,6 +1,6 @@
 #!/bin/bash
 # Read a string with spaces using for loop
-ALGS=("ra")
+ALGS=("ag" "l" "r" "ma" "ra")
 
 while read reg; do
     for alg in ${ALGS[*]}
@@ -18,4 +18,4 @@ while read reg; do
             --privileged=true \
             regression-seeker:0.2.3 python py/szz/PySZZ.py $reg $alg
     done
-done <scripts/regressions.txt
+done <scripts/regressionsGoT.txt

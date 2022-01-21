@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.jscomp.parsing.ParserTest -Dtest.entry.method=testForEach run.dev.tests",
     "folder": "test/com/google/javascript/jscomp/parsing/",
     "file": "ParserTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.parsing.ParserTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.parsing.ParserTest.xml",
+    "issue_created_at": "2012-01-20 06:54:07 +0000",
+    "issue_closed_at": "2012-01-23 15:57:52 +0000",
+    "fix_date": "2012-01-21 01:50:22 +0000"
 }

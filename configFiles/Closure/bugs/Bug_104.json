@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.javascript.rhino.jstype.UnionTypeTest -Dtest.entry.method=testGreatestSubtypeUnionTypes5 run.dev.tests",
     "folder": "test/com/google/javascript/rhino/jstype/",
     "file": "UnionTypeTest.java",
-    "test_report": "target/surefire-reports/TEST-com.google.javascript.rhino.jstype.UnionTypeTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.google.javascript.rhino.jstype.UnionTypeTest.xml",
+    "issue_created_at": "2010-02-21 01:41:43 +0000",
+    "issue_closed_at": "2010-02-22 22:55:42 +0000",
+    "fix_date": "2010-02-22 22:55:41 +0000"
 }
