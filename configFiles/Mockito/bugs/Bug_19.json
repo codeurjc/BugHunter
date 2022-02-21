@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest -Dtest.entry.method=shouldInsertFieldWithCorrectNameWhenMultipleTypesAvailable run.dev.tests",
     "folder": "test/org/mockitousage/annotation/",
     "file": "MockInjectionUsingSetterOrPropertyTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.annotation.MockInjectionUsingSetterOrPropertyTest.xml",
+    "issue_created_at": "2015-04-30 09:25:09 +0000",
+    "issue_closed_at": "2015-06-05 14:18:59 +0000",
+    "fix_date": "2015-06-03 00:52:12 +0200"
 }

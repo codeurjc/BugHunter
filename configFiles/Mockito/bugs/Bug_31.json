@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest -Dtest.entry.method=shouldPrintTheParametersWhenCallingAMethodWithArgs run.dev.tests",
     "folder": "test/org/mockito/internal/stubbing/defaultanswers/",
     "file": "ReturnsSmartNullsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNullsTest.xml",
+    "issue_created_at": "2015-06-06 20:49:37 +0000",
+    "issue_closed_at": "2015-08-23 15:01:38 +0000",
+    "fix_date": "2010-11-05 18:33:46 -0200"
 }

@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.VerifyingWithAnExtraCallToADifferentMockTest -Dtest.entry.method=shouldAllowVerifyingWhenOtherMockCallIsInTheSameLine run.dev.tests",
     "folder": "test/org/mockitousage/bugs/",
     "file": "VerifyingWithAnExtraCallToADifferentMockTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.VerifyingWithAnExtraCallToADifferentMockTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.VerifyingWithAnExtraCallToADifferentMockTest.xml",
+    "issue_created_at": "2014-12-15 13:56:44 +0000",
+    "issue_closed_at": "2014-12-30 12:06:49 +0000",
+    "fix_date": "2010-03-17 20:18:21 +0000"
 }

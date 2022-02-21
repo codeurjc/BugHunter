@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.util.reflection.GenericMasterTest -Dtest.entry.method=shouldDealWithNestedGenerics run.dev.tests",
     "folder": "test/org/mockito/internal/util/reflection/",
     "file": "GenericMasterTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockito.internal.util.reflection.GenericMasterTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.util.reflection.GenericMasterTest.xml",
+    "issue_created_at": "2015-04-01 00:16:10 +0000",
+    "issue_closed_at": "2015-06-05 14:18:58 +0000",
+    "fix_date": "2010-05-16 16:21:00 +0000"
 }

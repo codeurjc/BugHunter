@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.InheritedGenericsPolimorphicCallTest -Dtest.entry.method=shouldStubbingWork run.dev.tests",
     "folder": "test/org/mockitousage/bugs/",
     "file": "InheritedGenericsPolimorphicCallTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.InheritedGenericsPolimorphicCallTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.InheritedGenericsPolimorphicCallTest.xml",
+    "issue_created_at": "2015-04-16 16:42:19 +0000",
+    "issue_closed_at": "2015-04-17 09:49:44 +0000",
+    "fix_date": "2010-06-22 05:32:13 +0000"
 }

@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.InjectionByTypeShouldFirstLookForExactTypeThenAncestorTest -Dtest.entry.method=mock_should_be_injected_once_and_in_the_best_matching_type run.dev.tests",
     "folder": "test/org/mockitousage/bugs/",
     "file": "InjectionByTypeShouldFirstLookForExactTypeThenAncestorTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.InjectionByTypeShouldFirstLookForExactTypeThenAncestorTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.InjectionByTypeShouldFirstLookForExactTypeThenAncestorTest.xml",
+    "issue_created_at": "2015-06-20 20:19:32 +0000",
+    "issue_closed_at": "2015-06-20 20:36:42 +0000",
+    "fix_date": "2010-12-20 20:11:06 +0100"
 }

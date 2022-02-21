@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.DeepStubsWronglyReportsSerializationProblemsTest -Dtest.entry.method=should_not_raise_a_mockito_exception_about_serialization_when_accessing_deep_stub run.dev.tests",
     "folder": "test/org/mockitousage/bugs/",
     "file": "DeepStubsWronglyReportsSerializationProblemsTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.DeepStubsWronglyReportsSerializationProblemsTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.DeepStubsWronglyReportsSerializationProblemsTest.xml",
+    "issue_created_at": "2014-10-08 13:49:48 +0000",
+    "issue_closed_at": "2014-10-10 02:26:28 +0000",
+    "fix_date": "2014-10-10 02:44:43 +0200"
 }

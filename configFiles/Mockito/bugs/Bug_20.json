@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.annotation.SpyAnnotationTest -Dtest.entry.method=should_spy_inner_class run.dev.tests",
     "folder": "test/org/mockitousage/annotation/",
     "file": "SpyAnnotationTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.annotation.SpyAnnotationTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.annotation.SpyAnnotationTest.xml",
+    "issue_created_at": "2014-09-30 14:22:06 +0000",
+    "issue_closed_at": "2014-11-16 23:47:10 +0000",
+    "fix_date": "2015-02-16 00:10:52 +0100"
 }

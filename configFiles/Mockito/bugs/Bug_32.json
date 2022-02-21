@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.bugs.SpyShouldHaveNiceNameTest -Dtest.entry.method=shouldPrintNiceName run.dev.tests",
     "folder": "test/org/mockitousage/bugs/",
     "file": "SpyShouldHaveNiceNameTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.SpyShouldHaveNiceNameTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.bugs.SpyShouldHaveNiceNameTest.xml",
+    "issue_created_at": "2015-06-03 08:25:09 +0000",
+    "issue_closed_at": "2015-06-03 17:02:40 +0000",
+    "fix_date": "2010-09-02 18:23:03 +0000"
 }

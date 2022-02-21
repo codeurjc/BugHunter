@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.basicapi.MocksSerializationTest -Dtest.entry.method=shouldBeSerializeAndHaveExtraInterfaces run.dev.tests",
     "folder": "test/org/mockitousage/basicapi/",
     "file": "MocksSerializationTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.basicapi.MocksSerializationTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.basicapi.MocksSerializationTest.xml",
+    "issue_created_at": "2015-01-02 13:02:35 +0000",
+    "issue_closed_at": "2015-01-20 20:24:16 +0000",
+    "fix_date": "2009-11-21 23:04:52 +0000"
 }

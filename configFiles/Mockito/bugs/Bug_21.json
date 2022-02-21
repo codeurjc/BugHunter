@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockito.internal.creation.instance.ConstructorInstantiatorTest -Dtest.entry.method=creates_instances_of_inner_classes run.dev.tests",
     "folder": "test/org/mockito/internal/creation/instance/",
     "file": "ConstructorInstantiatorTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockito.internal.creation.instance.ConstructorInstantiatorTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockito.internal.creation.instance.ConstructorInstantiatorTest.xml",
+    "issue_created_at": "2014-09-30 14:22:06 +0000",
+    "issue_closed_at": "2014-11-16 23:47:10 +0000",
+    "fix_date": "2014-11-17 00:42:03 +0100"
 }

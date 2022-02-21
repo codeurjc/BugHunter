@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.stubbing.DeepStubsSerializableTest -Dtest.entry.method=should_serialize_and_deserialize_mock_created_by_deep_stubs run.dev.tests",
     "folder": "test/org/mockitousage/stubbing/",
     "file": "DeepStubsSerializableTest.java",
-    "test_report": "target/surefire-reports/TEST-org.mockitousage.stubbing.DeepStubsSerializableTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.mockitousage.stubbing.DeepStubsSerializableTest.xml",
+    "issue_created_at": "2016-04-22 12:14:45 +0000",
+    "issue_closed_at": "2016-04-22 13:09:06 +0000",
+    "fix_date": "2014-01-16 09:37:53 -0800"
 }
