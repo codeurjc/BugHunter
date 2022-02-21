@@ -13,4 +13,4 @@ while read reg; do
         --name $compact_reg-SZZUnleashed \
         --privileged=true \
         regression-seeker:0.2.3 python py/szz/SZZUnleashed.py $reg
-done <scripts/regressionsGoT.txt
+done <scripts/regressions.txt

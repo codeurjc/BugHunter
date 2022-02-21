@@ -18,4 +18,4 @@ while read reg; do
             --privileged=true \
             regression-seeker:0.2.3 python py/szz/PySZZ.py $reg $alg
     done
-done <scripts/regressionsGoT.txt
+done <scripts/regressions.txt

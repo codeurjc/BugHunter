@@ -13,4 +13,4 @@ while read reg; do
         --name $compact_reg-OpenSZZ \
         --privileged=true \
         regression-seeker:0.2.3 python py/szz/OpenSZZ.py $reg
-done <scripts/regressionsGoT.txt
+done <scripts/regressions.txt
