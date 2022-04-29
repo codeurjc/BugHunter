@@ -109,68 +109,9 @@ class CommitGraph():
 
     def draw_commit_history(self, fix_commit_hash, output_dir):
         fix_commit = self.graph[fix_commit_hash]
-        reduced_graph_4 = reduceGraph_4(self.graph, fix_commit)
-        #reduced_graph_2 = reduceGraph_2(self.graph, fix_commit)
+        reduced_graph = reduceGraph(self.graph, fix_commit)
         self._draw(self.graph, output_dir, "Full")
-        self._draw(reduced_graph_4, output_dir, "Reduced")
-        #self._draw(reduced_graph_2, output_dir, "Compact")
-
-def reduceGraph_1(graph, fix_commit):
-    reduced_graph = {}
-    reduced = []
-    
-    def reduceGraph_1_rec(graph, c_hash, add=True):
-    
-        if c_hash in reduced_graph:
-            return reduced_graph[c_hash]['id'], reduced_graph[c_hash]['parents']
-
-        if not c_hash in graph: return
-
-        current_commit = graph[c_hash].copy()
-
-        if not add:
-            reduced.append(current_commit['id'])
-
-        parents = current_commit['parents']
-        new_parents = []
-
-
-        if len(parents) == 1:
-            parent_hash = parents[0]
-            if parent_hash == "" or parent_hash not in graph: return "END", []
-            if graph[parent_hash]['State'] == current_commit['State']:
-                # Reduce
-                if len(graph[parent_hash]['children']) >= 2 and current_commit['id'] not in reduced:
-                    add = True
-                    reduceGraph_1_rec(graph, parent_hash)
-                else:
-
-                    if len(graph[parent_hash]['parents']) >= 2:
-                        reduceGraph_1_rec(graph, parent_hash)
-                    else:
-                        addParent = len(graph[parent_hash]['children']) >= 2
-                        if addParent:
-                            reduceGraph_1_rec(graph, parent_hash)
-                        else:
-                            last_id, new_parents = reduceGraph_1_rec(graph, parent_hash, add=False)
-                            current_commit['parents'] = new_parents
-                            if add:
-                                current_commit['id'] = str(current_commit['id']) + "-" + str(last_id)
-                            else:
-                                current_commit['id'] = last_id
-            else:
-                reduceGraph_1_rec(graph, parent_hash)
-        else:
-            add = True
-            for parent_hash in parents:
-                reduceGraph_1_rec(graph, parent_hash)
-
-        if add: reduced_graph[c_hash] = current_commit
-
-        return current_commit['id'], current_commit['parents']
-    
-    reduceGraph_1_rec(graph, fix_commit['commit'])    
-    return reduced_graph
+        self._draw(reduced_graph, output_dir, "Reduced")
 
 def bfs(graph, init): 
     visited = []   
@@ -197,33 +138,7 @@ def bfs(graph, init):
                 queue.append(parent_hash)
     return None, visited
 
-def reduceGraph_2(graph, init_commit):
-    
-    reduced_graph = {}
-    queue = [init_commit.copy()]
-    visited = [init_commit.copy()]
-    
-    while queue:
-        
-        commit = queue.pop()
-        
-        next_nodes, equals = bfs(graph, commit)
-        if next_nodes is not None:
-            for node in list(map(lambda h: graph[h], next_nodes)):
-                if node not in visited:
-                    visited.append(node.copy())
-                    queue.append(node.copy())
-            
-        last_commit = graph[equals[-1]]
-        commit['parents'] = next_nodes
-        last_id = last_commit['id']
-        if str(commit['id']) != str(last_id):
-            commit['id'] = str(commit['id']) + "-" + str(last_id)
-        reduced_graph[commit['commit']] = commit
-
-    return reduced_graph
-
-def reduceGraph_4(old_graph, init):
+def reduceGraph(old_graph, init):
     visited = list()
     graph = copy.deepcopy(old_graph)
     reduced_graph = {}
