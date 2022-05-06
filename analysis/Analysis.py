@@ -116,12 +116,17 @@ class Analysis:
                 bug_result['sub_category'] = "-"
 
         executionsOnPast = 0
+        buildFailCount = 0
+        buildTestFailCount = 0
         
         for node in commit_graph.graph.values():
-            if node['HasTestReport']:
-                executionsOnPast+=1
+            if node['HasTestReport']: executionsOnPast+=1
+            if node['State'] == 'TestBuildError': buildFailCount +=1
+            if node['State'] == 'BuildError': buildTestFailCount += 1
                 
         bug_result['executionsOnPast'] = executionsOnPast
+        bug_result['buildFail'] = buildFailCount
+        bug_result['buildTestFail'] = buildTestFailCount
         bug_result['numCommits'] = len(commit_graph.graph.values())
         
         # Save bug result
@@ -130,7 +135,7 @@ class Analysis:
 
         return bug_result
 
-    def searchRegression(graph, init_node):
+    def searchRegression(self, graph, init_node):
         candidates = []
         visited = []
         queue = []
