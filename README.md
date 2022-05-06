@@ -1,4 +1,4 @@
-# Regression Seeker
+# Bug Hunter
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6522906.svg)](https://doi.org/10.5281/zenodo.6522906)
 
