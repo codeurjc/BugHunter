@@ -9,7 +9,7 @@ import json
 import os
 from injectable import load_injection_container
 
-class RegressionSeeker():
+class RegTestExecutor():
 
     def __init__(self, projectName, bugId):
 
@@ -20,7 +20,7 @@ class RegressionSeeker():
         
         self.gitManager = GitManager(self.experiment.project.path, self.experiment.bug.fixCommit)
     
-    def searchRegression(self):
+    def execute(self):
 
         # Init container with project
 
@@ -96,15 +96,15 @@ class RegressionSeeker():
 if __name__ == "__main__":
     
     if len(sys.argv) < 3:
-        print("Use: python py/RegressionSeeker.py <project_name> <bugId>")
+        print("Use: python py/RegTestExecutor.py <project_name> <bugId>")
         exit()
 
     load_injection_container()
 
-    rs = RegressionSeeker(sys.argv[1], str(sys.argv[2]))
+    rs = RegTestExecutor(sys.argv[1], str(sys.argv[2]))
 
     try:
-        rs.searchRegression()
+        rs.execute()
     except KeyboardInterrupt as e:
         rs.finish("FINISHED EXPERIMENT WITH KeyboardInterrupt")
     except Exception as e:

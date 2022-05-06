@@ -2,7 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6522906.svg)](https://doi.org/10.5281/zenodo.6522906)
 
-Reproduction package for the paper "Hunting bugs: Towards an automated approach to identifying which change caused a bug through regression testing", presented to ASE 2022 (still under review). This package contains:
+Reproduction package for the paper "Hunting bugs: Towards an automated approach to identifying which change caused a bug through regression testing", presented to ASE 2022 (still under review). 
+
+This repository contains the tool that allows, from a commit that fixes a bug and a test that reveals this bug, to find the commit that introduced the bug. 
+It also includes a collection of Jupyter Notebooks to analyze in detail the results of the tool.
+
+This package contains:
 
 ```
 .
@@ -11,7 +16,7 @@ Reproduction package for the paper "Hunting bugs: Towards an automated approach 
 ├── dockerfiles     # Docker files for all necessary images to perform the experiment
 ├── projects        # Subjects of the experiment (git repositories)
 ├── py              # Python scripts to perform the experiment
-├── results         # Contains the results generate from the experiment
+├── results         # Results generate from the experiment
 ├── scripts         # Bash scripts to easy-perform the experiment
 ├── tmp             # Folder for temporary files
 └── README.md 
@@ -33,7 +38,7 @@ In order to use the tool, the following docker images are required to use the to
 docker build -f dockerfiles/defects4j/defects4j.Dockerfile -t defects4j:2.1.0 .
 ```
 
-- __RegressionSeeker image__
+- __RegTestExecutor image__
 ```
 docker build -f dockerfiles/regression-seeker.Dockerfile -t regression-seeker:0.2.2 .
 ```
@@ -49,11 +54,11 @@ docker build -f dockerfiles/analysis.Dockerfile -t regression-seeker-analysis:0.
 ```
 
 ## Conducting the experiment
-The experiment was carried out in 3 phases:
+The experiment was carried out in 3 phases/steps:
 
-- 1. Extract bug information from the Defects4J dataset.
-- 2. Execution of the regression test in the past (per bug)
-- 3. Analysis of the results
+1. Extract bug information from the Defects4J dataset.
+2. Execution of the regression test in the past (per bug)
+3. Analysis of the results
 
 ## Step 1. Extract bug information from the Defects4J dataset
 
@@ -127,7 +132,7 @@ $ ./scripts/runExperiment.sh <project> <bug_id>
 
 ## Step 3. Analysis of the results
 
-For this step you will need to have started a Docker container from the image built in set up (`regression-seeker-analysis`)
+For this step you will need to have started a Docker container using the image built in set up (`regression-seeker-analysis`)
 
 ```
 $ ./scripts/runNotebook.sh
@@ -163,13 +168,13 @@ The result of executing all the cells of this notebook is the CSV file `analysis
 
 Once the dataset has been generated in the previous step, in this step we will use it to test the performance and evaluate different derivations of the SZZ algorithm. 
 
-All SZZ derivations are part of this repository and are located in `py/szz/`. A suite of adapters has been generated to facilitate the use of these algorithms in Python code:
+All SZZ derivations are part of this repository and are located in `py/szz/`. A suite of adapters has been generated to facilitate the use of these algorithms using Python code:
 
 - OpenSZZ.py
 - PySZZ.py
 - SZZUnleashed.py
 
-These algorithms will use the project's git repository and the configuration file generated in step 1. The latter file must be adapted to include additional information required by these algorithms (date the fix was created, date the issue was opened and date the issue was closed). To adapt this configuration file, the following command is provided:
+These algorithms will use the project's git repository and the configuration file generated in Step 1. The latter file must be adapted to include additional information required by these algorithms (date the fix was created, date the issue was opened and date the issue was closed). To adapt this configuration file, the following command is provided:
 
 ```
 $ ./scripts/adaptAllIssues.sh
@@ -188,7 +193,7 @@ To visualize the results of these derivations of the SZZ and answer the `RQ2: Ho
 - [Open notebooks in browser](http://localhost:9000/notebooks/analysis/EvaluationOfSZZDerivatives.ipynb)
 - [Open notebooks in Gitlab/GitHub](analysis/EvaluationOfSZZDerivatives.ipynb)
 
-### 3.4 Comparing vs. Ground of Truth
+### 3.4 Comparing our dataset
 
 To validate our dataset, we checked our results with those of a popular BIC benchmark, [InduceBenchmark](https://github.com/justinwm/InduceBenchmark) which includes BICs for the Defects4J dataset.
 

@@ -4,7 +4,7 @@ import json
 import shutil
 from injectable import load_injection_container
 
-from RegressionSeeker import RegressionSeeker
+from RegTestExecutor import RegTestExecutor
 
 def getJson(path):
     with open(path) as f:
@@ -22,8 +22,8 @@ class BasicTest(unittest.TestCase):
         load_injection_container()
         project="SpringBootSamples"
         bug="1"
-        rs = RegressionSeeker(project, bug)
-        rs.searchRegression()
+        rs = RegTestExecutor(project, bug)
+        rs.execute()
         rs.finish("FINISH ON TEST MODE")
 
     def test_regression_test_exist(self):
