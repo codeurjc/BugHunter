@@ -4,6 +4,7 @@ import re
 import sys
 from shutil import copy
 from CommitGraph import CommitGraph
+from Utils import getTestName
 
 sys.setrecursionlimit(20000) # Current limit = 999
 
@@ -13,13 +14,6 @@ class Analysis:
         self.root=root
         self.analysis_results_path = self.root + "/analysis/results/"
         createDirIfNotExists(self.analysis_results_path)
-
-    def getTestName(self, cmd):
-    
-        if cmd.startswith("mvn"):
-            return re.search(r"-Dtest=(.*) test",cmd).group(1)
-        if cmd.startswith("ant"):
-            return re.search(r"-Dtest.entry.method=(.*) run",cmd).group(1)
 
     def analyzeBug(self,project, bug_id, force=False):
         
@@ -39,8 +33,7 @@ class Analysis:
         with open("{root}/configFiles/{project}/bugs/{bug_name}.json".format(root=self.root,project=project, bug_name=bug_name)) as f:
             bug_info = json.load(f)
             
-        test_name = self.getTestName(bug_info['test_command'])
-        #test_method = test_name.split("#")[1]
+        test_name = getTestName(bug_info['test_command'])
 
         bug_result = {
             'id': project + "_" + bug_name,
@@ -63,7 +56,7 @@ class Analysis:
         createDirIfNotExists(results_dir)
         
         try:
-            commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=True)
+            commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=False)
         except IndexError as e:
             bug_result['category'] = "No results - Error at performing experiment"
             return bug_result

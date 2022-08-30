@@ -6,6 +6,8 @@ import pickle
 import json
 import csv
 import copy
+from junitparser import JUnitXml, Failure, Error, Skipped
+from Utils import getTestName
 
 sys.path.append('../py')
 from framework.utils.GitUtils import GitManager
@@ -24,6 +26,9 @@ class CommitGraph():
     def __init__(self, project, bug_id, bug_path, results_dir, root="/home/jovyan/work", restore=False):
 
         graph_file_path = results_dir+'graph.pickle'
+
+        with open("{root}/configFiles/{project}/bugs/{bug_name}.json".format(root=root,project=project, bug_name="Bug_"+str(bug_id))) as f:
+            self.bug_info = json.load(f)
 
         if restore and os.path.isfile(graph_file_path):
             with open(graph_file_path, 'rb') as handle:
@@ -52,7 +57,11 @@ class CommitGraph():
                                 state = "TestBuildError"
                             else:
                                 if not raw_result['isTestExecutionSuccess']:
-                                    state = "TestFail"
+                                    successTest = self.checkTestStatusByTestReport(commit_path)
+                                    if not successTest:
+                                        state = "TestFail"
+                                    else:
+                                        raw_result['isTestExecutionSuccess'] = True
                         
                         result = {
                             'id': row['id'],
@@ -113,30 +122,30 @@ class CommitGraph():
         self._draw(self.graph, output_dir, "Full")
         self._draw(reduced_graph, output_dir, "Reduced")
 
-def bfs(graph, init): 
-    visited = []   
-    queue = []  
-    visited.append(init['commit'])
-    queue.append(init['commit'])
 
-    while queue:
-        c_hash = queue.pop(0) 
-        node = graph[c_hash]         
+    def checkTestStatusByTestReport(self, commit_path):
+        # Since it is possible that multiple tests are executed 
+        # (the filtering has not worked, usually due to limitations 
+        # of the test library), it is necessary to check that the test 
+        # that detects the failure is the one that passes or fails.
+        test_name = getTestName(self.bug_info['test_command'])
+        method_name = test_name.split("#")[1]
 
-        for parent_hash in node['parents']:
-            if parent_hash not in graph: break
-            parent = graph[parent_hash]
-            
-            if parent['State'] != node['State']:
-                if len(node['parents']) >= 2:
-                    return node['parents'], list(set(visited) - set(node['parents']))
-                else:
-                    return [parent_hash], visited
-            
-            if parent_hash not in visited:
-                visited.append(parent_hash)
-                queue.append(parent_hash)
-    return None, visited
+        xml = JUnitXml.fromfile(commit_path+"test-report.xml")
+        for case in xml:
+            #print(case.name +"=="+method_name)
+            if case.name == method_name:
+                for elem in case:
+                    if elem.__class__ is Failure:
+                        return False
+                    if elem.__class__ is Error:
+                        return False
+                    if elem.__class__ is Skipped:
+                        return False
+                return True
+
+        return False
+
 
 def reduceGraph(old_graph, init):
     visited = list()
