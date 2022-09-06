@@ -11,4 +11,4 @@ docker run -d \
     -w /home/regseek/workdir/ \
     --name EXTRACT-BUGS-$1 \
     --privileged=true \
-    regression-seeker:0.2.3 python py/ExtractBugsD4J.py <d4j_project_name>
+    regression-seeker:0.2.4 python py/ExtractBugsD4J.py <d4j_project_name>

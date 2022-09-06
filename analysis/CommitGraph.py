@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 import pandas as pd
 import graphviz
 import pickle
@@ -94,7 +95,7 @@ class CommitGraph():
             with open(graph_file_path, 'wb') as handle:
                 pickle.dump(self.graph, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-            self.draw_commit_history(commit_list[0]['commit'], results_dir)
+            #self.draw_commit_history(commit_list[0]['commit'], results_dir)
 
     
     def _draw(self, graph, output_dir, filename):
@@ -128,23 +129,39 @@ class CommitGraph():
         # (the filtering has not worked, usually due to limitations 
         # of the test library), it is necessary to check that the test 
         # that detects the failure is the one that passes or fails.
-        test_name = getTestName(self.bug_info['test_command'])
-        method_name = test_name.split("#")[1]
+        method_name = getTestName(self.bug_info['test_command'])
 
-        xml = JUnitXml.fromfile(commit_path+"test-report.xml")
-        for case in xml:
-            #print(case.name +"=="+method_name)
-            if case.name == method_name:
-                for elem in case:
-                    if elem.__class__ is Failure:
-                        return False
-                    if elem.__class__ is Error:
-                        return False
-                    if elem.__class__ is Skipped:
-                        return False
-                return True
+        # if '#' in test_name:
+        #     # Maven
+        #     method_name = test_name.split("#")[1]
+        # elif 'run.dev.tests' in test_name:
+        #     # Ant
+        #     method_name = re.search(r"-Dtest\.entry\.method=(.*) run\.dev\.tests", test_name).group()
+        # else:
+        #     return False
 
-        return False
+        junit_report_path = commit_path+"test-report.xml"
+
+        try:
+
+            if os.path.isfile(junit_report_path):
+
+                xml = JUnitXml.fromfile(junit_report_path)
+                for case in xml:
+                    #print(case.name +"=="+method_name)
+                    if case.name == method_name:
+                        for elem in case:
+                            if elem.__class__ is Failure:
+                                return False
+                            if elem.__class__ is Error:
+                                return False
+                            if elem.__class__ is Skipped:
+                                return False
+                        return True
+        except Exception as e:
+            return False
+        
+
 
 
 def reduceGraph(old_graph, init):

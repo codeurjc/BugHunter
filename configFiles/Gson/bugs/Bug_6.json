@@ -5,9 +5,9 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://github.com/google/gson/pull/800",
     "fix_commit": "dea305503ad8827121e8212248c271f1f2f90048",
-    "build": "cd gson/ && mvn clean compile",
-    "build_test": "cd gson/ && mvn test-compile",
-    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugDeserialize test",
+    "build": "mvn -f gson/pom.xml clean compile",
+    "build_test": "mvn -f gson/pom.xml test-compile",
+    "test_command": "mvn -f gson/pom.xml -Dtest=com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugDeserialize test",
     "folder": "gson/src/test/java/com/google/gson/regression/",
     "file": "JsonAdapterNullSafeTest.java",
     "test_report": "gson/target/surefire-reports/TEST-com.google.gson.regression.JsonAdapterNullSafeTest.xml"

@@ -5,9 +5,9 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://github.com/google/gson/issues/1053",
     "fix_commit": "9a2421997e83ec803c88ea370a2d102052699d3b",
-    "build": "cd gson/ && mvn clean compile",
-    "build_test": "cd gson/ && mvn test-compile",
-    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.stream.JsonReaderTest#testNegativeZero test",
+    "build": "mvn -f gson/pom.xml clean compile",
+    "build_test": "mvn -f gson/pom.xml test-compile",
+    "test_command": "mvn -f gson/pom.xml -Dtest=com.google.gson.stream.JsonReaderTest#testNegativeZero test",
     "folder": "gson/src/test/java/com/google/gson/stream/",
     "file": "JsonReaderTest.java",
     "test_report": "gson/target/surefire-reports/TEST-com.google.gson.stream.JsonReaderTest.xml"

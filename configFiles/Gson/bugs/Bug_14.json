@@ -5,9 +5,9 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://github.com/google/gson/issues/1074",
     "fix_commit": "a300148003e3a067875b1444e8268b6e0f0e0e02",
-    "build": "cd gson/ && mvn clean compile",
-    "build_test": "cd gson/ && mvn test-compile",
-    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.internal.bind.RecursiveTypesResolveTest#testDoubleSupertype test",
+    "build": "mvn -f gson/pom.xml clean compile",
+    "build_test": "mvn -f gson/pom.xml test-compile",
+    "test_command": "mvn -f gson/pom.xml -Dtest=com.google.gson.internal.bind.RecursiveTypesResolveTest#testDoubleSupertype test",
     "folder": "gson/src/test/java/com/google/gson/internal/bind/",
     "file": "RecursiveTypesResolveTest.java",
     "test_report": "gson/target/surefire-reports/TEST-com.google.gson.internal.bind.RecursiveTypesResolveTest.xml"

@@ -58,6 +58,7 @@ class Analysis:
         try:
             commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=False)
         except IndexError as e:
+            print(e)
             bug_result['category'] = "No results - Error at performing experiment"
             return bug_result
             
@@ -178,3 +179,13 @@ class Analysis:
 def createDirIfNotExists(folder_name):
     if not os.path.isdir(folder_name): 
         os.makedirs(folder_name)
+
+if __name__ == "__main__":
+    
+    if len(sys.argv) < 3:
+        print("Use: python analysis/Analysis.py <project_name> <bugId>")
+        exit()
+
+    analyzer = Analysis()
+    analyzer.analyzeBug(sys.argv[1], sys.argv[2], True)
+    

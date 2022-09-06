@@ -11,4 +11,4 @@ docker run -d \
     -w /home/regseek/workdir/ \
     --name RS-$1-Bug-$2 \
     --privileged=true \
-    regression-seeker:0.2.3 python py/RegTestExecutor.py $1 $2
+    regression-seeker:0.2.4 python py/RegTestExecutor.py $1 $2

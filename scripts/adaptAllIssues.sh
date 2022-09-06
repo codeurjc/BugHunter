@@ -16,7 +16,7 @@ for project in ${PROJECTS[*]}; do
             -v /var/run/docker.sock:/var/run/docker.sock \
             -w /home/regseek/workdir/ \
             --privileged=true \
-            regression-seeker:0.2.3 \
+            regression-seeker:0.2.4 \
             python py/szz/IssueAdapter.py $project $bug_id
     done
 done

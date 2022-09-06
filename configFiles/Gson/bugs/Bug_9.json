@@ -5,9 +5,9 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://github.com/google/gson/pull/836",
     "fix_commit": "874e74a3072f7ff0d2533296698ad126321516d1",
-    "build": "cd gson/ && mvn clean compile",
-    "build_test": "cd gson/ && mvn test-compile",
-    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.stream.JsonWriterTest#testBoxedBooleans test",
+    "build": "mvn -f gson/pom.xml clean compile",
+    "build_test": "mvn -f gson/pom.xml test-compile",
+    "test_command": "mvn -f gson/pom.xml -Dtest=com.google.gson.stream.JsonWriterTest#testBoxedBooleans test",
     "folder": "gson/src/test/java/com/google/gson/stream/",
     "file": "JsonWriterTest.java",
     "test_report": "gson/target/surefire-reports/TEST-com.google.gson.stream.JsonWriterTest.xml"

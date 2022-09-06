@@ -5,9 +5,9 @@
     "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://github.com/google/gson/issues/1107",
     "fix_commit": "b1fb9ca9a1bea5440bc6a5b506ccf67236b08243",
-    "build": "cd gson/ && mvn clean compile",
-    "build_test": "cd gson/ && mvn test-compile",
-    "test_command": "cd gson/ && mvn -Dtest=com.google.gson.functional.CollectionTest#testIssue1107 test",
+    "build": "mvn -f gson/pom.xml clean compile",
+    "build_test": "mvn -f gson/pom.xml test-compile",
+    "test_command": "mvn -f gson/pom.xml -Dtest=com.google.gson.functional.CollectionTest#testIssue1107 test",
     "folder": "gson/src/test/java/com/google/gson/functional/",
     "file": "CollectionTest.java",
     "test_report": "gson/target/surefire-reports/TEST-com.google.gson.functional.CollectionTest.xml"

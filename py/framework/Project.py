@@ -1,7 +1,8 @@
-import json
+import re
 import os
 import shutil
 from injectable import Autowired, autowired
+from junitparser import JUnitXml, Failure, Error, Skipped
 
 from framework.utils.ProcessUtils import ProcessManager
 from framework.utils.DockerUtils import DockerClient
@@ -70,3 +71,29 @@ class Project():
             self.pm.log("   %s FAILS"%cmd)
         
         return isSuccess
+    
+    def getTestReportResult(self, resultsPath):
+        
+        test_name = ""
+
+        if self.bug.test_command.startswith("mvn"):
+            test_name = re.search(r"-Dtest=(.*) test",self.bug.test_command).group(1)
+        if self.bug.test_command.startswith("ant"):
+            test_name = re.search(r"-Dtest.entry.method=(.*) run",self.bug.test_command).group(1)
+
+        method_name = test_name.split("#")[1]
+
+        xml = JUnitXml.fromfile(resultsPath+"test-report.xml")
+        for case in xml:
+            #print(case.name +"=="+method_name)
+            if case.name == method_name:
+                for elem in case:
+                    if elem.__class__ is Failure:
+                        return False
+                    if elem.__class__ is Error:
+                        return False
+                    if elem.__class__ is Skipped:
+                        return False
+                return True
+
+        return False

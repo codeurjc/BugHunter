@@ -77,8 +77,14 @@ class RegTestExecutor():
             if isTestBuildSuccess:
                 # 5) Run test
                 isTestExecutionSuccess = self.experiment.project.executeTest(commitResultsPath)
+                if not isTestExecutionSuccess:
+                    # Since it is possible that multiple tests are executed 
+                    # (the filtering has not worked, usually due to limitations 
+                    # of the test library), it is necessary to check that the test 
+                    # that detects the failure is the one that passes or fails.
+                    isTestExecutionSuccess = self.experiment.project.getTestReportResult(commitResultsPath)
 
-        # Save results
+        # 6) Save results
         with open(commitResultsPath+"result.json",'w+') as json_file:
             result = {
                 "isSourceBuildSuccess" : isSourceBuildSuccess,

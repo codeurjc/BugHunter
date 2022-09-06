@@ -17,6 +17,6 @@ for project in ${PROJECTS[*]}; do
             -w /home/regseek/workdir/ \
             --name Clone-Project-${project}-${bug_id} \
             --privileged=true \
-            regression-seeker:0.2.3 python py/CloneProject.py ${project} ${bug_id}
+            regression-seeker:0.2.4 python py/CloneProject.py ${project} ${bug_id}
     done
 done
