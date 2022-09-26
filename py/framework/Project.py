@@ -74,14 +74,13 @@ class Project():
     
     def getTestReportResult(self, resultsPath):
         
-        test_name = ""
+        method_name = ""
 
         if self.bug.test_command.startswith("mvn"):
             test_name = re.search(r"-Dtest=(.*) test",self.bug.test_command).group(1)
+            method_name = test_name.split("#")[1]
         if self.bug.test_command.startswith("ant"):
-            test_name = re.search(r"-Dtest.entry.method=(.*) run",self.bug.test_command).group(1)
-
-        method_name = test_name.split("#")[1]
+            method_name = re.search(r"-Dtest.entry.method=(.*) run",self.bug.test_command).group(1)
 
         xml = JUnitXml.fromfile(resultsPath+"test-report.xml")
         for case in xml:

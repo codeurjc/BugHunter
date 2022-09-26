@@ -51,6 +51,7 @@ ENV PATH="/defects4j/framework/bin:${PATH}"
 
 COPY dockerfiles/defects4j/defects4j.build.xml /defects4j/framework/projects/defects4j.build.xml
 COPY dockerfiles/defects4j/Mockito.build.xml /defects4j/framework/projects/Mockito/Mockito.build.xml
+COPY dockerfiles/defects4j/Time.build.xml /defects4j/framework/projects/Time/Time.build.xml
 
 RUN useradd -m -u 1000 regseek
 
@@ -61,4 +62,4 @@ USER regseek
 
 #RUN echo "alias ant='/defects4j/major/bin/ant -f /defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/defects4j -Dd4j.dir.projects=/defects4j/framework/projects -Dbasedir=$(pwd) -Dbuild.compiler=javac1.7 '" >> ~/.bashrc
 
-# BUILD: docker build -f dockerfiles/defects4j/defects4j.Dockerfile -t defects4j:2.1.0 .
+# BUILD: docker build -f dockerfiles/defects4j/defects4j.Dockerfile -t defects4j:2.1.1 .

@@ -5,6 +5,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import sys
+import traceback
 import json
 import os
 from injectable import load_injection_container
@@ -31,8 +32,9 @@ class RegTestExecutor():
 
         # 0) GET REGRESSION TEST
         self.gitManager.change_commit(fix_commit['hash'])
-        self.experiment.saveRegressionTest()
         self.experiment.initProjectContainer()
+        self.experiment.project.applyFixes("/tmp/") # In case of need to move to subfolder
+        self.experiment.saveRegressionTest()
 
         # 1) CHECK FIX COMMIT
         self.experiment.log("Checking FIX COMMIT: %s"%fix_commit['hash'])
@@ -63,8 +65,8 @@ class RegTestExecutor():
         self.gitManager.change_commit(commit['hash'])
 
         # 2) Apply regression test and fixes
-        self.experiment.applyRegressionTest()
         self.experiment.project.applyFixes(commitResultsPath)
+        self.experiment.applyRegressionTest()
 
         # 3) Build source
         isSourceBuildSuccess = self.experiment.project.buildSource(commitResultsPath)
@@ -115,8 +117,9 @@ if __name__ == "__main__":
         rs.finish("FINISHED EXPERIMENT WITH KeyboardInterrupt")
     except Exception as e:
         _, msg, _ = sys.exc_info()
-        print(e)
-        rs.finish("FINISHED EXPERIMENT WITH AN EXCEPTION: %s"%msg)
+        tb = traceback.format_exc()
+        print(tb)
+        rs.finish("FINISHED EXPERIMENT WITH AN EXCEPTION: %s\n %s"%(msg, tb))
     else:
         rs.finish("EXPERIMENT FINISHED SUCCESSFULLY")
 
