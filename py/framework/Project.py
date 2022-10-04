@@ -45,10 +45,16 @@ class Project():
     def buildTests(self, resultsPath):
         return self.executeOnCommitWithJava(self.bug.build_test_command, resultsPath + "test-build.log")
 
-    def executeTest(self, resultsPath):
-        isSuccess = self.executeOnCommitWithJava(self.bug.test_command, resultsPath + "test-execution.log")
+    def executeTest(self, resultsPath, index=None):
+        if index is None:
+            test_log_file = "test-execution.log"
+            test_report_file = "test-report.xml"
+        else:
+            test_log_file = "test-execution_it_{index}.log".format(index=index)
+            test_report_file = "test-report_it_{index}.xml".format(index=index)
+        isSuccess = self.executeOnCommitWithJava(self.bug.test_command, resultsPath + test_log_file)
         if os.path.isfile(self.path+self.bug.test_report):
-            shutil.copyfile(self.path+self.bug.test_report, resultsPath + "test-report.xml")
+            shutil.copyfile(self.path+self.bug.test_report, resultsPath + test_report_file)
         else:
             self.pm.log("Test report not found!")
         return isSuccess
@@ -72,7 +78,12 @@ class Project():
         
         return isSuccess
     
-    def getTestReportResult(self, resultsPath):
+    def getTestReportResult(self, resultsPath, index=None):
+
+        if index is None:
+            test_report_file = "test-report.xml"
+        else:
+            test_report_file = "test-report_it_{index}.xml".format(index=index)
         
         method_name = ""
 
@@ -82,7 +93,7 @@ class Project():
         if self.bug.test_command.startswith("ant"):
             method_name = re.search(r"-Dtest.entry.method=(.*) run",self.bug.test_command).group(1)
 
-        xml = JUnitXml.fromfile(resultsPath+"test-report.xml")
+        xml = JUnitXml.fromfile(resultsPath+test_report_file)
         for case in xml:
             #print(case.name +"=="+method_name)
             if case.name == method_name:

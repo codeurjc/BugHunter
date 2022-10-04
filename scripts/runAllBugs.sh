@@ -14,8 +14,8 @@ for bug in configFiles/$project/bugs/*; do
         ./scripts/runExperiment.sh $project $bug_id
     fi
 
-    if (( $count > 64 )); then
-        exit
-    fi
+    # if (( $count > 64 )); then
+    #     exit
+    # fi
 
 done

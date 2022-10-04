@@ -43,12 +43,12 @@ class RegTestExecutor():
             self.experiment.log("Test fail on fix commit: Abort experiment")
             return
 
-        # 2) CHECK ALL PREVIOUS COMMITS
-        self.experiment.log("Checking ALL PREVIOUS COMMITS")
+        # # 2) CHECK ALL PREVIOUS COMMITS
+        # self.experiment.log("Checking ALL PREVIOUS COMMITS")
 
-        for commit in previous_commits:
-            self.experiment.log("Checking commit {c_id}-{c_hash}".format(c_id=commit['id'], c_hash=commit['hash']))
-            self.checkCommit(commit)
+        # for commit in previous_commits:
+        #     self.experiment.log("Checking commit {c_id}-{c_hash}".format(c_id=commit['id'], c_hash=commit['hash']))
+        #     self.checkCommit(commit)
 
     def checkCommit(self, commit):
 
@@ -72,26 +72,35 @@ class RegTestExecutor():
         isSourceBuildSuccess = self.experiment.project.buildSource(commitResultsPath)
         isTestBuildSuccess     = False
         isTestExecutionSuccess = False
+        
+        flaky_results = []
 
         # 4) Build test
         if isSourceBuildSuccess:
             isTestBuildSuccess = self.experiment.project.buildTests(commitResultsPath)
             if isTestBuildSuccess:
-                # 5) Run test
-                isTestExecutionSuccess = self.experiment.project.executeTest(commitResultsPath)
-                if not isTestExecutionSuccess:
-                    # Since it is possible that multiple tests are executed 
-                    # (the filtering has not worked, usually due to limitations 
-                    # of the test library), it is necessary to check that the test 
-                    # that detects the failure is the one that passes or fails.
-                    isTestExecutionSuccess = self.experiment.project.getTestReportResult(commitResultsPath)
+                # 5) Run test: Run at least 3 times to avoid flaky test
+                isTestExecutionSuccess = True
+                for i in [1,2,3]:
+                    self.experiment.log("Running test iteration: {index}".format(index=i))
+                    isIterationSuccess = self.experiment.project.executeTest(commitResultsPath, index=i)
+                    if not isIterationSuccess:
+                        # Since it is possible that multiple tests are executed 
+                        # (the filtering has not worked, usually due to limitations 
+                        # of the test library), it is necessary to check that the test 
+                        # that detects the failure is the one that passes or fails.
+                        isIterationSuccess = self.experiment.project.getTestReportResult(commitResultsPath, index=i)
+                    flaky_results.append(isIterationSuccess)
+        
+        isFlaky = not all(elem == flaky_results[0] for elem in flaky_results)
 
         # 6) Save results
         with open(commitResultsPath+"result.json",'w+') as json_file:
             result = {
                 "isSourceBuildSuccess" : isSourceBuildSuccess,
                 "isTestBuildSuccess" : isTestBuildSuccess,
-                "isTestExecutionSuccess" : isTestExecutionSuccess
+                "isTestExecutionSuccess" : isTestExecutionSuccess,
+                "isFlaky": isFlaky
             }
             json.dump(result, json_file, indent=4)
         
