@@ -1,6 +1,6 @@
 import os
 import json
-import re
+from datetime import datetime
 import sys
 from shutil import copy
 from CommitGraph import CommitGraph
@@ -56,8 +56,9 @@ class Analysis:
         createDirIfNotExists(results_dir)
         
         try:
-            commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=False)
+            commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=True)
         except IndexError as e:
+            print(bug_result['id'])
             print(e)
             bug_result['category'] = "No results - Error at performing experiment"
             return bug_result
@@ -108,21 +109,44 @@ class Analysis:
             else:
                 bug_result['category'] = "No regression is detected"
                 bug_result['sub_category'] = "-"
-
+                
+        bfc_date = datetime.strptime(fix_commit['date'], '%Y-%m-%d %H:%M:%S %z')
+        
         executionsOnPast = 0
         buildFailCount = 0
         buildTestFailCount = 0
+        oldest_date = bfc_date
+        oldest_position = 0
         
-        for node in commit_graph.graph.values():
+        commits = list(commit_graph.graph.values())
+        commits_sorted = sorted(commits, key=lambda k: k['date'], reverse=True)
+        
+        bic = None 
+        if bug_result['sub_category'] == "Unique candidates":
+            bic = bug_result['BIC_candidates'][0][1]
+            
+        
+        for idx, node in enumerate(commits_sorted):
             if node['HasTestReport']: executionsOnPast+=1
             if node['State'] == 'TestBuildError': buildFailCount +=1
             if node['State'] == 'BuildError': buildTestFailCount += 1
-                
+            if node['State'] == 'TestFail' or node['State'] == 'TestSuccess':
+                date = datetime.strptime(node['date'], '%Y-%m-%d %H:%M:%S %z')
+                if oldest_date is None or date < oldest_date:
+                    oldest_date = date
+                    oldest_position = idx
+                if node['commit'] == bic:
+                    bug_result['bic_position'] = idx
+                    bug_result['bic_age'] = (bfc_date - date).days
+        
+        
         bug_result['executionsOnPast'] = executionsOnPast
         bug_result['buildFail'] = buildFailCount
         bug_result['buildTestFail'] = buildTestFailCount
         bug_result['numCommits'] = len(commit_graph.graph.values())
-        
+        bug_result['transplantability_days'] = (bfc_date - oldest_date).days
+        bug_result['transplantability_position'] = oldest_position
+            
         # Save bug result
         with open(results_dir+"bug_result.json",'w+') as json_file:
             json.dump(bug_result, json_file, indent=4)

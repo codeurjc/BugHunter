@@ -72,7 +72,8 @@ class CommitGraph():
                             'ExecuteTest': raw_result['isTestExecutionSuccess'],
                             'HasTestReport': os.path.isfile(commit_path+"test-report.xml"),
                             'State': state,
-                            'parents': gm.getParents(row['hash'])
+                            'parents': gm.getParents(row['hash']),
+                            'date': row['date']
                         }
                         self.graph[row['hash']] = result 
                         commit_list.append(result)
@@ -118,10 +119,10 @@ class CommitGraph():
         dot.render(output_dir+"CommitGraph_"+filename)
 
     def draw_commit_history(self, fix_commit_hash, output_dir):
-        fix_commit = self.graph[fix_commit_hash]
-        reduced_graph = reduceGraph(self.graph, fix_commit)
         self._draw(self.graph, output_dir, "Full")
-        self._draw(reduced_graph, output_dir, "Reduced")
+        #fix_commit = self.graph[fix_commit_hash]
+        #reduced_graph = reduceGraph(self.graph, fix_commit)
+        #self._draw(reduced_graph, output_dir, "Reduced")
 
 
     def checkTestStatusByTestReport(self, commit_path):
