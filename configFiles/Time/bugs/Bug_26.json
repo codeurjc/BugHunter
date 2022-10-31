@@ -11,7 +11,7 @@
     "folder": "src/test/java/org/joda/time/",
     "file": "TestDateTimeZoneCutover.java",
     "test_report": "target/surefire-reports/TEST-org.joda.time.TestDateTimeZoneCutover.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Time/build_fixes/fix-subfolder.sh",
+    "fixes": "/home/regseek/workdir/configFiles/Time/build_fixes/Bug_25/fix-build-file.sh",
     "issue_created_at": "2008-10-20 00:00:00 +0000",
     "issue_closed_at": "2012-10-08 00:00:00 +0000",
     "fix_date": "2010-12-05 21:27:36 +0000"

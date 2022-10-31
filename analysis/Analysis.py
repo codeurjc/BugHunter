@@ -28,8 +28,6 @@ class Analysis:
                 bug_result = json.load(json_file)  
                 return bug_result
         
-    #     print("INIT "+project+" "+bug_name)
-        
         with open("{root}/configFiles/{project}/bugs/{bug_name}.json".format(root=self.root,project=project, bug_name=bug_name)) as f:
             bug_info = json.load(f)
             
@@ -56,7 +54,7 @@ class Analysis:
         createDirIfNotExists(results_dir)
         
         try:
-            commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=True)
+            commit_graph = CommitGraph(project, bug_id, bug_path, results_dir, restore=False)
         except IndexError as e:
             print(bug_result['id'])
             print(e)

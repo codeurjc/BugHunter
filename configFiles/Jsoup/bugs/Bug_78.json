@@ -2,13 +2,14 @@
     "id": "78",
     "project": "Jsoup",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "defects4j:2.1.0",
     "bug_report": "https://github.com/jhy/jsoup/issues/980",
     "fix_commit": "2c4e79b104c0ff32566ce247617d47c0b39cc2c7",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.jsoup.integration.ConnectTest#handlesEmptyStreamDuringParseRead test",
+    "build": "ant -Dd4j.project.id=Jsoup compile",
+    "build_test": "ant -Dd4j.project.id=Jsoup compile.tests",
+    "test_command": "ant -Dd4j.project.id=Jsoup -Dtest.entry.class=org.jsoup.integration.ConnectTest -Dtest.entry.method=handlesEmptyStreamDuringParseRead run.dev.tests",
     "folder": "src/test/java/org/jsoup/integration/",
     "file": "ConnectTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.integration.ConnectTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.integration.ConnectTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Jsoup/build_fixes/Bug_78/fix-build-file.sh"
 }

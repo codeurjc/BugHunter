@@ -2,13 +2,14 @@
     "id": "67",
     "project": "Jsoup",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "defects4j:2.1.0",
     "bug_report": "https://github.com/jhy/jsoup/issues/955",
     "fix_commit": "fb8b60b4d3d202c6fa708f60b8b4a5a53836af24",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.jsoup.parser.HtmlParserTest#handlesDeepStack test",
+    "build": "ant -Dd4j.project.id=Jsoup compile",
+    "build_test": "ant -Dd4j.project.id=Jsoup compile.tests",
+    "test_command": "ant -Dd4j.project.id=Jsoup -Dtest.entry.class=org.jsoup.parser.HtmlParserTest -Dtest.entry.method=handlesDeepStack run.dev.tests",
     "folder": "src/test/java/org/jsoup/parser/",
     "file": "HtmlParserTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.parser.HtmlParserTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Jsoup/build_fixes/fix-build-file.sh"
 }
