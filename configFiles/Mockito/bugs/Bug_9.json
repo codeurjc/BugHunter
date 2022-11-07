@@ -10,5 +10,6 @@
     "test_command": "ant -Dd4j.project.id=Mockito -Dtest.entry.class=org.mockitousage.constructor.CreatingMocksWithConstructorTest -Dtest.entry.method=abstractMethodStubbed run.dev.tests",
     "folder": "test/org/mockitousage/constructor/",
     "file": "CreatingMocksWithConstructorTest.java",
+    "fixes": "/home/regseek/workdir/configFiles/Mockito/build_fixes/fix-build-file.sh",
     "test_report": "target/surefire-reports/TEST-org.mockitousage.constructor.CreatingMocksWithConstructorTest.xml"
 }
