@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.jdk.UtilCollectionsTypesTest#testUnmodifiableListFromLinkedList test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/deser/jdk/",
     "file": "UtilCollectionsTypesTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.jdk.UtilCollectionsTypesTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.jdk.UtilCollectionsTypesTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

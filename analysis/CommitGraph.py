@@ -96,7 +96,7 @@ class CommitGraph():
             with open(graph_file_path, 'wb') as handle:
                 pickle.dump(self.graph, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-            self.draw_commit_history(commit_list[0]['commit'], results_dir)
+            #self.draw_commit_history(commit_list[0]['commit'], results_dir)
 
     
     def _draw(self, graph, output_dir, filename):

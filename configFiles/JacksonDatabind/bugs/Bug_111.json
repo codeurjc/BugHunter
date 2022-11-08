@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest#testNullWithinNested test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/deser/jdk/",
     "file": "JDKAtomicTypesDeserTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

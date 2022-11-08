@@ -11,6 +11,7 @@
     "folder": "test/com/google/javascript/jscomp/parsing/",
     "file": "ParserTest.java",
     "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.parsing.ParserTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Closure/build_fixes/fix-encoding.sh",
     "issue_created_at": "2010-08-09 19:51:10 +0000",
     "issue_closed_at": "2011-01-12 17:28:10 +0000",
     "fix_date": "2011-01-11 19:28:55 +0000"

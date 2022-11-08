@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.node.TestTreeTraversingParser#testNumberOverflowLong test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/node/",
     "file": "TestTreeTraversingParser.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.node.TestTreeTraversingParser.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.node.TestTreeTraversingParser.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

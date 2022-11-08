@@ -11,6 +11,7 @@
     "folder": "test/com/google/javascript/jscomp/",
     "file": "InlineVariablesTest.java",
     "test_report": "target/surefire-reports/TEST-com.google.javascript.jscomp.InlineVariablesTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Closure/build_fixes/fix-encoding.sh",
     "issue_created_at": "2011-03-12 17:09:54 +0000",
     "issue_closed_at": "2011-03-31 23:35:08 +0000",
     "fix_date": "2011-03-26 00:16:46 +0000"
