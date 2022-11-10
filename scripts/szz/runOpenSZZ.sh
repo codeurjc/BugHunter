@@ -12,5 +12,5 @@ while read reg; do
         -w /home/regseek/workdir/ \
         --name $compact_reg-OpenSZZ \
         --privileged=true \
-        regression-seeker:0.2.3 python py/szz/OpenSZZ.py $reg
+        regression-seeker:0.2.4 python py/szz/OpenSZZ.py $reg
 done <scripts/regressions.txt

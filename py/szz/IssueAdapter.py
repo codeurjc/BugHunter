@@ -29,17 +29,33 @@ def updateIssue(project_name, bugId):
     # GET DATES OF ISSUE
 
     if "github" in report_path:
-        regex = r"https:\/\/github\.com\/(.*)\/issues\/(\d+)"
-        m = re.search(regex, report_path)
-        if m is None: exit(1)
-        repo = m.group(1)
-        issue_id = int(m.group(2))
-
+        
         g = Github()
-        gh_issue = g.get_repo(repo).get_issue(number=issue_id)
+        
+        if "issues" in report_path:
 
-        bug.bugConfig['issue_created_at'] = str(gh_issue.created_at)+" +0000"
-        bug.bugConfig['issue_closed_at'] = str(gh_issue.closed_at)+" +0000"
+            regex = r"https:\/\/github\.com\/(.*)\/issues\/(\d+)"
+            m = re.search(regex, report_path)
+            if m is None: exit(1)
+            repo = m.group(1)
+            issue_id = int(m.group(2))
+
+            gh_issue = g.get_repo(repo).get_issue(number=issue_id)
+
+            bug.bugConfig['issue_created_at'] = str(gh_issue.created_at)+" +0000"
+            bug.bugConfig['issue_closed_at'] = str(gh_issue.closed_at)+" +0000"
+        elif "pull" in report_path:
+            regex = r"https:\/\/github\.com\/(.*)\/pull\/(\d+)"
+            m = re.search(regex, report_path)
+            if m is None: exit(1)
+            repo = m.group(1)
+            pull_id = int(m.group(2))
+            
+            gh_pull = g.get_repo(repo).get_pull(number=pull_id)
+            
+            bug.bugConfig['issue_created_at'] = str(gh_pull.created_at)+" +0000"
+            bug.bugConfig['issue_closed_at'] = str(gh_pull.closed_at)+" +0000"
+            
     elif "apache" in report_path:
         regex = r"https:\/\/issues.apache.org\/(.*)\/browse\/(.*)"
         m = re.search(regex, report_path)

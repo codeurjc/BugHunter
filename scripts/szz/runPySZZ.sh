@@ -16,6 +16,6 @@ while read reg; do
             -w /home/regseek/workdir/ \
             --name $compact_reg-$alg \
             --privileged=true \
-            regression-seeker:0.2.3 python py/szz/PySZZ.py $reg $alg
+            regression-seeker:0.2.4 python py/szz/PySZZ.py $reg $alg
     done
 done <scripts/regressions.txt
