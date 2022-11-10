@@ -136,12 +136,14 @@ class Analysis:
                 if node['commit'] == bic:
                     bug_result['bic_position'] = idx
                     bug_result['bic_age'] = (bfc_date - date).days
-        
+                    
+        first_commit_date = datetime.strptime(commits_sorted[-1]['date'], '%Y-%m-%d %H:%M:%S %z')
         
         bug_result['executionsOnPast'] = executionsOnPast
         bug_result['buildFail'] = buildFailCount
         bug_result['buildTestFail'] = buildTestFailCount
         bug_result['numCommits'] = len(commit_graph.graph.values())
+        bug_result['totalDays'] = (bfc_date - first_commit_date).days
         bug_result['transplantability_days'] = (bfc_date - oldest_date).days
         bug_result['transplantability_position'] = oldest_position
             
