@@ -1,0 +1,15 @@
+{
+    "id": "15",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-158",
+    "fix_commit": "a93139165b160af1c908c85a06b0af6b3dda3387",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli2.bug.BugCLI158Test -Dtest.entry.method=testSingleOptionSingleArgument run.dev.tests",
+    "folder": "src/test/org/apache/commons/cli2/bug/",
+    "file": "BugCLI158Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli2.bug.BugCLI158Test.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}

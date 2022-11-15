@@ -1,0 +1,15 @@
+{
+    "id": "1",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-13",
+    "fix_commit": "b0e1b80b6d4a10a9c9f46539bc4c7a3cce55886e",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli.bug.BugCLI13Test -Dtest.entry.method=testCLI13 run.dev.tests",
+    "folder": "src/test/org/apache/commons/cli/bug/",
+    "file": "BugCLI13Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.bug.BugCLI13Test.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}

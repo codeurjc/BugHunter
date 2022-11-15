@@ -1,0 +1,15 @@
+{
+    "id": "20",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-165",
+    "fix_commit": "99aa05af2bfef3980ad8f94230cd077e8d30c5ea",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli.PosixParserTest -Dtest.entry.method=testStop3 run.dev.tests",
+    "folder": "src/test/org/apache/commons/cli/",
+    "file": "PosixParserTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.PosixParserTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}

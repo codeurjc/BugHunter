@@ -1,0 +1,15 @@
+{
+    "id": "40",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-282",
+    "fix_commit": "b0024d482050a08efc36c3cabee37c0af0e57a10",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli.TypeHandlerTest -Dtest.entry.method=testCreateValueInteger_failure run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/cli/",
+    "file": "TypeHandlerTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.TypeHandlerTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}

@@ -1,0 +1,15 @@
+{
+    "id": "33",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-207",
+    "fix_commit": "483f811dfefdc6bee162481425f261d983f15e4a",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli.HelpFormatterTest -Dtest.entry.method=testIndentedHeaderAndFooter run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/cli/",
+    "file": "HelpFormatterTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.HelpFormatterTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}

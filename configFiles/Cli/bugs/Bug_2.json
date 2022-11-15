@@ -1,0 +1,15 @@
+{
+    "id": "2",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-51",
+    "fix_commit": "2ff9573ffb08dd52ec3a55a49f2d77a1e94efbdf",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli.bug.BugCLI51Test -Dtest.entry.method=test run.dev.tests",
+    "folder": "src/test/org/apache/commons/cli/bug/",
+    "file": "BugCLI51Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.bug.BugCLI51Test.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}

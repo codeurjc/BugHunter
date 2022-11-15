@@ -1,0 +1,15 @@
+{
+    "id": "13",
+    "project": "Cli",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CLI-61",
+    "fix_commit": "538fb6889f0387a40b821cfb315685e929110736",
+    "build": "ant -Dd4j.project.id=Cli compile",
+    "build_test": "ant -Dd4j.project.id=Cli compile.tests",
+    "test_command": "ant -Dd4j.project.id=Cli -Dtest.entry.class=org.apache.commons.cli2.bug.BugLoopingOptionLookAlikeTest -Dtest.entry.method=testLoopingOptionLookAlike2 run.dev.tests",
+    "folder": "src/test/org/apache/commons/cli2/bug/",
+    "file": "BugLoopingOptionLookAlikeTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.cli2.bug.BugLoopingOptionLookAlikeTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+}
