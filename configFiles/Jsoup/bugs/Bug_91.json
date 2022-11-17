@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=org.jsoup.integration.ConnectTest#testBinaryThrowsExceptionWhenTypeIgnored test",
     "folder": "src/test/java/org/jsoup/integration/",
     "file": "ConnectTest.java",
-    "test_report": "target/surefire-reports/TEST-org.jsoup.integration.ConnectTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.jsoup.integration.ConnectTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Jsoup/build_fixes/Bug_91/fix.sh"
 }
