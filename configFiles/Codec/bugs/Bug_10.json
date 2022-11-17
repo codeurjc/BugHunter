@@ -1,0 +1,15 @@
+{
+    "id": "10",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-117",
+    "fix_commit": "41c68e9ef470696009d72133c7f05a20e2728e34",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.language.CaverphoneTest -Dtest.entry.method=testEndMb run.dev.tests",
+    "folder": "src/test/org/apache/commons/codec/language/",
+    "file": "CaverphoneTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.CaverphoneTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+}

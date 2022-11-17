@@ -1,0 +1,10 @@
+{
+    "project": "Codec",
+    "docker_image": "defects4j:2.1.1",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=%s -Dtest.entry.method=%s run.dev.tests",
+    "test_path": "src/test/%s.java",
+    "report_path": "target/surefire-reports/TEST-%s.xml",
+    "git_url": "D4J"
+}

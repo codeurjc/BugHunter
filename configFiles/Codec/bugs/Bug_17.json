@@ -1,0 +1,15 @@
+{
+    "id": "17",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-229",
+    "fix_commit": "d2f27093d7d95a07da901902f894d88b4ecc3e95",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.binary.StringUtilsTest -Dtest.entry.method=testNewStringNullInput_CODEC229 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/codec/binary/",
+    "file": "StringUtilsTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.binary.StringUtilsTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+}

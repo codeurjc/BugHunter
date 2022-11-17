@@ -1,0 +1,14 @@
+{
+    "id": "14",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-187",
+    "fix_commit": "39d5df29fb768fd257f9d328b99f00bc69ec864a",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest -Dtest.entry.method=testCompatibilityWithOriginalVersion run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/codec/language/bm/",
+    "file": "PhoneticEngineRegressionTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest.xml"
+}

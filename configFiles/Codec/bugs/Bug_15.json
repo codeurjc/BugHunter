@@ -1,0 +1,15 @@
+{
+    "id": "15",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-199",
+    "fix_commit": "28b7b958d39730fc278fd1919bf335c52133a1a2",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.language.SoundexTest -Dtest.entry.method=testHWRuleEx1 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/codec/language/",
+    "file": "SoundexTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.SoundexTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+}

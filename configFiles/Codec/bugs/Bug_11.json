@@ -1,0 +1,14 @@
+{
+    "id": "11",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-121",
+    "fix_commit": "7e8c20bd1b0593c3496a168be573aed40609a433",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.net.QuotedPrintableCodecTest -Dtest.entry.method=testSkipNotEncodedCRLF run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/codec/net/",
+    "file": "QuotedPrintableCodecTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.net.QuotedPrintableCodecTest.xml"
+}

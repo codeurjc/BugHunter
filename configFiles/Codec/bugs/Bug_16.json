@@ -1,0 +1,15 @@
+{
+    "id": "16",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-200",
+    "fix_commit": "c82fe35c48bd0082c16644d16d82d1be79d6b9d1",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.binary.Base32Test -Dtest.entry.method=testCodec200 run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/codec/binary/",
+    "file": "Base32Test.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.binary.Base32Test.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+}

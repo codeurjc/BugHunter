@@ -1,0 +1,15 @@
+{
+    "id": "6",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-101",
+    "fix_commit": "d74fc31604c805a47c44d7853f63a3b06ad6c016",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.binary.Base64InputStreamTest -Dtest.entry.method=testCodec101 run.dev.tests",
+    "folder": "src/test/org/apache/commons/codec/binary/",
+    "file": "Base64InputStreamTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.binary.Base64InputStreamTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/Bug_6/fix.sh"
+}

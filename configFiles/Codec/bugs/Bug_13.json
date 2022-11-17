@@ -1,0 +1,14 @@
+{
+    "id": "13",
+    "project": "Codec",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/CODEC-184",
+    "fix_commit": "37ba197e62d6b60037d18afc33801e6221f1b8c6",
+    "build": "ant -Dd4j.project.id=Codec compile",
+    "build_test": "ant -Dd4j.project.id=Codec compile.tests",
+    "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.language.DoubleMetaphoneTest -Dtest.entry.method=testIsDoubleMetaphoneEqualBasic run.dev.tests",
+    "folder": "src/test/java/org/apache/commons/codec/language/",
+    "file": "DoubleMetaphoneTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.DoubleMetaphoneTest.xml"
+}
