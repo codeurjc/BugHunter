@@ -1,0 +1,15 @@
+{
+    "id": "7",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-93",
+    "fix_commit": "58fac658aba985ba77f8bd0156c6d01bec8d991b",
+    "build": "ant -Dd4j.project.id=JxPath compile",
+    "build_test": "ant -Dd4j.project.id=JxPath compile.tests",
+    "test_command": "ant -Dd4j.project.id=JxPath -Dtest.entry.class=org.apache.commons.jxpath.ri.compiler.CoreOperationTest -Dtest.entry.method=testNodeSetOperations run.dev.tests",
+    "folder": "src/test/org/apache/commons/jxpath/ri/compiler/",
+    "file": "CoreOperationTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.compiler.CoreOperationTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JxPath/build_fixes/fix-build-file.sh"
+}

@@ -1,0 +1,15 @@
+{
+    "id": "11",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-97",
+    "fix_commit": "52d73022820d163104c6419f25ca955f86464f63",
+    "build": "ant -Dd4j.project.id=JxPath compile",
+    "build_test": "ant -Dd4j.project.id=JxPath compile.tests",
+    "test_command": "ant -Dd4j.project.id=JxPath -Dtest.entry.class=org.apache.commons.jxpath.ri.model.dom.DOMModelTest -Dtest.entry.method=testNamespaceMapping run.dev.tests",
+    "folder": "src/test/org/apache/commons/jxpath/ri/model/dom/",
+    "file": "DOMModelTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.model.dom.DOMModelTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JxPath/build_fixes/fix-build-file.sh"
+}

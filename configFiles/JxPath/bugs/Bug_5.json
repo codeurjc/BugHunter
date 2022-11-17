@@ -1,0 +1,15 @@
+{
+    "id": "5",
+    "project": "JxPath",
+    "git_url": "D4J",
+    "docker_image": "defects4j:2.1.1",
+    "bug_report": "https://issues.apache.org/jira/browse/JXPATH-89",
+    "fix_commit": "2a01dfaf8d6abbabc7e4cd5cfd05d2e0b4886708",
+    "build": "ant -Dd4j.project.id=JxPath compile",
+    "build_test": "ant -Dd4j.project.id=JxPath compile.tests",
+    "test_command": "ant -Dd4j.project.id=JxPath -Dtest.entry.class=org.apache.commons.jxpath.ri.compiler.VariableTest -Dtest.entry.method=testUnionOfVariableAndNode run.dev.tests",
+    "folder": "src/test/org/apache/commons/jxpath/ri/compiler/",
+    "file": "VariableTest.java",
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.jxpath.ri.compiler.VariableTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JxPath/build_fixes/fix-build-file.sh"
+}
