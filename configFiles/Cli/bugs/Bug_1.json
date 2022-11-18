@@ -11,5 +11,5 @@
     "folder": "src/test/org/apache/commons/cli/bug/",
     "file": "BugCLI13Test.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.bug.BugCLI13Test.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/Bug_1-2/fix-build-file.sh"
 }
