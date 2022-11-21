@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/codec/binary/",
     "file": "Base64Codec13Test.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.binary.Base64Codec13Test.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2009-10-28 06:15:12 +0000",
+    "issue_closed_at": "2010-03-27 00:05:31 +0000",
+    "fix_date": "2010-03-27 00:02:22 +0000"
 }

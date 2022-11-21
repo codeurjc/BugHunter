@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/cli2/bug/",
     "file": "BugCLI123Test.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.cli2.bug.BugCLI123Test.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2006-07-28 09:49:39 +0000",
+    "issue_closed_at": "2008-07-24 20:28:52 +0000",
+    "fix_date": "2008-07-24 20:28:16 +0000"
 }

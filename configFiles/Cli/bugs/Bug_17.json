@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/cli/",
     "file": "PosixParserTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.PosixParserTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2008-07-27 23:17:01 +0000",
+    "issue_closed_at": "2008-07-27 23:39:10 +0000",
+    "fix_date": "2008-07-27 23:38:21 +0000"
 }

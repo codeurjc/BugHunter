@@ -11,5 +11,8 @@
     "folder": "src/test/java/org/apache/commons/codec/language/",
     "file": "SoundexTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.SoundexTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2015-03-19 11:55:40 +0000",
+    "issue_closed_at": "2017-03-31 23:59:05 +0000",
+    "fix_date": "2015-03-22 18:48:52 +0000"
 }

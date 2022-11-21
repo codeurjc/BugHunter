@@ -10,5 +10,8 @@
     "test_command": "ant -Dd4j.project.id=Codec -Dtest.entry.class=org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest -Dtest.entry.method=testCompatibilityWithOriginalVersion run.dev.tests",
     "folder": "src/test/java/org/apache/commons/codec/language/bm/",
     "file": "PhoneticEngineRegressionTest.java",
-    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest.xml"
+    "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.bm.PhoneticEngineRegressionTest.xml",
+    "issue_created_at": "2014-06-10 22:49:23 +0000",
+    "issue_closed_at": "2014-11-01 13:57:27 +0000",
+    "fix_date": "2014-07-05 19:58:38 +0000"
 }

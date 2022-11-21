@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/codec/language/",
     "file": "CaverphoneTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.codec.language.CaverphoneTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Codec/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2008-04-25 11:18:24 +0000",
+    "issue_closed_at": "2008-04-27 00:33:11 +0000",
+    "fix_date": "2008-04-27 00:35:56 +0000"
 }

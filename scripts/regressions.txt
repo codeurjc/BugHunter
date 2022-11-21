@@ -58,3 +58,10 @@ Mockito 1
 Mockito 3
 Mockito 10
 Mockito 7
+Cli 38
+Cli 23
+Cli 13
+Cli 22
+JxPath 8
+Codec 17
+Codec 4

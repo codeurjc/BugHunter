@@ -11,5 +11,8 @@
     "folder": "src/test/org/apache/commons/cli/",
     "file": "UtilTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.cli.UtilTest.xml",
-    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh"
+    "fixes": "/home/regseek/workdir/configFiles/Cli/build_fixes/fix-build-file.sh",
+    "issue_created_at": "2009-06-10 12:54:28 +0000",
+    "issue_closed_at": "2010-06-16 08:38:45 +0000",
+    "fix_date": "2010-06-16 08:35:18 +0000"
 }
