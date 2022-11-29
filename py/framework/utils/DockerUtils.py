@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
     dockerCli = DockerClient()
 
-    dockerCli.initContainer("defects4j:2.1.0", "example")
+    dockerCli.initContainer("defects4j:2.1.1", "example")
 
     print(dockerCli.execute("example","ant"))
 

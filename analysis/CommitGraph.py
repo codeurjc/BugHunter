@@ -10,7 +10,8 @@ import copy
 from junitparser import JUnitXml, Failure, Error, Skipped
 from Utils import getTestName
 
-sys.path.append('../py')
+# Load our libs
+sys.path.append('/home/jovyan/work/py')
 from framework.utils.GitUtils import GitManager
 
 sys.setrecursionlimit(20000) # Current limit = 999
