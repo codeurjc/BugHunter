@@ -2,7 +2,7 @@
     "id": "27",
     "project": "Collections",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/COLLECTIONS-580",
     "fix_commit": "3eee44cf63b1ebb0da6925e98b3dcc6ef1e4d610",
     "build": "ant -Dd4j.project.id=Collections compile",

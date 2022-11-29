@@ -2,7 +2,7 @@
     "id": "23",
     "project": "JacksonCore",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://github.com/FasterXML/jackson-core/issues/502",
     "fix_commit": "157f2c490003c7494af8ecb7d57880cda1fde736",
     "build": "ant -Dd4j.project.id=JacksonCore compile",

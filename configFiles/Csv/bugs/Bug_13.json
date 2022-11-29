@@ -2,7 +2,7 @@
     "id": "13",
     "project": "Csv",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/CSV-168",
     "fix_commit": "f8b80e83417c3c7eeed1282118f64fa0e85c4787",
     "build": "ant -Dd4j.project.id=Csv compile",

@@ -2,7 +2,7 @@
     "id": "2",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-11",
     "fix_commit": "d09177b98f4e956c1d366110f73c3341ea110bee",
     "build": "ant -Dd4j.project.id=Compress compile",

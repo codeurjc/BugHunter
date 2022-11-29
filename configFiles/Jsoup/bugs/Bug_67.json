@@ -2,7 +2,7 @@
     "id": "67",
     "project": "Jsoup",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://github.com/jhy/jsoup/issues/955",
     "fix_commit": "fb8b60b4d3d202c6fa708f60b8b4a5a53836af24",
     "build": "ant -Dd4j.project.id=Jsoup compile",

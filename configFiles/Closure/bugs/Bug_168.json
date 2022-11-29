@@ -2,7 +2,7 @@
     "id": "168",
     "project": "Closure",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/closure-compiler/issues/issue-726.json",
     "fix_commit": "b675d1da9d5f8b36849db4943f580969105901a4",
     "build": "ant -Dd4j.project.id=Closure compile",

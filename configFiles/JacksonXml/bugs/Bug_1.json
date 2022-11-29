@@ -2,7 +2,7 @@
     "id": "1",
     "project": "JacksonXml",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://github.com/FasterXML/jackson-dataformat-xml/issues/180",
     "fix_commit": "2d7683ed820116b77cba9b4b290cd7ce7dfa5cf4",
     "build": "ant -Dd4j.project.id=JacksonXml compile",

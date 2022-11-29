@@ -2,7 +2,7 @@
     "id": "17",
     "project": "Lang",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/LANG-720",
     "fix_commit": "b4255e6d071dc8d48bfc51037cecb29097b9a49d",
     "build": "ant -Dd4j.project.id=Lang compile",

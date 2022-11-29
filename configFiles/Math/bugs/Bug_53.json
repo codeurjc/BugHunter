@@ -2,7 +2,7 @@
     "id": "53",
     "project": "Math",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/MATH-618",
     "fix_commit": "7707b0bb80be05bbf6533a36bb0c646cbfd1026d",
     "build": "ant -Dd4j.project.id=Math compile",

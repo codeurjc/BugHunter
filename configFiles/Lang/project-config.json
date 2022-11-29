@@ -1,6 +1,6 @@
 {
     "project": "Lang",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "build": "ant -Dd4j.project.id=Lang compile",
     "build_test": "ant -Dd4j.project.id=Lang compile.tests",
     "test_command": "ant -Dd4j.project.id=Lang -Dtest.entry.class=%s -Dtest.entry.method=%s run.dev.tests",

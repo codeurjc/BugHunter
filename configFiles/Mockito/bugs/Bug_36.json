@@ -2,7 +2,7 @@
     "id": "36",
     "project": "Mockito",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.0",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://github.com/mockito/mockito/issues/140",
     "fix_commit": "84c142f56fe971ed52ecfe42b42bc0aa7bef8354",
     "build": "ant -Dd4j.project.id=Mockito compile",
