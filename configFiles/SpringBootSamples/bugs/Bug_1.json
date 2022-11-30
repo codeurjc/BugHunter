@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=DividerTest#divideBy0 test",
     "folder": "src/test/java/samples/websocket/tomcat/divider/",
     "file": "DividerTest.java",
-    "test_report": "target/surefire-reports/TEST-samples.websocket.tomcat.divider.DividerTest.xml"
+    "test_report": "target/surefire-reports/TEST-samples.websocket.tomcat.divider.DividerTest.xml",
+    "fixes": "echo \"No fixes!\""
 }
