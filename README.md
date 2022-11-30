@@ -23,6 +23,28 @@ This package contains:
 └── README.md 
 ```
 
+# Index
+
+- [SetUp](#setup)
+  * [Requirements](#requirements)
+  * [Build images](#build-images)
+- [Reproducing the experiment of the paper](#reproducing-the-experiment-of-the-paper)
+  * [Step 1. Extract bug information from the Defects4J dataset](#step-1-extract-bug-information-from-the-defects4j-dataset)
+    + [How to reproduce](#how-to-reproduce)
+  * [Step 2. Execution of the regression test in the past (per bug)](#step-2-execution-of-the-regression-test-in-the-past--per-bug-)
+    + [Experiment process](#experiment-process)
+    + [Experiment results](#experiment-results)
+    + [How to reproduce](#how-to-reproduce-1)
+  * [Step 3. Analysis of the results](#step-3-analysis-of-the-results)
+    + [3.1 Analysis of raw results](#31-analysis-of-raw-results)
+    + [3.2 Generate BIC dataset (BIC-RT)](#32-generate-bic-dataset--bic-rt-)
+    + [3.3 Evaluation of SZZ derivatives](#33-evaluation-of-szz-derivatives)
+    + [3.4 Comparing our dataset](#34-comparing-our-dataset)
+- [How to use BugHunter](#how-to-use-bughunter)
+  * [Step 1. Generate de config file](#step-1-generate-de-config-file)
+  * [Step 2. Run the experiment](#step-2-run-the-experiment)
+  * [Step 3. Run the analysis](#step-3-run-the-analysis)
+
 # SetUp
 
 ## Requirements
@@ -54,7 +76,7 @@ docker build --build-arg DOCKER_GID=$DOCKER_GID -f dockerfiles/regression-seeker
 docker build -f dockerfiles/analysis.Dockerfile -t regression-seeker-analysis:0.1.1 .
 ```
 
-## Reproducing the experiment of the paper
+# Reproducing the experiment of the paper
 The experiment was carried out in 3 phases/steps:
 
 1. Extract bug information from the Defects4J dataset.
