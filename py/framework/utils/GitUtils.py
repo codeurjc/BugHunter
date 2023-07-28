@@ -47,7 +47,7 @@ class GitManager:
                         "id": n,
                         "hash": commit_hash.strip(),
                         "date": date.strip(),
-                        "comment": comment.strip()
+                        "comment": comment.strip().encode('utf-8', 'replace').decode()
                     })
                     n+=1
                 writer.writeheader()
