@@ -7,7 +7,7 @@
     "fix_commit": "aedce35970673f20696d5721acba13e986cc764c",
     "build": "ant -Dd4j.project.id=Closure compile",
     "build_test": "ant -Dd4j.project.id=Closure compile.tests",
-    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.debugging.sourcemap.SourceMapGeneratorV3Test -Dtest.entry.method=testParseSourceMetaMap run.dev.tests",
+    "test_command": "ant -Dd4j.project.id=Closure -Dtest.entry.class=com.google.debugging.sourcemap.SourceMapGeneratorV3Test -Dtest.entry.method=testGoldenOutput0a run.dev.tests",
     "folder": "test/com/google/debugging/sourcemap/",
     "file": "SourceMapGeneratorV3Test.java",
     "test_report": "target/surefire-reports/TEST-com.google.debugging.sourcemap.SourceMapGeneratorV3Test.xml",
