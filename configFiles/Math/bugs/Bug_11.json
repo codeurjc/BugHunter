@@ -10,6 +10,7 @@
     "test_command": "ant -Dd4j.project.id=Math -Dtest.entry.class=org.apache.commons.math3.distribution.MultivariateNormalDistributionTest -Dtest.entry.method=testUnivariateDistribution run.dev.tests",
     "folder": "src/test/java/org/apache/commons/math3/distribution/",
     "file": "MultivariateNormalDistributionTest.java",
+    "fixes": "/home/regseek/workdir/configFiles/Math/build_fixes/fix-encoding-2.sh",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.math3.distribution.MultivariateNormalDistributionTest.xml",
     "issue_created_at": "2013-01-15 11:45:28 +0000",
     "issue_closed_at": "2013-01-15 12:20:21 +0000",
