@@ -2,16 +2,17 @@
     "id": "18",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-203",
     "fix_commit": "09b8f6d78e18b927491fc299973146fa74fd977f",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest#testWriteNonAsciiDirectoryNamePosixMode test",
+    "build": "ant -Dd4j.project.id=Compress compile",
+    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
+    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest -Dtest.entry.method=testWriteNonAsciiDirectoryNamePosixMode run.dev.tests",
     "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
     "file": "TarArchiveOutputStreamTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest.xml",
     "issue_created_at": "2012-10-01 14:01:05 +0000",
     "issue_closed_at": "2012-12-27 21:35:09 +0000",
-    "fix_date": "2012-12-27 21:34:35 +0000"
+    "fix_date": "2012-12-27 21:34:35 +0000",
+    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 18"
 }

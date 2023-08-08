@@ -2,16 +2,17 @@
     "id": "20",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-236",
     "fix_commit": "040e42d0f0bebc15ca80cb80fb6db53804b2e082",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamTest#testCpioUnarchiveCreatedByRedlineRpm test",
+    "build": "ant -Dd4j.project.id=Compress compile",
+    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
+    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamTest -Dtest.entry.method=testCpioUnarchiveCreatedByRedlineRpm run.dev.tests",
     "folder": "src/test/java/org/apache/commons/compress/archivers/cpio/",
     "file": "CpioArchiveInputStreamTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.cpio.CpioArchiveInputStreamTest.xml",
     "issue_created_at": "2013-08-02 10:31:14 +0000",
     "issue_closed_at": "2013-08-08 16:19:20 +0000",
-    "fix_date": "2013-08-08 16:18:45 +0000"
+    "fix_date": "2013-08-08 16:18:45 +0000",
+    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 20"
 }

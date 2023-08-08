@@ -2,16 +2,17 @@
     "id": "40",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-363",
     "fix_commit": "52dd5908e374973d69c51856b74d4d93d591c90a",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.apache.commons.compress.utils.BitInputStreamTest#littleEndianWithOverflow test",
+    "build": "ant -Dd4j.project.id=Compress compile",
+    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
+    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.utils.BitInputStreamTest -Dtest.entry.method=littleEndianWithOverflow run.dev.tests",
     "folder": "src/test/java/org/apache/commons/compress/utils/",
     "file": "BitInputStreamTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.utils.BitInputStreamTest.xml",
     "issue_created_at": "2016-06-29 09:19:19 +0000",
     "issue_closed_at": "2016-07-01 19:39:14 +0000",
-    "fix_date": "2016-07-01 21:37:24 +0200"
+    "fix_date": "2016-07-01 21:37:24 +0200",
+    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 40"
 }

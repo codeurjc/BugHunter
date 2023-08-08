@@ -2,16 +2,17 @@
     "id": "47",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "defects4j:2.1.1",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-436",
     "fix_commit": "c66db899cb061c79934986f0efa19a50ca33703f",
-    "build": "mvn clean compile",
-    "build_test": "mvn test-compile",
-    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest#properlyMarksEntriesAsUnreadableIfUncompressedSizeIsUnknown test",
+    "build": "ant -Dd4j.project.id=Compress compile",
+    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
+    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest -Dtest.entry.method=properlyMarksEntriesAsUnreadableIfUncompressedSizeIsUnknown run.dev.tests",
     "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
     "file": "ZipArchiveInputStreamTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveInputStreamTest.xml",
     "issue_created_at": "2018-01-05 06:37:52 +0000",
     "issue_closed_at": "2018-01-14 11:13:51 +0000",
-    "fix_date": "2018-01-14 12:12:50 +0100"
+    "fix_date": "2018-01-14 12:12:50 +0100",
+    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 47"
 }
