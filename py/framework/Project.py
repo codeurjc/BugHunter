@@ -36,8 +36,8 @@ class Project():
     def applyFixes(self, resultsPath):
         if 'fixes' in self.bug.bugConfig:
             fix_cmd = self.bug.bugConfig['fixes']
-            self.pm.log("Applying fixes: %s"%fix_cmd)
-            self.executeOnCommit(fix_cmd, resultsPath + "apply-fixes.log")
+            self.pm.log("Applying fixes: %s. Output: %s"%(fix_cmd, resultsPath))
+            self.executeOnCommit(fix_cmd, resultsPath)
 
     def buildSource(self, resultsPath): 
         return self.executeOnCommitWithJava(self.bug.build_source_command, resultsPath + "source-build.log")

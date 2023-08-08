@@ -33,7 +33,7 @@ class RegTestExecutor():
         # 0) GET REGRESSION TEST
         self.gitManager.change_commit(fix_commit['hash'])
         self.experiment.initProjectContainer()
-        self.experiment.project.applyFixes("/tmp/") # In case of need to move to subfolder
+        self.experiment.project.applyFixes(self.experiment.bug_folder+ "apply-fixes-before-all.log") # In case of need to move to subfolder
         self.experiment.saveRegressionTest()
 
         # 1) CHECK FIX COMMIT
@@ -65,7 +65,7 @@ class RegTestExecutor():
         self.gitManager.change_commit(commit['hash'])
 
         # 2) Apply regression test and fixes
-        self.experiment.project.applyFixes(commitResultsPath)
+        self.experiment.project.applyFixes(commitResultsPath+ "apply-fixes.log")
         self.experiment.applyRegressionTest()
 
         # 3) Build source
