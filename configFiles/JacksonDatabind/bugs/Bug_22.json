@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.ser.TestJsonValue#testJsonValueWithCustomOverride test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/ser/",
     "file": "TestJsonValue.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.ser.TestJsonValue.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.ser.TestJsonValue.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-and-problematic-tests.sh"
 }

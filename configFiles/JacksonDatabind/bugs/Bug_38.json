@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test#testExplicitMapType test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/interop/",
     "file": "DeprecatedTypeHandling1102Test.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.interop.DeprecatedTypeHandling1102Test.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

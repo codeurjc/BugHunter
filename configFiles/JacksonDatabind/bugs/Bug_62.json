@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.creators.ArrayDelegatorCreatorForCollectionTest#testUnmodifiable test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/creators/",
     "file": "ArrayDelegatorCreatorForCollectionTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.ArrayDelegatorCreatorForCollectionTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.ArrayDelegatorCreatorForCollectionTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

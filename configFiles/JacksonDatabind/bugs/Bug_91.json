@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest#testCachedSerialize test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/deser/jdk/",
     "file": "MapDeserializerCachingTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.convert.TestUpdateValue#testIssue744 test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/convert/",
     "file": "TestUpdateValue.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.convert.TestUpdateValue.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.convert.TestUpdateValue.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-and-problematic-tests.sh"
 }

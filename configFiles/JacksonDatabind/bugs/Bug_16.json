@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.mixins.MixinsWithBundlesTest#testMixinWithBundles test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/mixins/",
     "file": "MixinsWithBundlesTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.mixins.MixinsWithBundlesTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.mixins.MixinsWithBundlesTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }
