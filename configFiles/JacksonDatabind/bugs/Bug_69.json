@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.creators.Creator1476Test#testConstructorChoice test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/creators/",
     "file": "Creator1476Test.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.Creator1476Test.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.creators.Creator1476Test.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

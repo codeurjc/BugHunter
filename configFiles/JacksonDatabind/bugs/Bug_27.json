@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.jsontype.TestExternalId#testInverseExternalId928 test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
     "file": "TestExternalId.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TestExternalId.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TestExternalId.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }

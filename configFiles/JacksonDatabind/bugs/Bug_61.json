@@ -10,5 +10,6 @@
     "test_command": "mvn -Dtest=com.fasterxml.jackson.databind.jsontype.DefaultTypingWithPrimitivesTest#testDefaultTypingWithLong test",
     "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
     "file": "DefaultTypingWithPrimitivesTest.java",
-    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.DefaultTypingWithPrimitivesTest.xml"
+    "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.DefaultTypingWithPrimitivesTest.xml",
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
 }
