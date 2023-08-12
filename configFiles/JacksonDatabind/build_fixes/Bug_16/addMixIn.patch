@@ -1,0 +1,27 @@
+diff --git a/src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java b/src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
+index 25e2475ed..37b050b9c 100644
+--- a/src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
++++ b/src/main/java/com/fasterxml/jackson/databind/ObjectMapper.java
+@@ -946,6 +946,22 @@ public class ObjectMapper
+         _mixInAnnotations.put(new ClassKey(target), mixinSource);
+     }
+ 
++    /**
++     * Method to use for adding mix-in annotations to use for augmenting
++     * specified class or interface. All annotations from
++     * <code>mixinSource</code> are taken to override annotations
++     * that <code>target</code> (or its supertypes) has.
++     *
++     * @param target Class (or interface) whose annotations to effectively override
++     * @param mixinSource Class (or interface) whose annotations are to
++     *   be "added" to target's annotations, overriding as necessary
++     */
++    public final ObjectMapper addMixIn(Class<?> target, Class<?> mixinSource)
++    {
++        _mixInAnnotations.put(new ClassKey(target), mixinSource);
++        return this;
++    }
++
+     public final Class<?> findMixInClassFor(Class<?> cls) {
+         return (_mixInAnnotations == null) ? null : _mixInAnnotations.get(new ClassKey(cls));
+     }
