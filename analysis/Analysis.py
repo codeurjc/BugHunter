@@ -164,7 +164,8 @@ class Analysis:
         while queue:
             node = queue.pop()  
 
-            successParents = True
+            bothParentsSuccess = True
+            bothParentsError = True
             parents = graph[node['commit']]['parents']
 
             if node['State'] == "TestFail":
@@ -172,23 +173,30 @@ class Analysis:
 
             for parent_hash in parents:
                 if parent_hash not in graph: # Reach first commit
-                    successParents = False
+                    bothParentsSuccess = False
                     if len(queue)==0:
                         break
                     else: 
                         continue # Check other branches
                 parent = graph[parent_hash]
                 successParent = parent['State'] == "TestSuccess"
-                successParents = successParents and successParent
+                bothParentsSuccess = bothParentsSuccess and successParent
                 if not successParent:
                     if parent['State'] in ["BuildError", "TestBuildError"]:
-                        candidates.append(node)
+                        bothParentsError = bothParentsError and True
+                    else:
+                        bothParentsError = False
                     if parent_hash not in visited:
                         visited.append(parent_hash)
                         queue.append(parent)
-        
-            if successParents and node['State'] != "TestSuccess":
+                else:
+                    bothParentsError = False
                 
+            if bothParentsError:
+                candidates.append(node)
+                        
+            if bothParentsSuccess and node['State'] != "TestSuccess":
+
                 if node['State'] == 'TestFail': 
                     return [node]
                 else:
@@ -196,8 +204,8 @@ class Analysis:
                     if len(queue)==0:
                         return candidates
                     else:
-                        candidate_path = candidates
-        
+                        candidate_path = candidate_path + candidates
+
         return candidate_path
 
 def createDirIfNotExists(folder_name):
@@ -211,5 +219,6 @@ if __name__ == "__main__":
         exit()
 
     analyzer = Analysis()
-    analyzer.analyzeBug(sys.argv[1], sys.argv[2], True)
+    result = analyzer.analyzeBug(sys.argv[1], sys.argv[2], True)
+    print(result['BIC_candidates'])
     
