@@ -84,7 +84,10 @@ class RegTestExecutor():
                     # (the filtering has not worked, usually due to limitations 
                     # of the test library), it is necessary to check that the test 
                     # that detects the failure is the one that passes or fails.
-                    isTestExecutionSuccess = self.experiment.project.getTestReportResult(commitResultsPath)
+                    try:
+                        isTestExecutionSuccess = self.experiment.project.getTestReportResult(commitResultsPath)
+                    except:
+                        self.experiment.log("Can't find test report - Probably infinite loop")
 
         # 6) Save results
         with open(commitResultsPath+"result.json",'w+') as json_file:
