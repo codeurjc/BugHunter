@@ -2,7 +2,7 @@
     "id": "70",
     "project": "JacksonDatabind",
     "git_url": "D4J",
-    "docker_image": "maven:3-jdk-8-slim",
+    "docker_image": "maven:3-jdk-8-slim-git",
     "bug_report": "https://github.com/FasterXML/jackson-databind/issues/1493",
     "fix_commit": "d7155de6c37db3301b92b755bd0a02388f7dd07f",
     "build": "mvn clean compile",
@@ -11,5 +11,5 @@
     "folder": "src/test/java/com/fasterxml/jackson/databind/struct/",
     "file": "TestUnwrapped.java",
     "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.struct.TestUnwrapped.xml",
-    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/Bug_70/fix-snapshot-version-and-JavaType-method.sh"
 }

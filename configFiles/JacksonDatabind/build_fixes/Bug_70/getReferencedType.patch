@@ -1,0 +1,14 @@
+diff --git a/src/main/java/com/fasterxml/jackson/databind/JavaType.java b/src/main/java/com/fasterxml/jackson/databind/JavaType.java
+index 4a4f205fd..c501abf4f
+--- a/src/main/java/com/fasterxml/jackson/databind/JavaType.java
++++ b/src/main/java/com/fasterxml/jackson/databind/JavaType.java
+@@ -326,6 +326,9 @@ public abstract class JavaType
+     @Override
+     public JavaType getContentType() { return null; }
+ 
++    @Override // since 2.6
++    public JavaType getReferencedType() { return null; }
++
+     @Override
+     public int containedTypeCount() { return 0; }
+ 
