@@ -11,5 +11,8 @@
     "folder": "src/test/java/com/fasterxml/jackson/databind/jsontype/",
     "file": "TypeRefinementForMap1215Test.java",
     "test_report": "target/surefire-reports/TEST-com.fasterxml.jackson.databind.jsontype.TypeRefinementForMap1215Test.xml",
-    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh"
+    "fixes": "/home/regseek/workdir/configFiles/JacksonDatabind/build_fixes/fix-snapshot-version.sh",
+    "issue_created_at": "2016-04-27 02:25:20 +0000",
+    "issue_closed_at": "2016-06-30 04:45:35 +0000",
+    "fix_date": "2016-06-29 21:43:40 -0700"
 }

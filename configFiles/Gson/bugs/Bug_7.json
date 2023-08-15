@@ -10,5 +10,8 @@
     "test_command": "mvn -f gson/pom.xml -Dtest=com.google.gson.functional.MapTest#testMapDeserializationWithUnquotedLongKeys test",
     "folder": "gson/src/test/java/com/google/gson/functional/",
     "file": "MapTest.java",
-    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.functional.MapTest.xml"
+    "test_report": "gson/target/surefire-reports/TEST-com.google.gson.functional.MapTest.xml",
+    "issue_created_at": "2015-03-19 18:34:26 +0000",
+    "issue_closed_at": "2022-07-29 17:25:15 +0000",
+    "fix_date": "2016-03-12 15:51:22 -0500"
 }
