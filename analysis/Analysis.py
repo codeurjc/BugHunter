@@ -182,9 +182,7 @@ class Analysis:
                 successParent = parent['State'] == "TestSuccess"
                 bothParentsSuccess = bothParentsSuccess and successParent
                 if not successParent:
-                    if parent['State'] in ["BuildError", "TestBuildError"]:
-                        bothParentsError = bothParentsError and True
-                    else:
+                    if parent['State'] not in ["BuildError", "TestBuildError"]:
                         bothParentsError = False
                     if parent_hash not in visited:
                         visited.append(parent_hash)
@@ -204,7 +202,7 @@ class Analysis:
                     if len(queue)==0:
                         return candidates
                     else:
-                        candidate_path = candidate_path + candidates
+                        candidate_path = candidates
 
         return candidate_path
 
