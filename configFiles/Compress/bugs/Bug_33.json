@@ -2,17 +2,16 @@
     "id": "33",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.1",
+    "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-316",
     "fix_commit": "b72b5c716ac18150396d05988d9eab745bea02b9",
-    "build": "ant -Dd4j.project.id=Compress compile",
-    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
-    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.compressors.DetectCompressorTestCase -Dtest.entry.method=testDetection run.dev.tests",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.compressors.DetectCompressorTestCase#testDetection test",
     "folder": "src/test/java/org/apache/commons/compress/compressors/",
     "file": "DetectCompressorTestCase.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.compressors.DetectCompressorTestCase.xml",
     "issue_created_at": "2015-05-23 12:03:30 +0000",
     "issue_closed_at": "2015-05-23 15:09:09 +0000",
-    "fix_date": "2015-05-23 15:05:43 +0000",
-    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 33"
+    "fix_date": "2015-05-23 15:05:43 +0000"
 }

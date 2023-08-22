@@ -2,17 +2,16 @@
     "id": "43",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.1",
+    "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-394",
     "fix_commit": "d75b89856ef29bbec6784cd6aa714eafe0eeb312",
-    "build": "ant -Dd4j.project.id=Compress compile",
-    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
-    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.zip.DataDescriptorTest -Dtest.entry.method=doesntWriteDataDescriptorWhenAddingRawEntries run.dev.tests",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.DataDescriptorTest#doesntWriteDataDescriptorWhenAddingRawEntries test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
     "file": "DataDescriptorTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.DataDescriptorTest.xml",
     "issue_created_at": "2017-05-13 21:52:07 +0000",
     "issue_closed_at": "2017-05-22 16:13:22 +0000",
-    "fix_date": "2017-05-22 18:11:06 +0200",
-    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 43"
+    "fix_date": "2017-05-22 18:11:06 +0200"
 }

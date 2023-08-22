@@ -2,17 +2,16 @@
     "id": "29",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.1",
+    "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-306",
     "fix_commit": "d50feb67569fb5881b8a2ff5996f656c5f207c2e",
-    "build": "ant -Dd4j.project.id=Compress compile",
-    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
-    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.ArchiveStreamFactoryTest -Dtest.entry.method=testEncodingInputStream run.dev.tests",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.ArchiveStreamFactoryTest#testEncodingInputStream test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/",
     "file": "ArchiveStreamFactoryTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.ArchiveStreamFactoryTest.xml",
     "issue_created_at": "2015-02-16 17:01:15 +0000",
     "issue_closed_at": "2015-02-16 23:21:51 +0000",
-    "fix_date": "2015-02-16 23:13:01 +0000",
-    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 29"
+    "fix_date": "2015-02-16 23:13:01 +0000"
 }

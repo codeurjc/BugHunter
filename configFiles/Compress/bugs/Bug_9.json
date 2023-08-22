@@ -2,17 +2,16 @@
     "id": "9",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.1",
+    "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-160",
     "fix_commit": "fdac1475918e93444b08a024d096b4ec39d6733d",
-    "build": "ant -Dd4j.project.id=Compress compile",
-    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
-    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest -Dtest.entry.method=testCount run.dev.tests",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest#testCount test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/tar/",
     "file": "TarArchiveOutputStreamTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.tar.TarArchiveOutputStreamTest.xml",
     "issue_created_at": "2011-10-21 13:23:08 +0000",
     "issue_closed_at": "2011-10-23 12:13:53 +0000",
-    "fix_date": "2011-10-23 12:15:13 +0000",
-    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 9"
+    "fix_date": "2011-10-23 12:15:13 +0000"
 }

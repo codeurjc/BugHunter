@@ -2,17 +2,16 @@
     "id": "42",
     "project": "Compress",
     "git_url": "D4J",
-    "docker_image": "defects4j:2.1.1",
+    "docker_image": "maven:3-jdk-8-slim",
     "bug_report": "https://issues.apache.org/jira/browse/COMPRESS-379",
     "fix_commit": "c59fc43c527610ae18d7596eb191817ce674cb29",
-    "build": "ant -Dd4j.project.id=Compress compile",
-    "build_test": "ant -Dd4j.project.id=Compress compile.tests",
-    "test_command": "ant -Dd4j.project.id=Compress -Dtest.entry.class=org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest -Dtest.entry.method=isUnixSymlinkIsFalseIfMoreThanOneFlagIsSet run.dev.tests",
+    "build": "mvn clean compile",
+    "build_test": "mvn test-compile",
+    "test_command": "mvn -Dtest=org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest#isUnixSymlinkIsFalseIfMoreThanOneFlagIsSet test",
     "folder": "src/test/java/org/apache/commons/compress/archivers/zip/",
     "file": "ZipArchiveEntryTest.java",
     "test_report": "target/surefire-reports/TEST-org.apache.commons.compress.archivers.zip.ZipArchiveEntryTest.xml",
     "issue_created_at": "2017-01-15 16:53:19 +0000",
     "issue_closed_at": "2017-01-15 21:08:21 +0000",
-    "fix_date": "2017-01-15 22:07:19 +0100",
-    "fixes": "/home/regseek/workdir/configFiles/Compress/build_fixes/fix-build-file-custom.sh 42"
+    "fix_date": "2017-01-15 22:07:19 +0100"
 }
