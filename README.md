@@ -1,6 +1,6 @@
 # Bug Hunter
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7381612.svg)](https://doi.org/10.5281/zenodo.7381612)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8274835.svg)](https://doi.org/10.5281/zenodo.8274835)
 
 Reproduction package for the paper "Hunting bugs: Towards an automated approach to identifying which change caused a bug through regression testing", sent to EMSE Journal (still under review). 
 
@@ -144,7 +144,7 @@ For each bug, the following information is obtained:
 - The logs of each of these three phases
 - The test report generated
 
-The results of this step (which we will call raw results) can be found in Zenodo (https://zenodo.org/record/7381612) as `<project>-raw-results.tar.gz` (~16GB), where `<project>` will be the name of the Defects4J project.
+The results of this step (which we will call raw results) can be found in Zenodo (https://zenodo.org/record/8274835) as `<project>-raw-results.tar.gz` (~16GB), where `<project>` will be the name of the Defects4J project.
 They should be unzipped inside the `results/` directory, so that the results are placed in `results/<project>`.
 
 ### How to reproduce
@@ -179,7 +179,7 @@ This notebook:
 
 When running all notebook cells, processed results are generated in the `analysis/results/` folder.
 
-The results of this step (which we will call processed results) can be found in Zenodo (https://zenodo.org/record/7381612) as `processed-results.tar.gz` (350MB).
+The results of this step (which we will call processed results) can be found in Zenodo (https://zenodo.org/record/8274835) as `processed-results.tar.gz` (350MB).
 
 ### 3.2 Generate BIC dataset (BIC-RT)
 
@@ -212,7 +212,7 @@ The execution of the SZZ algorithms on the detected regressions is automated thr
 $ scripts/szz/run<SZZ_Algorithm>.sh
 ```
 
-The results of the execution of these algorithms are part of the `raw results` mentioned above and are available at Zenodo (https://zenodo.org/record/7381612) as `szz-raw-results.tar.gz`.
+The results of the execution of these algorithms are part of the `raw results` mentioned above and are available at Zenodo (https://zenodo.org/record/8274835) as `szz-raw-results.tar.gz`.
 They should be unzipped inside the `results/` directory, so that the results are placed in `results/szz/`.
 
 To visualize the results of these derivations of the SZZ, we will use again a JupyterNotebook
