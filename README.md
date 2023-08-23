@@ -235,7 +235,7 @@ The analysis of the common BICs (whether the identification matches or not) toge
 To evaluate the reasons why a regression test cannot be transplanted, we evaluated the logs at the first commit (starting from the BFC) where the test can no longer be built. The results of this analysis can be found in a Jupyter Notebook.
 
 - [Open notebooks in browser](http://localhost:9000//notebooks/analysis/LogAnalysis.ipynb)
-- [Open notebooks in GitHub](/analysis/LogAnalysis.ipynb)
+- [Open notebooks in GitHub](analysis/LogAnalysis.ipynb)
 
 # How to use BugHunter
 
