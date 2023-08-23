@@ -40,6 +40,7 @@ This package contains:
     + [3.2 Generate BIC dataset (BIC-RT)](#32-generate-bic-dataset--bic-rt-)
     + [3.3 Evaluation of SZZ derivatives](#33-evaluation-of-szz-derivatives)
     + [3.4 Comparing our dataset](#34-comparing-our-dataset)
+    + [3.5 Log analysis](#35-log-analysis)
 - [How to use BugHunter](#how-to-use-bughunter)
   * [Step 1. Generate de config file](#step-1-generate-de-config-file)
   * [Step 2. Run the experiment](#step-2-run-the-experiment)
@@ -228,6 +229,13 @@ The analysis of the common BICs (whether the identification matches or not) toge
 
 - [Open notebooks in browser](http://localhost:9000/notebooks/analysis/EvaluationOfSZZDerivatives.ipynb)
 - [Open notebooks in GitHub](analysis/EvaluationOfSZZDerivatives.ipynb)
+
+### 3.5 Log analysis
+
+To evaluate the reasons why a regression test cannot be transplanted, we evaluated the logs at the first commit (starting from the BFC) where the test can no longer be built. The results of this analysis can be found in a Jupyter Notebook.
+
+- [Open notebooks in browser](http://localhost:9000//notebooks/analysis/LogAnalysis.ipynb)
+- [Open notebooks in GitHub](/analysis/LogAnalysis.ipynb)
 
 # How to use BugHunter
 
