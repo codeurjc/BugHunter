@@ -1,4 +1,6 @@
 results/**
 projects/**
-.git/
-tmp/
+.git/**
+tmp/**
+dataset/**
+previous_work/**
