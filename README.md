@@ -2,7 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8274835.svg)](https://doi.org/10.5281/zenodo.8274835)
 
-Reproduction package for the paper "Hunting bugs: Towards an automated approach to identifying which change caused a bug through regression testing", sent to EMSE Journal (still under review). 
+Reproduction package for the paper ["Hunting bugs: Towards an automated approach to identifying which change caused a bug through regression testing"](https://doi.org/10.1007/s10664-024-10479-z), published at Empirical Software Engineering.
+
+
 
 This repository contains the tool that allows, from a commit that fixes a bug and a test that reveals this bug, to find the commit that introduced the bug. 
 It also includes a collection of Jupyter Notebooks to analyze in detail the results of the tool.
